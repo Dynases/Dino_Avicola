@@ -1,0 +1,10 @@
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\DATA.dll.config
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\DATA.dll
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\DATA.pdb
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\EntityFramework.dll
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\EntityFramework.SqlServer.dll
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\EntityFramework.xml
+D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\EntityFramework.SqlServer.xml
+D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
+D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.dll
+D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.pdb

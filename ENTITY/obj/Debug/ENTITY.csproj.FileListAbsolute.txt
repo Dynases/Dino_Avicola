@@ -1,0 +1,10 @@
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\ENTITY.dll
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\ENTITY.pdb
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\DATA.dll
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\EntityFramework.dll
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\DATA.pdb
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\DATA.dll.config
+D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\EntityFramework.xml
+D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache
+D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.dll
+D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.pdb
