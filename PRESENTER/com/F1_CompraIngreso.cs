@@ -296,7 +296,7 @@ namespace PRESENTER.com
 
                     Dgv_Detalle.RootTable.Columns[3].Key = "Caja";
                     Dgv_Detalle.RootTable.Columns[3].Caption = "CAJA";
-                    Dgv_Detalle.RootTable.Columns[3].FormatString = "0.00";
+                    Dgv_Detalle.RootTable.Columns[3].FormatString = "0";
                     Dgv_Detalle.RootTable.Columns[3].Width = 90;
                     Dgv_Detalle.RootTable.Columns[3].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
                     Dgv_Detalle.RootTable.Columns[3].CellStyle.FontSize = 9;
@@ -305,7 +305,7 @@ namespace PRESENTER.com
 
                     Dgv_Detalle.RootTable.Columns[4].Key = "Grupo";
                     Dgv_Detalle.RootTable.Columns[4].Caption = "GRUPO";
-                    Dgv_Detalle.RootTable.Columns[4].FormatString = "0.00";
+                    Dgv_Detalle.RootTable.Columns[4].FormatString = "0";
                     Dgv_Detalle.RootTable.Columns[4].Width = 90;
                     Dgv_Detalle.RootTable.Columns[4].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
                     Dgv_Detalle.RootTable.Columns[4].CellStyle.FontSize = 9;
@@ -314,7 +314,7 @@ namespace PRESENTER.com
 
                     Dgv_Detalle.RootTable.Columns[5].Key = "Maple";
                     Dgv_Detalle.RootTable.Columns[5].Caption = "MAPLE";
-                    Dgv_Detalle.RootTable.Columns[5].FormatString = "0.00";
+                    Dgv_Detalle.RootTable.Columns[5].FormatString = "0";
                     Dgv_Detalle.RootTable.Columns[5].Width = 90;
                     Dgv_Detalle.RootTable.Columns[5].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
                     Dgv_Detalle.RootTable.Columns[5].CellStyle.FontSize = 9;
@@ -322,8 +322,8 @@ namespace PRESENTER.com
                     Dgv_Detalle.RootTable.Columns[5].Visible = true;
 
                     Dgv_Detalle.RootTable.Columns[6].Key = "Cantidad";
-                    Dgv_Detalle.RootTable.Columns[6].Caption = "CANTIDAD";
-                    Dgv_Detalle.RootTable.Columns[6].FormatString = "0.00";
+                    Dgv_Detalle.RootTable.Columns[6].Caption = "UNIDADES";
+                    Dgv_Detalle.RootTable.Columns[6].FormatString = "0";
                     Dgv_Detalle.RootTable.Columns[6].Width = 90;
                     Dgv_Detalle.RootTable.Columns[6].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
                     Dgv_Detalle.RootTable.Columns[6].CellStyle.FontSize = 9;
@@ -331,8 +331,8 @@ namespace PRESENTER.com
                     Dgv_Detalle.RootTable.Columns[6].Visible = true;
 
                     Dgv_Detalle.RootTable.Columns[7].Key = "TotalCant";
-                    Dgv_Detalle.RootTable.Columns[7].Caption = "SUBTOTAL";
-                    Dgv_Detalle.RootTable.Columns[7].FormatString = "0.00";
+                    Dgv_Detalle.RootTable.Columns[7].Caption = "TOTAL U.";
+                    Dgv_Detalle.RootTable.Columns[7].FormatString = "0";
                     Dgv_Detalle.RootTable.Columns[7].Width = 110;
                     Dgv_Detalle.RootTable.Columns[7].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
                     Dgv_Detalle.RootTable.Columns[7].CellStyle.FontSize = 9;
@@ -349,7 +349,7 @@ namespace PRESENTER.com
                     Dgv_Detalle.RootTable.Columns[8].Visible = true;
 
                     Dgv_Detalle.RootTable.Columns[9].Key = "Total";
-                    Dgv_Detalle.RootTable.Columns[9].Caption = "TOTAL";
+                    Dgv_Detalle.RootTable.Columns[9].Caption = "TOTAL BS";
                     Dgv_Detalle.RootTable.Columns[9].FormatString = "0.00";
                     Dgv_Detalle.RootTable.Columns[9].Width = 110;
                     Dgv_Detalle.RootTable.Columns[9].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
@@ -476,14 +476,8 @@ namespace PRESENTER.com
                     UTGlobal.MG_SeleccionarCombo(Cb_Recibido);
                 }
                 MP_CargarDetalle(0, 2);
-                Tb_MCajas.Value = 0;
-                Tb_MGrupos.Value = 0;
-                Tb_MMaples.Value = 0;
-                Tb_MCantidad.Value = 0;
-                Tb_TCajas.Value = 0;
-                Tb_TGrupo.Value = 0;
-                Tb_TMaples.Value = 0;
-                Tb_TCantidad.Value = 0;
+                Tb_MCajas.Value = 0;             
+                Tb_TCajas.Value = 0;                
                 Tb_MTotal.Value = 0;
                 Tb_TTotal.Value = 0;
                 Tb_TPrecio.Value = 0;
@@ -527,18 +521,18 @@ namespace PRESENTER.com
         }
         private void MP_ObtenerCalculo()
         {
-            Tb_TCajas.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[3], AggregateFunction.Sum));
-            Tb_TGrupo.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[4], AggregateFunction.Sum));
-            Tb_TMaples.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[5], AggregateFunction.Sum));
-            Tb_TCantidad.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[6], AggregateFunction.Sum));
-            Tb_TTotal.Value = (Tb_TCajas.Value * 360) + (Tb_TGrupo.Value * 300) + (Tb_TMaples.Value * 30) + Tb_TCantidad.Value;
-            Tb_TPrecio.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[8], AggregateFunction.Sum)) / 10;
-            Tb_TSaldoTo.Value = Tb_TTotal.Value * Tb_TPrecio.Value;
-            Tb_MCajas.Value = Tb_TCajas.Value * 12;
-            Tb_MGrupos.Value = Tb_TGrupo.Value * 10;
-            Tb_MMaples.Value = Tb_TMaples.Value;
-            Tb_MCantidad.Value = Convert.ToInt32((Tb_TCantidad.Value / 300) * 11);
-            Tb_MTotal.Value = Tb_TSaldoTo.Value + Tb_MGrupos.Value + Tb_MMaples.Value + Tb_MCantidad.Value;
+        //    Tb_TCajas.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[3], AggregateFunction.Sum));
+        //    Tb_TGrupo.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[4], AggregateFunction.Sum));
+        //    Tb_TMaples.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[5], AggregateFunction.Sum));
+        //    Tb_TCantidad.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[6], AggregateFunction.Sum));
+        //    Tb_TTotal.Value = (Tb_TCajas.Value * 360) + (Tb_TGrupo.Value * 300) + (Tb_TMaples.Value * 30) + Tb_TCantidad.Value;
+        //    Tb_TPrecio.Value = Convert.ToDouble(Dgv_Detalle.GetTotal(Dgv_Detalle.RootTable.Columns[8], AggregateFunction.Sum)) / 10;
+        //    Tb_TSaldoTo.Value = Tb_TTotal.Value * Tb_TPrecio.Value;
+        //    Tb_MCajas.Value = Tb_TCajas.Value * 12;
+        //    Tb_MGrupos.Value = Tb_TGrupo.Value * 10;
+        //    Tb_MMaples.Value = Tb_TMaples.Value;
+        //    Tb_MCantidad.Value = Convert.ToInt32((Tb_TCantidad.Value / 300) * 11);
+        //    Tb_MTotal.Value = Tb_TSaldoTo.Value + Tb_MGrupos.Value + Tb_MMaples.Value + Tb_MCantidad.Value;
         }
         private void MP_Filtrar(int tipo)
         {
@@ -607,8 +601,30 @@ namespace PRESENTER.com
 
 
 
+
         #endregion
 
-  
+        private void tb_Proveedor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Tb_FechaEnt.IsInputReadOnly == false)
+            {
+                if (e.KeyData == Keys.Control &&  e.KeyData == Keys.Enter)
+                {
+                    //var lista = new ServiceDesktop.ServiceDesktopClient().ProveedorListar();
+                    //List<GLCelda> listEstCeldas = new List<GLCelda.Celda>();
+                    //listEstCeldas.Add(new GLCelda)
+                    //listEstCeldas.Add(New Modelo.Celda("ydcod", false, "ID", 50));
+                    //listEstCeldas.Add(New Modelo.Celda("ydrazonsocial", true, "RAZÓN SOCIAL", 180));
+                    //listEstCeldas.Add(New Modelo.Celda("yddesc", True, "NOMBRE", 280));
+                    //listEstCeldas.Add(New Modelo.Celda("yddctnum", True, "N. Documento".ToUpper, 150));
+                    //listEstCeldas.Add(New Modelo.Celda("yddirec", True, "DIRECCIÓN", 220));
+                    //listEstCeldas.Add(New Modelo.Celda("ydtelf1", True, "Teléfono".ToUpper, 200));
+                    //listEstCeldas.Add(New Modelo.Celda("ydfnac", True, "F.Nacimiento".ToUpper, 150, "MM/dd,YYYY"));
+                    //listEstCeldas.Add(New Modelo.Celda("ydnumivend,", False, "ID", 50));
+                    //listEstCeldas.Add(New Modelo.Celda("vendedor,", False, "ID", 50));
+                    //listEstCeldas.Add(New Modelo.Celda("yddias", False, "CRED", 50));
+                }
+            }
+        }
     }
 }

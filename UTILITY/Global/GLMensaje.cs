@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,7 @@ namespace UTILITY.Global
             return "Código de " + programa +" "+ codigo + " eliminado con éxito";
         }
         public static string Pregunta_Eliminar = "¿Esta seguro de eliminar el registro?";
-        public static string Mensaje_Principal = "Mensaje Principal";
+        public static string Mensaje_Principal = "Mensaje Principal";     
 
     }
 }

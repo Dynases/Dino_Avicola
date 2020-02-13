@@ -72,12 +72,11 @@ namespace UTILITY.Global
             {
                 Band = true;
                 this.Close();
-            }
-
-            
+            }            
         }
+     
         #endregion
 
-     
+
     }
 }

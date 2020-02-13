@@ -48,5 +48,11 @@ namespace PRESENTER.adm
             F1_CompraIngreso frm = new F1_CompraIngreso();
             frm.Show();
         }
+
+        private void Metro_Transformacion_Click(object sender, EventArgs e)
+        {
+            FI_Transformacio frm = new FI_Transformacio();
+            frm.Show();
+        }
     }
 }

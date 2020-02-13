@@ -379,6 +379,25 @@ namespace PRESENTER.reg
                 Dgv_Buscardor.Row = _MPos;
             }
         }
+        private void sw_TipoPro_ValueChanged(object sender, EventArgs e)
+        {
+            if (sw_TipoPro.Value == true)
+            {
+                LblProducto.Visible = true;
+                LblCantidad.Visible = true;
+                Tb_Producto.Visible = true;
+                Tb_IdProducto.Visible = true;
+                Tb_Cantidad.Visible = true;
+            }
+            else
+            {
+                LblProducto.Visible = false;
+                LblCantidad.Visible = false;
+                Tb_Producto.Visible = false;
+                Tb_IdProducto.Visible = false;
+                Tb_Cantidad.Visible = false;
+            }
+        }
         #endregion
         #region Metodos Privados
         private void MP_Iniciar()
@@ -390,28 +409,37 @@ namespace PRESENTER.reg
         }
         private void MP_ArmarComboInicial()
         {
-            //Carga las librerias al combobox desde una lista
-            UTGlobal.MG_ArmarCombo(Cb_Grupo1,
-                                   new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                                 Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO1)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_Grupo2,
-                                   new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                                 Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO2)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_Grupo3,
-                                new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                              Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO3)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_Grupo4,
-                                new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                              Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO4)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_Grupo5,
-                                new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                              Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO5)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_UnidadVenta,
-                              new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                            Convert.ToInt32(ENEstaticosOrden.PRODUCTO_UN_VENTA)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_UniPeso,
-                              new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
-                                                                                            Convert.ToInt32(ENEstaticosOrden.PRODUCTO_UN_PESO)).ToList());
+            try
+            {
+                //Carga las librerias al combobox desde una lista
+                UTGlobal.MG_ArmarCombo(Cb_Grupo1,
+                                       new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                     Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO1)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_Grupo2,
+                                       new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                     Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO2)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_Grupo3,
+                                    new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                  Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO3)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_Grupo4,
+                                    new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                  Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO4)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_Grupo5,
+                                    new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                  Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO5)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_UnidadVenta,
+                                  new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                Convert.ToInt32(ENEstaticosOrden.PRODUCTO_UN_VENTA)).ToList());
+                UTGlobal.MG_ArmarCombo(Cb_UniPeso,
+                                  new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
+                                                                                                Convert.ToInt32(ENEstaticosOrden.PRODUCTO_UN_PESO)).ToList());
+            }
+            catch (Exception ex)
+            {
+
+                MP_MostrarMensajeError(ex.Message);
+            }
+           
         }
         private void MP_CargarEncabezado()
         {
@@ -493,12 +521,12 @@ namespace PRESENTER.reg
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message, "Comuniquese con el administrador del sistema");
+                MP_MostrarMensajeError(ex.Message);
             }
 
         }
-        private void MP_Habilitar()        {
+        private void MP_Habilitar()
+        {
             try
             {
                 Tb_Id.ReadOnly = false;
@@ -518,10 +546,14 @@ namespace PRESENTER.reg
                 UTGlobal.MG_CrearCarpetaTemporal();
                 Dgv_Buscardor.Enabled = false;
                 Tb_CodProducto.Focus();
+     
+                Tb_Producto.ReadOnly = false;
+                Tb_IdProducto.IsInputReadOnly = false;
+                Tb_Cantidad.IsInputReadOnly = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace, GLMensaje.Error);
+                MP_MostrarMensajeError(ex.Message);
             }
         }
         private void MP_InHabilitar()
@@ -541,6 +573,9 @@ namespace PRESENTER.reg
             BtAdicionar.Enabled = false;
             _Limpiar = false;
             Dgv_Buscardor.Enabled = true;
+            Tb_Producto.ReadOnly = true;
+            Tb_IdProducto.IsInputReadOnly = true;
+            Tb_Cantidad.IsInputReadOnly = true;
         }
         private void MP_Limpiar()
         {
@@ -583,10 +618,9 @@ namespace PRESENTER.reg
                 MP_MostrarImagen(tabla.Select(x => x.Imagen).First());
                 LblPaginacion.Text = Convert.ToString(_Pos + 1) + "/" + Dgv_Buscardor.RowCount.ToString();
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-
-                MessageBox.Show(EX.StackTrace, "Comuniquece con el administrador del sistema");
+                MP_MostrarMensajeError(ex.Message);
             }
         }
         private void MP_MostrarImagen(string _NombreImagen)
@@ -638,7 +672,7 @@ namespace PRESENTER.reg
             }
             catch (Exception ex )
             {
-                MessageBox.Show(ex.StackTrace, GLMensaje.Error);
+                MP_MostrarMensajeError(ex.Message);
             }          
         }
         private string MP_CopiarImagenRutaDefinida()
@@ -687,13 +721,18 @@ namespace PRESENTER.reg
             }
             catch (Exception ex)
             {
-              MessageBox.Show(ex.StackTrace, GLMensaje.Error);
+                MP_MostrarMensajeError(ex.Message);
                 return "";
             }           
         }
         private bool MP_AccionResult()
         {
               return Tb_Id.Text == string.Empty && Tb_CodBarras.ReadOnly == false ? true : false;
+        }
+        void MP_MostrarMensajeError(string mensaje)
+        {
+            ToastNotification.Show(this, mensaje.ToUpper(), PRESENTER.Properties.Resources.WARNING, (int)GLMensajeTamano.Mediano, eToastGlowColor.Green, eToastPosition.TopCenter);
+
         }
         #endregion
         #region Metodos Heredados
@@ -867,6 +906,12 @@ namespace PRESENTER.reg
             return _Error;
         }
         #endregion
-       
+
+        private void labelX5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }

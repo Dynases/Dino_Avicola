@@ -162,6 +162,12 @@
     <Compile Include="com\F1_Proveedor.Designer.cs">
       <DependentUpon>F1_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="com\FI_Transformacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\FI_Transformacio.Designer.cs">
+      <DependentUpon>FI_Transformacio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceDesktop\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="com\F1_Proveedor.resx">
       <DependentUpon>F1_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\FI_Transformacio.resx">
+      <DependentUpon>FI_Transformacio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrUEBA.resx">
       <DependentUpon>PrUEBA.cs</DependentUpon>
@@ -355,6 +364,8 @@
     <None Include="Resource\AGREGAR.png" />
     <None Include="Resource\ALMACEN.png" />
     <None Include="Resources\WARNING.png" />
+    <None Include="Resources\TRANSFORMACION.png" />
+    <None Include="Resources\hojaruta.png" />
     <Content Include="Resource\BUSQUEDA.png" />
     <Content Include="Resource\CANCEL.png" />
     <None Include="Resource\CLIENTE.png" />

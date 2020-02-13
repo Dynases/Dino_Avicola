@@ -163,6 +163,16 @@ namespace PRESENTER.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hojaruta {
+            get {
+                object obj = ResourceManager.GetObject("hojaruta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HUEVOS {
             get {
                 object obj = ResourceManager.GetObject("HUEVOS", resourceCulture);
@@ -286,6 +296,16 @@ namespace PRESENTER.Properties {
         internal static System.Drawing.Bitmap ROLES {
             get {
                 object obj = ResourceManager.GetObject("ROLES", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TRANSFORMACION {
+            get {
+                object obj = ResourceManager.GetObject("TRANSFORMACION", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
