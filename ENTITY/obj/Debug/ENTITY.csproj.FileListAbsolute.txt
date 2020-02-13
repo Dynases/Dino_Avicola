@@ -8,3 +8,13 @@ D:\GOGS\DiAvi\DIAvi\ENTITY\bin\Debug\EntityFramework.xml
 D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache
 D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.dll
 D:\GOGS\DiAvi\DIAvi\ENTITY\obj\Debug\ENTITY.pdb
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\ENTITY.dll
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\ENTITY.pdb
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\DATA.dll
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\EntityFramework.dll
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\DATA.dll.config
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\bin\Debug\EntityFramework.xml
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\obj\Debug\ENTITY.dll
+D:\GitHub\Dino_Avicola\DiAvi\ENTITY\obj\Debug\ENTITY.pdb

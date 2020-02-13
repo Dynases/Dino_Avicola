@@ -93,6 +93,8 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.csprojResolveAssembly
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.adm.Principal.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_CompraIngreso.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Proveedor.resources
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Transformacion.resources
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.FI_Seleccion.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.PrUEBA.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.reg.F1_Clientes.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.Properties.Resources.resources
@@ -102,5 +104,3 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.csproj.GenerateResour
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.pdb
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.FI_Seleccion.resources
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Transformacion.resources

@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DiAviModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Estaticos">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Orden" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Grupo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Libreria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="IdOrden" Type="int" Nullable="false" />
+    <Property Name="IdLibrer" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSucur" Type="int" Nullable="false" />
+    <Property Name="IdProvee" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="FechaDoc" Type="date" Nullable="false" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+    <Property Name="FechaCred" Type="date" Nullable="false" />
+    <Property Name="Observ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descuen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compra_01">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompra" Type="int" Nullable="false" />
+    <Property Name="IdProduc" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UniMin" Type="int" Nullable="false" />
+    <Property Name="PrecioCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaVen" Type="date" Nullable="false" />
+    <Property Name="SubTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Utilidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PrecioVen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Observ" Type="nvarchar" MaxLength="30" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompraIng">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSucur" Type="int" Nullable="false" />
+    <Property Name="IdProvee" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="NumNota" Type="nvarchar" MaxLength="26" Nullable="false" />
+    <Property Name="FechaEnt" Type="date" Nullable="false" />
+    <Property Name="FechaRec" Type="date" Nullable="false" />
+    <Property Name="Placa" Type="nvarchar" MaxLength="15" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+    <Property Name="Obser" Type="nvarchar" MaxLength="50" />
+    <Property Name="Entregado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Recibido" Type="int" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CompraIng_01">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdCompra" />
+      <PropertyRef Name="IdProduc" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="UniMin" />
+      <PropertyRef Name="Caja" />
+      <PropertyRef Name="Grupo" />
+      <PropertyRef Name="Maple" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="TotalCant" />
+      <PropertyRef Name="PrecioCost" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Hora" />
+      <PropertyRef Name="Usuario" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompra" Type="int" Nullable="false" />
+    <Property Name="IdProduc" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="UniMin" Type="int" Nullable="false" />
+    <Property Name="Caja" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Grupo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Maple" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalCant" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PrecioCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSpyre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ciudad" Type="int" Nullable="false" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+    <Property Name="TipoProve" Type="int" Nullable="false" />
+    <Property Name="Direcc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telfon" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contacto2" Type="nvarchar" MaxLength="205" />
+    <Property Name="Telfon2" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitud" Type="decimal" Precision="18" Scale="14" Nullable="false" />
+    <Property Name="Longit" Type="decimal" Precision="18" Scale="14" Nullable="false" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveed_01">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProveed" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="FechaNac" Type="date" Nullable="false" />
+    <Property Name="EdadSeman" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="TipoAloja" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deposito">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Direcc" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telef" Type="nvarchar" MaxLength="30" />
+    <Property Name="Latit" Type="decimal" Precision="18" Scale="14" />
+    <Property Name="Longi" Type="decimal" Precision="18" Scale="14" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDepos" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Direcc" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telef" Type="nvarchar" MaxLength="30" />
+    <Property Name="Latit" Type="decimal" Precision="18" Scale="14" />
+    <Property Name="Longi" Type="decimal" Precision="18" Scale="14" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSpyre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="RazonSo" Type="nvarchar" MaxLength="40" />
+    <Property Name="Nit" Type="nchar" MaxLength="10" />
+    <Property Name="TipoCli" Type="int" Nullable="false" />
+    <Property Name="Direcc" Type="nvarchar" MaxLength="250" />
+    <Property Name="Contac1" Type="nvarchar" MaxLength="30" />
+    <Property Name="Contac2" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telfo1" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telfo2" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email1" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email2" Type="nvarchar" MaxLength="30" />
+    <Property Name="Ciudad" Type="int" Nullable="false" />
+    <Property Name="Factur" Type="int" Nullable="false" />
+    <Property Name="Latitud" Type="decimal" Precision="18" Scale="14" Nullable="false" />
+    <Property Name="Longit" Type="decimal" Precision="18" Scale="14" Nullable="false" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Precio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAlmac" Type="int" Nullable="false" />
+    <Property Name="IdProduc" Type="int" Nullable="false" />
+    <Property Name="IdPrecioCat" Type="int" Nullable="false" />
+    <Property Name="Prrecio" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Oferta" Type="int" />
+    <Property Name="Observacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PrecioCat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cod" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+    <Property Name="Margen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProd" Type="nvarchar" MaxLength="15" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Granja" Type="int" />
+    <Property Name="CodBar" Type="nvarchar" MaxLength="15" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UniVen" Type="int" Nullable="false" />
+    <Property Name="UniPeso" Type="int" Nullable="false" />
+    <Property Name="Peso" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Grupo1" Type="int" Nullable="false" />
+    <Property Name="Grupo2" Type="int" Nullable="false" />
+    <Property Name="Grupo3" Type="int" Nullable="false" />
+    <Property Name="Grupo4" Type="int" Nullable="false" />
+    <Property Name="Grupo5" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Compra__IdProvee__30C33EC3">
+    <End Role="Proveed" Type="Self.Proveed" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveed">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdProvee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra__IdSucur__2FCF1A8A">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdSucur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra_01__IdCom__3B40CD36">
+    <End Role="Compra" Type="Self.Compra" Multiplicity="1" />
+    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra_01">
+        <PropertyRef Name="IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra_01__IdPro__3C34F16F">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra_01">
+        <PropertyRef Name="IdProduc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraIng__IdCom__45BE5BA9">
+    <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="1" />
+    <End Role="CompraIng_01" Type="Self.CompraIng_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompraIng">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompraIng_01">
+        <PropertyRef Name="IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraIng__IdPro__43D61337">
+    <End Role="Proveed" Type="Self.Proveed" Multiplicity="1" />
+    <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveed">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompraIng">
+        <PropertyRef Name="IdProvee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraIng__IdPro__46B27FE2">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="CompraIng_01" Type="Self.CompraIng_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompraIng_01">
+        <PropertyRef Name="IdProduc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraIng__IdSuc__42E1EEFE">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompraIng">
+        <PropertyRef Name="IdSucur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Precio_Almacen">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Precio" Type="Self.Precio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Precio">
+        <PropertyRef Name="IdAlmac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Precio_Cat">
+    <End Role="PrecioCat" Type="Self.PrecioCat" Multiplicity="1" />
+    <End Role="Precio" Type="Self.Precio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioCat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Precio">
+        <PropertyRef Name="IdPrecioCat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Precio_Product">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Precio" Type="Self.Precio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Precio">
+        <PropertyRef Name="IdProduc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Deposito">
+    <End Role="Deposito" Type="Self.Deposito" Multiplicity="1" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Deposito">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sucursal">
+        <PropertyRef Name="IdDepos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveed_01_Proveed">
+    <End Role="Proveed" Type="Self.Proveed" Multiplicity="1" />
+    <End Role="Proveed_01" Type="Self.Proveed_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveed">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Proveed_01">
+        <PropertyRef Name="IdProveed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DiAviModelStoreContainer">
+    <EntitySet Name="Libreria" EntityType="Self.Libreria" Schema="ADM" store:Type="Tables" />
+    <EntitySet Name="Compra" EntityType="Self.Compra" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Compra_01" EntityType="Self.Compra_01" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="CompraIng" EntityType="Self.CompraIng" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Proveed" EntityType="Self.Proveed" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Proveed_01" EntityType="Self.Proveed_01" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Deposito" EntityType="Self.Deposito" Schema="INV" store:Type="Tables" />
+    <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="INV" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="REG" store:Type="Tables" />
+    <EntitySet Name="Precio" EntityType="Self.Precio" Schema="REG" store:Type="Tables" />
+    <EntitySet Name="PrecioCat" EntityType="Self.PrecioCat" Schema="REG" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="REG" store:Type="Tables" />
+    <EntitySet Name="Estaticos" EntityType="Self.Estaticos" store:Type="Tables" store:Schema="ADM">
+      <DefiningQuery>SELECT 
+    [Estaticos].[Id] AS [Id], 
+    [Estaticos].[Grupo] AS [Grupo], 
+    [Estaticos].[Orden] AS [Orden], 
+    [Estaticos].[Descrip] AS [Descrip]
+    FROM [ADM].[Estaticos] AS [Estaticos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CompraIng_01" EntityType="Self.CompraIng_01" store:Type="Tables" store:Schema="COM">
+      <DefiningQuery>SELECT 
+    [CompraIng_01].[Id] AS [Id], 
+    [CompraIng_01].[IdCompra] AS [IdCompra], 
+    [CompraIng_01].[IdProduc] AS [IdProduc], 
+    [CompraIng_01].[Estado] AS [Estado], 
+    [CompraIng_01].[UniMin] AS [UniMin], 
+    [CompraIng_01].[Caja] AS [Caja], 
+    [CompraIng_01].[Grupo] AS [Grupo], 
+    [CompraIng_01].[Maple] AS [Maple], 
+    [CompraIng_01].[Cantidad] AS [Cantidad], 
+    [CompraIng_01].[TotalCant] AS [TotalCant], 
+    [CompraIng_01].[PrecioCost] AS [PrecioCost], 
+    [CompraIng_01].[Total] AS [Total], 
+    [CompraIng_01].[Fecha] AS [Fecha], 
+    [CompraIng_01].[Hora] AS [Hora], 
+    [CompraIng_01].[Usuario] AS [Usuario]
+    FROM [COM].[CompraIng_01] AS [CompraIng_01]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Compra__IdProvee__30C33EC3" Association="Self.FK__Compra__IdProvee__30C33EC3">
+      <End Role="Proveed" EntitySet="Proveed" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra__IdSucur__2FCF1A8A" Association="Self.FK__Compra__IdSucur__2FCF1A8A">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra_01__IdCom__3B40CD36" Association="Self.FK__Compra_01__IdCom__3B40CD36">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="Compra_01" EntitySet="Compra_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra_01__IdPro__3C34F16F" Association="Self.FK__Compra_01__IdPro__3C34F16F">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Compra_01" EntitySet="Compra_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraIng__IdCom__45BE5BA9" Association="Self.FK__CompraIng__IdCom__45BE5BA9">
+      <End Role="CompraIng" EntitySet="CompraIng" />
+      <End Role="CompraIng_01" EntitySet="CompraIng_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraIng__IdPro__43D61337" Association="Self.FK__CompraIng__IdPro__43D61337">
+      <End Role="Proveed" EntitySet="Proveed" />
+      <End Role="CompraIng" EntitySet="CompraIng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraIng__IdPro__46B27FE2" Association="Self.FK__CompraIng__IdPro__46B27FE2">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="CompraIng_01" EntitySet="CompraIng_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraIng__IdSuc__42E1EEFE" Association="Self.FK__CompraIng__IdSuc__42E1EEFE">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="CompraIng" EntitySet="CompraIng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Precio_Almacen" Association="Self.FK__Precio_Almacen">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Precio" EntitySet="Precio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Precio_Cat" Association="Self.FK__Precio_Cat">
+      <End Role="PrecioCat" EntitySet="PrecioCat" />
+      <End Role="Precio" EntitySet="Precio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Precio_Product" Association="Self.FK__Precio_Product">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Precio" EntitySet="Precio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Deposito" Association="Self.FK_Deposito">
+      <End Role="Deposito" EntitySet="Deposito" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveed_01_Proveed" Association="Self.FK_Proveed_01_Proveed">
+      <End Role="Proveed" EntitySet="Proveed" />
+      <End Role="Proveed_01" EntitySet="Proveed_01" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

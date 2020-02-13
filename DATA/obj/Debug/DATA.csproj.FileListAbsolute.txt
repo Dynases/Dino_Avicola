@@ -8,3 +8,13 @@ D:\GOGS\DiAvi\DIAvi\DATA\bin\Debug\EntityFramework.SqlServer.xml
 D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
 D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.dll
 D:\GOGS\DiAvi\DIAvi\DATA\obj\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.dll.config
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.xml
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.pdb

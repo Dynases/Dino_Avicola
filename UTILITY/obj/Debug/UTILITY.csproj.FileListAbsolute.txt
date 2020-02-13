@@ -31,6 +31,7 @@ D:\GOGS\DiAvi\DIAvi\UTILITY\obj\Debug\UTILITY.Properties.Resources.resources
 D:\GOGS\DiAvi\DIAvi\UTILITY\obj\Debug\UTILITY.csproj.GenerateResource.Cache
 D:\GOGS\DiAvi\DIAvi\UTILITY\obj\Debug\UTILITY.dll
 D:\GOGS\DiAvi\DIAvi\UTILITY\obj\Debug\UTILITY.pdb
+D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\UTILITY.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\UTILITY.pdb
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar.Design.dll
@@ -53,7 +54,6 @@ D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\ENTITY.pdb
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar.Schedule.xml
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
-D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.Instrumentation.xml
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DATA.pdb
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DATA.dll.config
