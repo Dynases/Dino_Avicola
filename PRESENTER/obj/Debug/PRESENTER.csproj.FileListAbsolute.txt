@@ -91,6 +91,7 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\DATA.pdb
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\DATA.dll.config
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.csprojResolveAssemblyReference.cache
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.adm.Principal.resources
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Compra.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_CompraIngreso.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Proveedor.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Transformacion.resources

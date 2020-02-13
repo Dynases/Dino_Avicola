@@ -42,14 +42,14 @@
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.PanelIzquierda = new System.Windows.Forms.Panel();
             this.GPanel_DatosGenerales = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.Tb_Observacion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.Cb_Almacen2 = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.Cb_Almacen1 = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.Tb_Observacion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -135,7 +135,7 @@
             // 
             // PanelContenidoBuscar
             // 
-            this.PanelContenidoBuscar.Size = new System.Drawing.Size(1232, 646);
+            this.PanelContenidoBuscar.Size = new System.Drawing.Size(853, 627);
             // 
             // btnMin
             // 
@@ -151,7 +151,7 @@
             // 
             // GMPanel_Buscardor
             // 
-            this.GMPanel_Buscardor.Size = new System.Drawing.Size(1232, 646);
+            this.GMPanel_Buscardor.Size = new System.Drawing.Size(853, 627);
             // 
             // 
             // 
@@ -183,11 +183,13 @@
             // 
             // Dgv_GBuscador
             // 
-            this.Dgv_GBuscador.Size = new System.Drawing.Size(1226, 620);
+            this.Dgv_GBuscador.Size = new System.Drawing.Size(847, 601);
             // 
             // LblSubtitulo
             // 
             this.LblSubtitulo.Size = new System.Drawing.Size(853, 36);
+            this.LblSubtitulo.Text = "Registre una nueva transformación . Visualice y/o modifique la información de una" +
+    " transformación previamente registrado.";
             // 
             // PanelFondo
             // 
@@ -275,6 +277,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
             this.panel1.Controls.Add(this.Tb_Total2);
             this.panel1.Controls.Add(this.Tb_Total1);
             this.panel1.Controls.Add(this.labelX12);
@@ -327,8 +330,8 @@
             // 
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.labelX12.Location = new System.Drawing.Point(15, 12);
+            this.labelX12.ForeColor = System.Drawing.Color.White;
+            this.labelX12.Location = new System.Drawing.Point(63, 12);
             this.labelX12.Name = "labelX12";
             this.labelX12.SingleLineColor = System.Drawing.SystemColors.Control;
             this.labelX12.Size = new System.Drawing.Size(46, 16);
@@ -393,6 +396,39 @@
             this.GPanel_DatosGenerales.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GPanel_DatosGenerales.TabIndex = 85;
             this.GPanel_DatosGenerales.Text = "DATOS GENERELAES";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.labelX1.Location = new System.Drawing.Point(3, 116);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.labelX1.Size = new System.Drawing.Size(71, 23);
+            this.labelX1.TabIndex = 343;
+            this.labelX1.Text = "Observación";
+            // 
+            // Tb_Observacion
+            // 
+            this.Tb_Observacion.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.Tb_Observacion.Border.Class = "TextBoxBorder";
+            this.Tb_Observacion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Observacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Observacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.Tb_Observacion.Location = new System.Drawing.Point(108, 118);
+            this.Tb_Observacion.Multiline = true;
+            this.Tb_Observacion.Name = "Tb_Observacion";
+            this.Tb_Observacion.PreventEnterBeep = true;
+            this.Tb_Observacion.Size = new System.Drawing.Size(196, 141);
+            this.Tb_Observacion.TabIndex = 342;
             // 
             // Cb_Almacen2
             // 
@@ -497,39 +533,6 @@
             this.labelX7.TabIndex = 254;
             this.labelX7.Text = "Salida";
             // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.labelX1.Location = new System.Drawing.Point(3, 116);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX1.Size = new System.Drawing.Size(71, 23);
-            this.labelX1.TabIndex = 343;
-            this.labelX1.Text = "Observación";
-            // 
-            // Tb_Observacion
-            // 
-            this.Tb_Observacion.BackColor = System.Drawing.SystemColors.Window;
-            // 
-            // 
-            // 
-            this.Tb_Observacion.Border.Class = "TextBoxBorder";
-            this.Tb_Observacion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_Observacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_Observacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.Tb_Observacion.Location = new System.Drawing.Point(108, 118);
-            this.Tb_Observacion.Multiline = true;
-            this.Tb_Observacion.Name = "Tb_Observacion";
-            this.Tb_Observacion.PreventEnterBeep = true;
-            this.Tb_Observacion.Size = new System.Drawing.Size(196, 141);
-            this.Tb_Observacion.TabIndex = 342;
-            // 
             // F1_Transformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +540,7 @@
             this.ClientSize = new System.Drawing.Size(853, 687);
             this.Name = "F1_Transformacion";
             this.Text = "F1_Transformacion";
+            this.Load += new System.EventHandler(this.F1_Transformacion_Load);
             this.PanelContenidoRegistro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);

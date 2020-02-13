@@ -62,6 +62,8 @@
             this.GPanel_Detalle = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Dgv_Detalle = new Janus.Windows.GridEX.GridEX();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.Tb_TSaldoTo = new DevComponents.Editors.DoubleInput();
             this.Tb_MTotal = new DevComponents.Editors.DoubleInput();
@@ -70,8 +72,6 @@
             this.Tb_TTotal = new DevComponents.Editors.DoubleInput();
             this.Tb_TCajas = new DevComponents.Editors.DoubleInput();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -103,12 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TCajas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LblSubtitulo
-            // 
-            this.LblSubtitulo.Size = new System.Drawing.Size(1133, 36);
-            this.LblSubtitulo.Text = "Registre un nueva compra. Visualice y/o modifique la información de una comprapre" +
-    "viamente registrado. ";
             // 
             // PanelContenidoRegistro
             // 
@@ -220,6 +214,12 @@
             // 
             this.Dgv_GBuscador.Size = new System.Drawing.Size(1127, 571);
             this.Dgv_GBuscador.SelectionChanged += new System.EventHandler(this.Dgv_GBuscador_SelectionChanged);
+            // 
+            // LblSubtitulo
+            // 
+            this.LblSubtitulo.Size = new System.Drawing.Size(1133, 36);
+            this.LblSubtitulo.Text = "Registre un nuevo ingreso. Visualice y/o modifique la información de un ingreso p" +
+    "reviamente registrado. ";
             // 
             // panel1
             // 
@@ -826,6 +826,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
             this.panel3.Controls.Add(this.labelX14);
             this.panel3.Controls.Add(this.labelX15);
             this.panel3.Controls.Add(this.labelX13);
@@ -842,6 +843,40 @@
             this.panel3.Size = new System.Drawing.Size(785, 100);
             this.panel3.TabIndex = 0;
             // 
+            // labelX14
+            // 
+            this.labelX14.AutoSize = true;
+            this.labelX14.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX14.ForeColor = System.Drawing.Color.White;
+            this.labelX14.Location = new System.Drawing.Point(335, 36);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.labelX14.Size = new System.Drawing.Size(104, 16);
+            this.labelX14.TabIndex = 235;
+            this.labelX14.Text = "TOTAL MAPLES";
+            // 
+            // labelX15
+            // 
+            this.labelX15.AutoSize = true;
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX15.ForeColor = System.Drawing.Color.White;
+            this.labelX15.Location = new System.Drawing.Point(335, 8);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.labelX15.Size = new System.Drawing.Size(174, 16);
+            this.labelX15.TabIndex = 234;
+            this.labelX15.Text = "TOTAL RECEPCION FISICA";
+            // 
             // labelX13
             // 
             this.labelX13.AutoSize = true;
@@ -851,7 +886,7 @@
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.labelX13.ForeColor = System.Drawing.Color.White;
             this.labelX13.Location = new System.Drawing.Point(6, 41);
             this.labelX13.Name = "labelX13";
             this.labelX13.SingleLineColor = System.Drawing.SystemColors.Control;
@@ -970,47 +1005,13 @@
             // 
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.labelX12.ForeColor = System.Drawing.Color.White;
             this.labelX12.Location = new System.Drawing.Point(6, 13);
             this.labelX12.Name = "labelX12";
             this.labelX12.SingleLineColor = System.Drawing.SystemColors.Control;
             this.labelX12.Size = new System.Drawing.Size(130, 16);
             this.labelX12.TabIndex = 220;
             this.labelX12.Text = "TOTAL ENVIADO(h)";
-            // 
-            // labelX14
-            // 
-            this.labelX14.AutoSize = true;
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.labelX14.Location = new System.Drawing.Point(335, 36);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX14.Size = new System.Drawing.Size(104, 16);
-            this.labelX14.TabIndex = 235;
-            this.labelX14.Text = "TOTAL MAPLES";
-            // 
-            // labelX15
-            // 
-            this.labelX15.AutoSize = true;
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.labelX15.Location = new System.Drawing.Point(335, 8);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX15.Size = new System.Drawing.Size(174, 16);
-            this.labelX15.TabIndex = 234;
-            this.labelX15.Text = "TOTAL RECEPCION FISICA";
             // 
             // F1_CompraIngreso
             // 

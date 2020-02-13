@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace PRESENTER.com
 {
-    public partial class FI_Seleccion : MODEL.ModeloF1
+    public partial class F1_Compra : MODEL.ModeloF1
     {
-        public FI_Seleccion()
+        public F1_Compra()
         {
             InitializeComponent();
         }
 
-        private void FI_Seleccion_Load(object sender, EventArgs e)
+        private void F1_Compra_Load(object sender, EventArgs e)
         {
-            this.Name = "SELECCION";
+            this.Name = "COMPRA";
         }
     }
 }

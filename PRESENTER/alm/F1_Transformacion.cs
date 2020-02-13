@@ -16,5 +16,10 @@ namespace PRESENTER.com
         {
             InitializeComponent();
         }
+
+        private void F1_Transformacion_Load(object sender, EventArgs e)
+        {
+            this.Name = "TRANSFORMACION";
+        }
     }
 }

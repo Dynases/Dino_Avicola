@@ -23,6 +23,7 @@ D:\GOGS\DiAvi\DIAvi\LOGIC\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GOGS\DiAvi\DIAvi\LOGIC\obj\Debug\LOGIC.csprojResolveAssemblyReference.cache
 D:\GOGS\DiAvi\DIAvi\LOGIC\obj\Debug\LOGIC.dll
 D:\GOGS\DiAvi\DIAvi\LOGIC\obj\Debug\LOGIC.pdb
+D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\LOGIC.dll.config
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\LOGIC.dll
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\LOGIC.pdb
@@ -44,7 +45,6 @@ D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\EntityFramework.xml
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\DATA.pdb
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\DATA.dll.config
-D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.csprojResolveAssemblyReference.cache
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.dll
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.pdb
