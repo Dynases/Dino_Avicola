@@ -51,7 +51,13 @@ namespace PRESENTER.adm
 
         private void Metro_Transformacion_Click(object sender, EventArgs e)
         {
-            FI_Transformacio frm = new FI_Transformacio();
+            FI_Seleccion frm = new FI_Seleccion();
+            frm.Show();
+        }
+
+        private void Metro_Transformacion_Click_1(object sender, EventArgs e)
+        {
+            F1_Transformacion frm = new F1_Transformacion();
             frm.Show();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRESENTER.com
 {
-    public partial class FI_Transformacio : MODEL.ModeloF1
+    public partial class F1_Transformacion : MODEL.ModeloF1
     {
-        public FI_Transformacio()
+        public F1_Transformacion()
         {
             InitializeComponent();
         }

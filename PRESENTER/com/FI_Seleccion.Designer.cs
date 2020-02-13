@@ -1,6 +1,6 @@
 ﻿namespace PRESENTER.com
 {
-    partial class FI_Transformacio
+    partial class FI_Seleccion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             Janus.Windows.GridEX.GridEXLayout Cb_Tipo_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             Janus.Windows.GridEX.GridEXLayout Cb_Almacen_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FI_Transformacio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FI_Seleccion));
             this.PanelFondo = new System.Windows.Forms.Panel();
             this.PanelIzquierda = new System.Windows.Forms.Panel();
             this.PanelDerecho = new System.Windows.Forms.Panel();

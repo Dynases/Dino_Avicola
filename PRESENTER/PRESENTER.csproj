@@ -162,11 +162,17 @@
     <Compile Include="com\F1_Proveedor.Designer.cs">
       <DependentUpon>F1_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="com\FI_Transformacio.cs">
+    <Compile Include="com\F1_Transformacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="com\FI_Transformacio.Designer.cs">
-      <DependentUpon>FI_Transformacio.cs</DependentUpon>
+    <Compile Include="com\F1_Transformacion.Designer.cs">
+      <DependentUpon>F1_Transformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\FI_Seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\FI_Seleccion.Designer.cs">
+      <DependentUpon>FI_Seleccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ServiceDesktop\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -213,8 +219,11 @@
     <EmbeddedResource Include="com\F1_Proveedor.resx">
       <DependentUpon>F1_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="com\FI_Transformacio.resx">
-      <DependentUpon>FI_Transformacio.cs</DependentUpon>
+    <EmbeddedResource Include="com\F1_Transformacion.resx">
+      <DependentUpon>F1_Transformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\FI_Seleccion.resx">
+      <DependentUpon>FI_Seleccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrUEBA.resx">
       <DependentUpon>PrUEBA.cs</DependentUpon>
