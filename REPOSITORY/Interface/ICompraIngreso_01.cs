@@ -11,6 +11,6 @@ namespace REPOSITORY.Interface
     {
         List<VCompraIngreso_01> ListarXId(int id);
 
-        List<VCompraIngreso_01> ListarXId2();
+        List<VCompraIngreso_01> ListarXId2(int IdGrupo2);
     }
 }

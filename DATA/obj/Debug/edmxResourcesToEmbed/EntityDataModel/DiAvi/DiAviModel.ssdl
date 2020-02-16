@@ -30,14 +30,14 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdSucur" Type="int" Nullable="false" />
+    <Property Name="IdSuc" Type="int" Nullable="false" />
     <Property Name="IdProvee" Type="int" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
     <Property Name="FechaDoc" Type="date" Nullable="false" />
-    <Property Name="Tipo" Type="int" Nullable="false" />
-    <Property Name="FechaCred" Type="date" Nullable="false" />
-    <Property Name="Observ" Type="nvarchar" MaxLength="50" />
-    <Property Name="Descuen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TipoVenta" Type="int" Nullable="false" />
+    <Property Name="FechaVen" Type="date" Nullable="false" />
+    <Property Name="Observ" Type="nvarchar" MaxLength="150" />
+    <Property Name="Descu" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
@@ -47,19 +47,17 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdCompra" Type="int" Nullable="false" />
-    <Property Name="IdProduc" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
-    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="UniMin" Type="int" Nullable="false" />
-    <Property Name="PrecioCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Canti" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Costo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Lote" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="FechaVen" Type="date" Nullable="false" />
-    <Property Name="SubTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Utilidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="PrecioVen" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="Observ" Type="nvarchar" MaxLength="30" />
+    <Property Name="Porcent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
@@ -76,10 +74,13 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
     <Property Name="FechaEnt" Type="date" Nullable="false" />
     <Property Name="FechaRec" Type="date" Nullable="false" />
     <Property Name="Placa" Type="nvarchar" MaxLength="15" />
+    <Property Name="EdadSemana" Type="nvarchar" MaxLength="15" Nullable="false" />
     <Property Name="Tipo" Type="int" Nullable="false" />
     <Property Name="Obser" Type="nvarchar" MaxLength="50" />
     <Property Name="Entregado" Type="nvarchar" MaxLength="50" />
     <Property Name="Recibido" Type="int" Nullable="false" />
+    <Property Name="TotalRecibido" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalVendido" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
@@ -162,6 +163,32 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <EntityType Name="Seleccion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompraIng" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seleccion_01">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSeleccion" Type="int" Nullable="false" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
   <EntityType Name="Deposito">
     <Key>
       <PropertyRef Name="Id" />
@@ -193,6 +220,31 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transformacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSucSalida" Type="int" Nullable="false" />
+    <Property Name="IdSucIngreso" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Observ" Type="nvarchar" MaxLength="250" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transformacion_01">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTransformacion" Type="int" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="TotalProd" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="Cliente">
     <Key>
@@ -272,54 +324,6 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <Property Name="Hora" Type="nvarchar" MaxLength="5" Nullable="false" />
     <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Compra__IdProvee__30C33EC3">
-    <End Role="Proveed" Type="Self.Proveed" Multiplicity="1" />
-    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Proveed">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Compra">
-        <PropertyRef Name="IdProvee" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Compra__IdSucur__2FCF1A8A">
-    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
-    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Sucursal">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Compra">
-        <PropertyRef Name="IdSucur" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Compra_01__IdCom__3B40CD36">
-    <End Role="Compra" Type="Self.Compra" Multiplicity="1" />
-    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Compra">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Compra_01">
-        <PropertyRef Name="IdCompra" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Compra_01__IdPro__3C34F16F">
-    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
-    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Compra_01">
-        <PropertyRef Name="IdProduc" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__CompraIng__IdCom__45BE5BA9">
     <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="1" />
     <End Role="CompraIng_01" Type="Self.CompraIng_01" Multiplicity="*" />
@@ -404,6 +408,54 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Compra_01_Compra">
+    <End Role="Compra" Type="Self.Compra" Multiplicity="1" />
+    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra_01">
+        <PropertyRef Name="IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_01_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Compra_01" Type="Self.Compra_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra_01">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_IdProveedor">
+    <End Role="Proveed" Type="Self.Proveed" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveed">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdProvee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_IdSucusal">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdSuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Deposito">
     <End Role="Deposito" Type="Self.Deposito" Multiplicity="1" />
     <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
@@ -428,6 +480,66 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Seleccion_01_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Seleccion_01" Type="Self.Seleccion_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Seleccion_01">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seleccion_01_Seleccion">
+    <End Role="Seleccion" Type="Self.Seleccion" Multiplicity="1" />
+    <End Role="Seleccion_01" Type="Self.Seleccion_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seleccion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Seleccion_01">
+        <PropertyRef Name="IdSeleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seleccion_CompraIng">
+    <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="1" />
+    <End Role="Seleccion" Type="Self.Seleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompraIng">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Seleccion">
+        <PropertyRef Name="IdCompraIng" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transformacion_01_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Transformacion_01" Type="Self.Transformacion_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transformacion_01">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transformacion_01_Transformacion">
+    <End Role="Transformacion" Type="Self.Transformacion" Multiplicity="0..1" />
+    <End Role="Transformacion_01" Type="Self.Transformacion_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transformacion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transformacion_01">
+        <PropertyRef Name="IdTransformacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DiAviModelStoreContainer">
     <EntitySet Name="Libreria" EntityType="Self.Libreria" Schema="ADM" store:Type="Tables" />
     <EntitySet Name="Compra" EntityType="Self.Compra" Schema="COM" store:Type="Tables" />
@@ -435,8 +547,12 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <EntitySet Name="CompraIng" EntityType="Self.CompraIng" Schema="COM" store:Type="Tables" />
     <EntitySet Name="Proveed" EntityType="Self.Proveed" Schema="COM" store:Type="Tables" />
     <EntitySet Name="Proveed_01" EntityType="Self.Proveed_01" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Seleccion" EntityType="Self.Seleccion" Schema="COM" store:Type="Tables" />
+    <EntitySet Name="Seleccion_01" EntityType="Self.Seleccion_01" Schema="COM" store:Type="Tables" />
     <EntitySet Name="Deposito" EntityType="Self.Deposito" Schema="INV" store:Type="Tables" />
     <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="INV" store:Type="Tables" />
+    <EntitySet Name="Transformacion" EntityType="Self.Transformacion" Schema="INV" store:Type="Tables" />
+    <EntitySet Name="Transformacion_01" EntityType="Self.Transformacion_01" Schema="INV" store:Type="Tables" />
     <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="REG" store:Type="Tables" />
     <EntitySet Name="Precio" EntityType="Self.Precio" Schema="REG" store:Type="Tables" />
     <EntitySet Name="PrecioCat" EntityType="Self.PrecioCat" Schema="REG" store:Type="Tables" />
@@ -468,22 +584,6 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     [CompraIng_01].[Usuario] AS [Usuario]
     FROM [COM].[CompraIng_01] AS [CompraIng_01]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__Compra__IdProvee__30C33EC3" Association="Self.FK__Compra__IdProvee__30C33EC3">
-      <End Role="Proveed" EntitySet="Proveed" />
-      <End Role="Compra" EntitySet="Compra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Compra__IdSucur__2FCF1A8A" Association="Self.FK__Compra__IdSucur__2FCF1A8A">
-      <End Role="Sucursal" EntitySet="Sucursal" />
-      <End Role="Compra" EntitySet="Compra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Compra_01__IdCom__3B40CD36" Association="Self.FK__Compra_01__IdCom__3B40CD36">
-      <End Role="Compra" EntitySet="Compra" />
-      <End Role="Compra_01" EntitySet="Compra_01" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Compra_01__IdPro__3C34F16F" Association="Self.FK__Compra_01__IdPro__3C34F16F">
-      <End Role="Producto" EntitySet="Producto" />
-      <End Role="Compra_01" EntitySet="Compra_01" />
-    </AssociationSet>
     <AssociationSet Name="FK__CompraIng__IdCom__45BE5BA9" Association="Self.FK__CompraIng__IdCom__45BE5BA9">
       <End Role="CompraIng" EntitySet="CompraIng" />
       <End Role="CompraIng_01" EntitySet="CompraIng_01" />
@@ -512,6 +612,22 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
       <End Role="Producto" EntitySet="Producto" />
       <End Role="Precio" EntitySet="Precio" />
     </AssociationSet>
+    <AssociationSet Name="FK_Compra_01_Compra" Association="Self.FK_Compra_01_Compra">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="Compra_01" EntitySet="Compra_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_01_Producto" Association="Self.FK_Compra_01_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Compra_01" EntitySet="Compra_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_IdProveedor" Association="Self.FK_Compra_IdProveedor">
+      <End Role="Proveed" EntitySet="Proveed" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_IdSucusal" Association="Self.FK_Compra_IdSucusal">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
     <AssociationSet Name="FK_Deposito" Association="Self.FK_Deposito">
       <End Role="Deposito" EntitySet="Deposito" />
       <End Role="Sucursal" EntitySet="Sucursal" />
@@ -519,6 +635,26 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <AssociationSet Name="FK_Proveed_01_Proveed" Association="Self.FK_Proveed_01_Proveed">
       <End Role="Proveed" EntitySet="Proveed" />
       <End Role="Proveed_01" EntitySet="Proveed_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seleccion_01_Producto" Association="Self.FK_Seleccion_01_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Seleccion_01" EntitySet="Seleccion_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seleccion_01_Seleccion" Association="Self.FK_Seleccion_01_Seleccion">
+      <End Role="Seleccion" EntitySet="Seleccion" />
+      <End Role="Seleccion_01" EntitySet="Seleccion_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seleccion_CompraIng" Association="Self.FK_Seleccion_CompraIng">
+      <End Role="CompraIng" EntitySet="CompraIng" />
+      <End Role="Seleccion" EntitySet="Seleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transformacion_01_Producto" Association="Self.FK_Transformacion_01_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Transformacion_01" EntitySet="Transformacion_01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transformacion_01_Transformacion" Association="Self.FK_Transformacion_01_Transformacion">
+      <End Role="Transformacion" EntitySet="Transformacion" />
+      <End Role="Transformacion_01" EntitySet="Transformacion_01" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -46,6 +46,11 @@
     <Compile Include="com\CompraIngreso\View\VCompraIngreso.cs" />
     <Compile Include="com\CompraIngreso\View\VCompraIngresoLista.cs" />
     <Compile Include="com\CompraIngreso_01\VCompraIngreso_01.cs" />
+    <Compile Include="com\Compra\View\VCompra.cs" />
+    <Compile Include="com\Seleccion\View\VSeleccion.cs" />
+    <Compile Include="com\Seleccion\View\VSeleccionLista.cs" />
+    <Compile Include="com\Seleccion_01\View\VSeleccion_01.cs" />
+    <Compile Include="com\Seleccion_01\View\VSeleccion_01_Lista.cs" />
     <Compile Include="inv\Sucursal\View\VSucursalCombo.cs" />
     <Compile Include="Libreria\View\VLibreria.cs" />
     <Compile Include="Libreria\View\VLibreriaLista.cs" />
@@ -62,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cliente\Report\" />
+    <Folder Include="com\Compra_01\View\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DATA\DATA.csproj">

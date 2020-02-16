@@ -41,7 +41,6 @@
             this.Tb_Edad = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
-            this.btn_Tipo = new DevComponents.DotNetBar.ButtonX();
             this.Cb_Tipo = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.tb_Proveedor = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -66,12 +65,13 @@
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.Tb_TSaldoTo = new DevComponents.Editors.DoubleInput();
-            this.Tb_MTotal = new DevComponents.Editors.DoubleInput();
-            this.Tb_MCajas = new DevComponents.Editors.DoubleInput();
+            this.Tb_TotalMaples = new DevComponents.Editors.DoubleInput();
+            this.Tb_TotalVendido = new DevComponents.Editors.DoubleInput();
             this.Tb_TPrecio = new DevComponents.Editors.DoubleInput();
-            this.Tb_TTotal = new DevComponents.Editors.DoubleInput();
-            this.Tb_TCajas = new DevComponents.Editors.DoubleInput();
+            this.Tb_TotalFisico = new DevComponents.Editors.DoubleInput();
+            this.Tb_TotalEnviado = new DevComponents.Editors.DoubleInput();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -97,11 +97,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TSaldoTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_MTotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_MCajas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalMaples)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalVendido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_TTotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_TCajas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalFisico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalEnviado)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoRegistro
@@ -243,7 +243,6 @@
             this.GPanel_DatosGenerales.Controls.Add(this.Tb_Edad);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX9);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX8);
-            this.GPanel_DatosGenerales.Controls.Add(this.btn_Tipo);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Tipo);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX7);
             this.GPanel_DatosGenerales.Controls.Add(this.tb_Proveedor);
@@ -425,20 +424,6 @@
             this.labelX8.Size = new System.Drawing.Size(71, 23);
             this.labelX8.TabIndex = 336;
             this.labelX8.Text = "Observación";
-            // 
-            // btn_Tipo
-            // 
-            this.btn_Tipo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Tipo.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.btn_Tipo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tipo.Image")));
-            this.btn_Tipo.ImageFixedSize = new System.Drawing.Size(28, 28);
-            this.btn_Tipo.Location = new System.Drawing.Point(309, 200);
-            this.btn_Tipo.Name = "btn_Tipo";
-            this.btn_Tipo.Size = new System.Drawing.Size(28, 29);
-            this.btn_Tipo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_Tipo.TabIndex = 335;
-            this.btn_Tipo.Visible = false;
-            this.btn_Tipo.Click += new System.EventHandler(this.btn_Tipo_Click);
             // 
             // Cb_Tipo
             // 
@@ -764,7 +749,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(785, 389);
+            this.panel4.Size = new System.Drawing.Size(785, 372);
             this.panel4.TabIndex = 1;
             // 
             // GPanel_Detalle
@@ -778,7 +763,7 @@
             this.GPanel_Detalle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GPanel_Detalle.Location = new System.Drawing.Point(0, 0);
             this.GPanel_Detalle.Name = "GPanel_Detalle";
-            this.GPanel_Detalle.Size = new System.Drawing.Size(785, 389);
+            this.GPanel_Detalle.Size = new System.Drawing.Size(785, 372);
             // 
             // 
             // 
@@ -817,30 +802,31 @@
             this.Dgv_Detalle.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.True;
             this.Dgv_Detalle.Location = new System.Drawing.Point(0, 0);
             this.Dgv_Detalle.Name = "Dgv_Detalle";
-            this.Dgv_Detalle.Size = new System.Drawing.Size(779, 363);
+            this.Dgv_Detalle.Size = new System.Drawing.Size(779, 346);
             this.Dgv_Detalle.TabIndex = 258;
             this.Dgv_Detalle.CellValueChanged += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Detalle_CellValueChanged);
             this.Dgv_Detalle.CellEdited += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Detalle_CellEdited);
             this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell);
-            this.Dgv_Detalle.UpdatingCell += new Janus.Windows.GridEX.UpdatingCellEventHandler(this.Dgv_Detalle_UpdatingCell);
+           // this.Dgv_Detalle.UpdatingCell += new Janus.Windows.GridEX.UpdatingCellEventHandler(this.Dgv_Detalle_UpdatingCell);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.labelX14);
             this.panel3.Controls.Add(this.labelX15);
             this.panel3.Controls.Add(this.labelX13);
             this.panel3.Controls.Add(this.Tb_TSaldoTo);
-            this.panel3.Controls.Add(this.Tb_MTotal);
-            this.panel3.Controls.Add(this.Tb_MCajas);
+            this.panel3.Controls.Add(this.Tb_TotalMaples);
+            this.panel3.Controls.Add(this.Tb_TotalVendido);
             this.panel3.Controls.Add(this.Tb_TPrecio);
-            this.panel3.Controls.Add(this.Tb_TTotal);
-            this.panel3.Controls.Add(this.Tb_TCajas);
+            this.panel3.Controls.Add(this.Tb_TotalFisico);
+            this.panel3.Controls.Add(this.Tb_TotalEnviado);
             this.panel3.Controls.Add(this.labelX12);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 389);
+            this.panel3.Location = new System.Drawing.Point(0, 372);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(785, 100);
+            this.panel3.Size = new System.Drawing.Size(785, 117);
             this.panel3.TabIndex = 0;
             // 
             // labelX14
@@ -911,39 +897,39 @@
             this.Tb_TSaldoTo.TabIndex = 232;
             this.Tb_TSaldoTo.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // Tb_MTotal
+            // Tb_TotalMaples
             // 
             // 
             // 
             // 
-            this.Tb_MTotal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_MTotal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_MTotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_MTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_MTotal.Increment = 1D;
-            this.Tb_MTotal.Location = new System.Drawing.Point(515, 35);
-            this.Tb_MTotal.MinValue = 0D;
-            this.Tb_MTotal.Name = "Tb_MTotal";
-            this.Tb_MTotal.Size = new System.Drawing.Size(80, 22);
-            this.Tb_MTotal.TabIndex = 231;
-            this.Tb_MTotal.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_TotalMaples.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TotalMaples.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TotalMaples.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TotalMaples.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TotalMaples.Increment = 1D;
+            this.Tb_TotalMaples.Location = new System.Drawing.Point(515, 35);
+            this.Tb_TotalMaples.MinValue = 0D;
+            this.Tb_TotalMaples.Name = "Tb_TotalMaples";
+            this.Tb_TotalMaples.Size = new System.Drawing.Size(80, 22);
+            this.Tb_TotalMaples.TabIndex = 231;
+            this.Tb_TotalMaples.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // Tb_MCajas
-            // 
-            // 
+            // Tb_TotalVendido
             // 
             // 
-            this.Tb_MCajas.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_MCajas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_MCajas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_MCajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_MCajas.Increment = 1D;
-            this.Tb_MCajas.Location = new System.Drawing.Point(142, 36);
-            this.Tb_MCajas.MinValue = 0D;
-            this.Tb_MCajas.Name = "Tb_MCajas";
-            this.Tb_MCajas.Size = new System.Drawing.Size(84, 22);
-            this.Tb_MCajas.TabIndex = 227;
-            this.Tb_MCajas.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            // 
+            // 
+            this.Tb_TotalVendido.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TotalVendido.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TotalVendido.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TotalVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TotalVendido.Increment = 1D;
+            this.Tb_TotalVendido.Location = new System.Drawing.Point(142, 36);
+            this.Tb_TotalVendido.MinValue = 0D;
+            this.Tb_TotalVendido.Name = "Tb_TotalVendido";
+            this.Tb_TotalVendido.Size = new System.Drawing.Size(84, 22);
+            this.Tb_TotalVendido.TabIndex = 227;
+            this.Tb_TotalVendido.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // Tb_TPrecio
             // 
@@ -962,39 +948,39 @@
             this.Tb_TPrecio.TabIndex = 226;
             this.Tb_TPrecio.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // Tb_TTotal
+            // Tb_TotalFisico
             // 
             // 
             // 
             // 
-            this.Tb_TTotal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_TTotal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_TTotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_TTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_TTotal.Increment = 1D;
-            this.Tb_TTotal.Location = new System.Drawing.Point(515, 7);
-            this.Tb_TTotal.MinValue = 0D;
-            this.Tb_TTotal.Name = "Tb_TTotal";
-            this.Tb_TTotal.Size = new System.Drawing.Size(80, 22);
-            this.Tb_TTotal.TabIndex = 225;
-            this.Tb_TTotal.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_TotalFisico.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TotalFisico.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TotalFisico.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TotalFisico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TotalFisico.Increment = 1D;
+            this.Tb_TotalFisico.Location = new System.Drawing.Point(515, 7);
+            this.Tb_TotalFisico.MinValue = 0D;
+            this.Tb_TotalFisico.Name = "Tb_TotalFisico";
+            this.Tb_TotalFisico.Size = new System.Drawing.Size(80, 22);
+            this.Tb_TotalFisico.TabIndex = 225;
+            this.Tb_TotalFisico.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // Tb_TCajas
-            // 
-            // 
+            // Tb_TotalEnviado
             // 
             // 
-            this.Tb_TCajas.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_TCajas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_TCajas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_TCajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_TCajas.Increment = 1D;
-            this.Tb_TCajas.Location = new System.Drawing.Point(142, 8);
-            this.Tb_TCajas.MinValue = 0D;
-            this.Tb_TCajas.Name = "Tb_TCajas";
-            this.Tb_TCajas.Size = new System.Drawing.Size(84, 22);
-            this.Tb_TCajas.TabIndex = 221;
-            this.Tb_TCajas.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            // 
+            // 
+            this.Tb_TotalEnviado.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TotalEnviado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TotalEnviado.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TotalEnviado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TotalEnviado.Increment = 1D;
+            this.Tb_TotalEnviado.Location = new System.Drawing.Point(142, 8);
+            this.Tb_TotalEnviado.MinValue = 0D;
+            this.Tb_TotalEnviado.Name = "Tb_TotalEnviado";
+            this.Tb_TotalEnviado.Size = new System.Drawing.Size(84, 22);
+            this.Tb_TotalEnviado.TabIndex = 221;
+            this.Tb_TotalEnviado.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // labelX12
             // 
@@ -1012,6 +998,17 @@
             this.labelX12.Size = new System.Drawing.Size(130, 16);
             this.labelX12.TabIndex = 220;
             this.labelX12.Text = "TOTAL ENVIADO(h)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 15);
+            this.label1.TabIndex = 236;
+            this.label1.Text = "Medidas: Cajas = 360 /  Grupo = 300 / Maple = 30 ";
             // 
             // F1_CompraIngreso
             // 
@@ -1048,11 +1045,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TSaldoTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_MTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_MCajas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalMaples)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalVendido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_TTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_TCajas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalFisico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalEnviado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1086,19 +1083,19 @@
         private DevComponents.DotNetBar.Controls.TextBoxX Tb_Edad;
         internal DevComponents.DotNetBar.LabelX labelX9;
         internal DevComponents.DotNetBar.LabelX labelX8;
-        internal DevComponents.DotNetBar.ButtonX btn_Tipo;
         internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Tipo;
         private DevComponents.DotNetBar.Controls.GroupPanel GPanel_Detalle;
         internal Janus.Windows.GridEX.GridEX Dgv_Detalle;
         internal DevComponents.DotNetBar.LabelX labelX13;
         internal DevComponents.Editors.DoubleInput Tb_TSaldoTo;
-        internal DevComponents.Editors.DoubleInput Tb_MTotal;
-        internal DevComponents.Editors.DoubleInput Tb_MCajas;
+        internal DevComponents.Editors.DoubleInput Tb_TotalMaples;
+        internal DevComponents.Editors.DoubleInput Tb_TotalVendido;
         internal DevComponents.Editors.DoubleInput Tb_TPrecio;
-        internal DevComponents.Editors.DoubleInput Tb_TTotal;
-        internal DevComponents.Editors.DoubleInput Tb_TCajas;
+        internal DevComponents.Editors.DoubleInput Tb_TotalFisico;
+        internal DevComponents.Editors.DoubleInput Tb_TotalEnviado;
         internal DevComponents.DotNetBar.LabelX labelX12;
         internal DevComponents.DotNetBar.LabelX labelX14;
         internal DevComponents.DotNetBar.LabelX labelX15;
+        private System.Windows.Forms.Label label1;
     }
 }

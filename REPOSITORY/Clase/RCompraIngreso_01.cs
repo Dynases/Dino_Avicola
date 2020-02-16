@@ -52,7 +52,7 @@ namespace REPOSITORY.Clase
             }
         }
 
-        public List<VCompraIngreso_01> ListarXId2()
+        public List<VCompraIngreso_01> ListarXId2(int IdGrupo2)
         {
 
             try
@@ -70,7 +70,7 @@ namespace REPOSITORY.Clase
                                       {
                                           idProduc = b.IdProduc
                                       }
-                                      where b.IdPrecioCat.Equals(1)
+                                      where b.IdPrecioCat.Equals(1) && c.Grupo2.Equals(IdGrupo2)
                                       select new VCompraIngreso_01
                                       {
                                           Id = 0,

@@ -16,17 +16,15 @@ namespace DATA.EntityDataModel.DiAvi
     {
         public int Id { get; set; }
         public int IdCompra { get; set; }
-        public int IdProduc { get; set; }
+        public int IdProducto { get; set; }
         public int Estado { get; set; }
-        public decimal Cantidad { get; set; }
-        public int UniMin { get; set; }
-        public decimal PrecioCost { get; set; }
+        public decimal Canti { get; set; }
+        public decimal Costo { get; set; }
         public string Lote { get; set; }
         public System.DateTime FechaVen { get; set; }
-        public decimal SubTotal { get; set; }
         public decimal Utilidad { get; set; }
-        public decimal PrecioVen { get; set; }
-        public string Observ { get; set; }
+        public decimal Porcent { get; set; }
+        public decimal Total { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }

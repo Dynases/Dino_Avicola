@@ -216,7 +216,7 @@ namespace PRESENTER.reg
                     tProducto.Columns.Add("estado_" + rPrecioCat.Field<string>("Cod"));
                     tProducto.Columns.Add(rPrecioCat.Field<int>("Id").ToString().Trim());
                 }
-                for (int j = 0; j < tProducto.Rows.Count -1; j++)
+                for (int j = 0; j < tProducto.Rows.Count ; j++)
                 {
                     int idProdcuto = tProducto.Rows[j].Field<int>("Id");
                     DataRow[] resultado = tPrecio.Select("IdProducto=" + idProdcuto.ToString());

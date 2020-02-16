@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseConexion.cs" />
     <Compile Include="Base\BaseConexionPrincipal.cs" />
+    <Compile Include="Base\BD.cs" />
     <Compile Include="Clase\RCliente.cs" />
     <Compile Include="Clase\RCompraIngreso.cs" />
     <Compile Include="Clase\RCompraIngreso_01.cs" />
@@ -58,7 +60,9 @@
     <Compile Include="Clase\RProducto.cs" />
     <Compile Include="Clase\RProvedor.cs" />
     <Compile Include="Clase\RProveedor_01.cs" />
+    <Compile Include="Clase\RSeleccion.cs" />
     <Compile Include="Clase\RSucursal.cs" />
+    <Compile Include="Clase\RSeleccion_01.cs" />
     <Compile Include="Interface\ICliente.cs" />
     <Compile Include="Interface\ICompraIngreso.cs" />
     <Compile Include="Interface\ICompraIngreso_01.cs" />
@@ -68,6 +72,8 @@
     <Compile Include="Interface\IProducto.cs" />
     <Compile Include="Interface\IProveedor.cs" />
     <Compile Include="Interface\IProveedor_01.cs" />
+    <Compile Include="Interface\ISeleccion.cs" />
+    <Compile Include="Interface\ISeleccion_01.cs" />
     <Compile Include="Interface\ISucursal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

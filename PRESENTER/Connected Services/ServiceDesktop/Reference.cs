@@ -158,6 +158,12 @@ namespace PRESENTER.ServiceDesktop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ProveedorListar", ReplyAction="http://tempuri.org/IServiceDesktop/ProveedorListarResponse")]
         System.Threading.Tasks.Task<ENTITY.Proveedor.View.VProveedorLista[]> ProveedorListarAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ListarEncabezadoResponse")]
+        System.Data.DataTable ListarEncabezado();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ListarEncabezadoResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> ListarEncabezadoAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Proveedor_01ListarXId", ReplyAction="http://tempuri.org/IServiceDesktop/Proveedor_01ListarXIdResponse")]
         ENTITY.Proveedor.View.VProveedor_01Lista[] Proveedor_01ListarXId(int Id);
         
@@ -238,10 +244,22 @@ namespace PRESENTER.ServiceDesktop {
         System.Threading.Tasks.Task<ENTITY.com.CompraIngreso_01.VCompraIngreso_01[]> CmmpraIngreso_01ListarXIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId2", ReplyAction="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId2Response")]
-        ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId2();
+        ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId2(int IdGrupo2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId2", ReplyAction="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId2Response")]
-        System.Threading.Tasks.Task<ENTITY.com.CompraIngreso_01.VCompraIngreso_01[]> CmmpraIngreso_01ListarXId2Async();
+        System.Threading.Tasks.Task<ENTITY.com.CompraIngreso_01.VCompraIngreso_01[]> CmmpraIngreso_01ListarXId2Async(int IdGrupo2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_ListaResponse")]
+        ENTITY.com.Seleccion.View.VSeleccionLista[] Seleccion_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.Seleccion.View.VSeleccionLista[]> Seleccion_ListaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse")]
+        ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync();
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -525,6 +543,14 @@ namespace PRESENTER.ServiceDesktop {
             return base.Channel.ProveedorListarAsync();
         }
         
+        public System.Data.DataTable ListarEncabezado() {
+            return base.Channel.ListarEncabezado();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> ListarEncabezadoAsync() {
+            return base.Channel.ListarEncabezadoAsync();
+        }
+        
         public ENTITY.Proveedor.View.VProveedor_01Lista[] Proveedor_01ListarXId(int Id) {
             return base.Channel.Proveedor_01ListarXId(Id);
         }
@@ -639,12 +665,28 @@ namespace PRESENTER.ServiceDesktop {
             return base.Channel.CmmpraIngreso_01ListarXIdAsync(id);
         }
         
-        public ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId2() {
-            return base.Channel.CmmpraIngreso_01ListarXId2();
+        public ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId2(int IdGrupo2) {
+            return base.Channel.CmmpraIngreso_01ListarXId2(IdGrupo2);
         }
         
-        public System.Threading.Tasks.Task<ENTITY.com.CompraIngreso_01.VCompraIngreso_01[]> CmmpraIngreso_01ListarXId2Async() {
-            return base.Channel.CmmpraIngreso_01ListarXId2Async();
+        public System.Threading.Tasks.Task<ENTITY.com.CompraIngreso_01.VCompraIngreso_01[]> CmmpraIngreso_01ListarXId2Async(int IdGrupo2) {
+            return base.Channel.CmmpraIngreso_01ListarXId2Async(IdGrupo2);
+        }
+        
+        public ENTITY.com.Seleccion.View.VSeleccionLista[] Seleccion_Lista() {
+            return base.Channel.Seleccion_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.Seleccion.View.VSeleccionLista[]> Seleccion_ListaAsync() {
+            return base.Channel.Seleccion_ListaAsync();
+        }
+        
+        public ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_Lista() {
+            return base.Channel.Seleccion_01_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync() {
+            return base.Channel.Seleccion_01_ListaAsync();
         }
     }
 }

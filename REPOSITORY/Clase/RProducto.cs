@@ -198,15 +198,15 @@ namespace REPOSITORY.Clase
                 using (var db = GetEsquema())
                 {
                     var resultado = (from a in db.Producto
-                                      join b in db.CompraIng_01 on
-                                      new { Id = a.Id }
-                                         equals new { Id = b.IdProduc }
-                                      join c in db.Compra_01 on
-                                      new { Id = a.Id }
-                                         equals new { Id = c.IdProduc }
-                                      where a.Id.Equals(IdProducto)
-                                      select a).Count();
-                    return resultado != 0?true:false;
+                                     join b in db.CompraIng_01 on
+                                     new { Id = a.Id }
+                                        equals new { Id = b.IdProduc }
+                                     join c in db.Compra_01 on
+                                     new { Id = a.Id }
+                                        equals new { Id = c.IdProducto }
+                                     where a.Id.Equals(IdProducto)
+                                     select a).Count();
+                    return resultado != 0 ? true : false;
                 }
             }
             catch (Exception ex)

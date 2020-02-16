@@ -15,6 +15,9 @@ using ENTITY.reg.PrecioCategoria.View;
 using ENTITY.reg.Precio.View;
 using ENTITY.com.CompraIngreso.View;
 using ENTITY.com.CompraIngreso_01;
+using System.Data;
+using ENTITY.com.Seleccion.View;
+using ENTITY.com.Seleccion_01.View;
 
 namespace SERVICE
 {
@@ -182,10 +185,18 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
-
-
-
-
+        public DataTable ListarEncabezado()
+        {
+            try
+            {
+                var listResult = new LProveedor().ListarEncabezado();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         #endregion
         #region Proveedor_01
         public List<VProveedor_01Lista> Proveedor_01ListarXId(int id)
@@ -365,11 +376,41 @@ namespace SERVICE
             }
         }
 
-        public List<VCompraIngreso_01> CmmpraIngreso_01ListarXId2()
+        public List<VCompraIngreso_01> CmmpraIngreso_01ListarXId2(int IdGrupo2)
         {
             try
             {
-                var listResult = new LCompraIngreso_01().ListarXId2();
+                var listResult = new LCompraIngreso_01().ListarXId2(IdGrupo2);
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        #endregion
+        #region Seleccion
+        public List<VSeleccionLista> Seleccion_Lista()
+        {
+            try
+            {
+                var listResult = new LSeleccion().Listar();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        #endregion
+        #region Seleccion_01
+        public List<VSeleccion_01_Lista> Seleccion_01_Lista()
+        {
+            try
+            {
+                var listResult = new LSeleccion_01().Listar();
                 return listResult;
             }
             catch (Exception ex)

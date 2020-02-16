@@ -21,22 +21,22 @@ namespace DATA.EntityDataModel.DiAvi
         }
     
         public int Id { get; set; }
-        public int IdSucur { get; set; }
+        public int IdSuc { get; set; }
         public int IdProvee { get; set; }
         public int Estado { get; set; }
         public System.DateTime FechaDoc { get; set; }
-        public int Tipo { get; set; }
-        public System.DateTime FechaCred { get; set; }
+        public int TipoVenta { get; set; }
+        public System.DateTime FechaVen { get; set; }
         public string Observ { get; set; }
-        public decimal Descuen { get; set; }
+        public decimal Descu { get; set; }
         public decimal Total { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }
     
-        public virtual Proveed Proveed { get; set; }
-        public virtual Sucursal Sucursal { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra_01> Compra_01 { get; set; }
+        public virtual Proveed Proveed { get; set; }
+        public virtual Sucursal Sucursal { get; set; }
     }
 }

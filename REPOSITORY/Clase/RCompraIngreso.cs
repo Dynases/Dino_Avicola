@@ -82,8 +82,8 @@ namespace REPOSITORY.Clase
                                       {
                                           Id = a.Id,
                                           IdSucur = a.IdSucur,
-                                          IdProvee = a.IdProvee,
-                                          CantidadSemanas = b.EdadSeman,
+                                          IdProvee = a.IdProvee,                                         
+                                          CantidadSemanas = a.EdadSemana,
                                           Proveedor = c.Descrip,
                                           NumNota = a.NumNota,
                                           FechaEnt = a.FechaEnt,
@@ -93,7 +93,9 @@ namespace REPOSITORY.Clase
                                           Observacion = a.Obser,
                                           Entregado = a.Entregado,
                                           Recibido = a.Recibido,
-                                          Total = a.Total
+                                          Total = a.Total,
+                                          TotalRecibido= a.TotalRecibido,
+                                          TotalVendido =a.TotalVendido
                                       }).ToList();
                     return listResult;
                 }

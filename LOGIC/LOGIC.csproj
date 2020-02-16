@@ -57,7 +57,9 @@
     <Compile Include="Class\LProducto.cs" />
     <Compile Include="Class\LProveedor.cs" />
     <Compile Include="Class\LProveedor_01.cs" />
+    <Compile Include="Class\LSeleccion.cs" />
     <Compile Include="Class\LSucursal.cs" />
+    <Compile Include="Class\LSeleccion_01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

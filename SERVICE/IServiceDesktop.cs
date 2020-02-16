@@ -1,6 +1,8 @@
 ﻿using ENTITY.Cliente.View;
 using ENTITY.com.CompraIngreso.View;
 using ENTITY.com.CompraIngreso_01;
+using ENTITY.com.Seleccion.View;
+using ENTITY.com.Seleccion_01.View;
 using ENTITY.inv.Sucursal.View;
 using ENTITY.Libreria.View;
 using ENTITY.Producto.View;
@@ -9,6 +11,7 @@ using ENTITY.reg.Precio.View;
 using ENTITY.reg.PrecioCategoria.View;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -65,6 +68,8 @@ namespace SERVICE
 
         [OperationContract]
         List<VProveedorLista> ProveedorListar();
+        [OperationContract]
+        DataTable ListarEncabezado();
         #endregion
         #region Proveedor_01
         [OperationContract]
@@ -106,11 +111,21 @@ namespace SERVICE
         [OperationContract]
         List<VCompraIngresoLista> CmmpraIngresoListarXId(int id);
         #endregion
+
+
         #region Compra Ingreso_01
         [OperationContract]
         List<VCompraIngreso_01> CmmpraIngreso_01ListarXId(int id);
         [OperationContract]
-        List<VCompraIngreso_01> CmmpraIngreso_01ListarXId2();
+        List<VCompraIngreso_01> CmmpraIngreso_01ListarXId2(int IdGrupo2);
+        #endregion
+        #region Seleccion
+        [OperationContract]
+        List<VSeleccionLista> Seleccion_Lista();
+        #endregion
+        #region Seleccion_01
+        [OperationContract]
+        List<VSeleccion_01_Lista> Seleccion_01_Lista();
         #endregion
         // TODO: agregue aquí sus operaciones de servicio
     }

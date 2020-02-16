@@ -18,6 +18,7 @@ namespace DATA.EntityDataModel.DiAvi
         public CompraIng()
         {
             this.CompraIng_01 = new HashSet<CompraIng_01>();
+            this.Seleccion = new HashSet<Seleccion>();
         }
     
         public int Id { get; set; }
@@ -28,10 +29,13 @@ namespace DATA.EntityDataModel.DiAvi
         public System.DateTime FechaEnt { get; set; }
         public System.DateTime FechaRec { get; set; }
         public string Placa { get; set; }
+        public string EdadSemana { get; set; }
         public int Tipo { get; set; }
         public string Obser { get; set; }
         public string Entregado { get; set; }
         public int Recibido { get; set; }
+        public decimal TotalRecibido { get; set; }
+        public decimal TotalVendido { get; set; }
         public decimal Total { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
@@ -41,5 +45,7 @@ namespace DATA.EntityDataModel.DiAvi
         public virtual ICollection<CompraIng_01> CompraIng_01 { get; set; }
         public virtual Proveed Proveed { get; set; }
         public virtual Sucursal Sucursal { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Seleccion> Seleccion { get; set; }
     }
 }

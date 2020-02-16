@@ -35,7 +35,7 @@ namespace UTILITY.Global
         public string Header = "";
         public int Tipo = 0;
         public string Context = "";
-        public DataTable Tabla;
+        public GLCelda Tabla;
         public int Alto;
         public int Ancho;
         public Janus.Windows.GridEX.GridEXRow Row;
