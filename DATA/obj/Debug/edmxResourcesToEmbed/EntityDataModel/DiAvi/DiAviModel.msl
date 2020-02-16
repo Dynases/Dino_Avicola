@@ -320,6 +320,7 @@
           <ScalarProperty Name="UniVen" ColumnName="UniVen" />
           <ScalarProperty Name="Descrip" ColumnName="Descrip" />
           <ScalarProperty Name="CodBar" ColumnName="CodBar" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
           <ScalarProperty Name="Granja" ColumnName="Granja" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdProd" ColumnName="IdProd" />

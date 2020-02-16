@@ -28,6 +28,7 @@ namespace DATA.EntityDataModel.DiAvi
         public string IdProd { get; set; }
         public int Estado { get; set; }
         public Nullable<int> Granja { get; set; }
+        public int Tipo { get; set; }
         public string CodBar { get; set; }
         public string Descrip { get; set; }
         public int UniVen { get; set; }

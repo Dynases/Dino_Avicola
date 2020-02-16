@@ -23,6 +23,7 @@ namespace REPOSITORY.Clase
                     var producto = new Producto();
                     producto.IdProd = Producto.IdProd;
                     producto.Estado = producto.Estado;
+                    producto.Tipo = Producto.Tipo;
                     producto.CodBar = Producto.CodBar;
                     producto.Descrip = Producto.Descripcion;
                     producto.UniVen = Producto.UniVenta;
@@ -175,6 +176,7 @@ namespace REPOSITORY.Clase
                                           Id = a.Id,
                                           IdProd =a.IdProd,
                                           CodBar = a.CodBar,
+                                          Tipo = a.Tipo,
                                           Descripcion = a.Descrip,
                                           Peso =a.Peso,
                                           UniVenta =a.UniVen,

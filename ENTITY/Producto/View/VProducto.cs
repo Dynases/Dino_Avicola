@@ -11,6 +11,7 @@ namespace ENTITY.Producto.View
         public int Id { get; set; }
         public string IdProd { get; set; }
         public int Estado { get; set; }
+        public int Tipo { get; set; }
         public string CodBar { get; set; }
         public string Descripcion { get; set; }
         public int UniVenta { get; set; }

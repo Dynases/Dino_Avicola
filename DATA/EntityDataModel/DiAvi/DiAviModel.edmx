@@ -52,8 +52,8 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="IdCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCompra" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IdProducto" Type="int" Nullable="false" />
           <Property Name="Estado" Type="int" Nullable="false" />
           <Property Name="Canti" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -314,6 +314,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
           <Property Name="IdProd" Type="nvarchar" MaxLength="15" />
           <Property Name="Estado" Type="int" Nullable="false" />
           <Property Name="Granja" Type="int" />
+          <Property Name="Tipo" Type="int" Nullable="false" />
           <Property Name="CodBar" Type="nvarchar" MaxLength="15" />
           <Property Name="Descrip" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UniVen" Type="int" Nullable="false" />
@@ -329,7 +330,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
           <Property Name="DescripProduc" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Fecha" Type="date" Nullable="false" />
-          <Property Name="Hora" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Hora" Type="nvarchar" MaxLength="5" />
           <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <Association Name="FK__CompraIng__IdCom__45BE5BA9">
@@ -1253,6 +1254,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
           <Property Name="IdProd" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="Estado" Type="Int32" Nullable="false" />
           <Property Name="Granja" Type="Int32" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
           <Property Name="CodBar" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="Descrip" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UniVen" Type="Int32" Nullable="false" />
@@ -1268,7 +1270,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
           <Property Name="DescripProduc" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Hora" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Hora" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="Usuario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Compra_01" Relationship="DiAviModel.FK_Compra_01_Producto" FromRole="Producto" ToRole="Compra_01" />
           <NavigationProperty Name="Seleccion_01" Relationship="DiAviModel.FK_Seleccion_01_Producto" FromRole="Producto" ToRole="Seleccion_01" />
@@ -1661,6 +1663,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
                 <ScalarProperty Name="UniVen" ColumnName="UniVen" />
                 <ScalarProperty Name="Descrip" ColumnName="Descrip" />
                 <ScalarProperty Name="CodBar" ColumnName="CodBar" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
                 <ScalarProperty Name="Granja" ColumnName="Granja" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="IdProd" ColumnName="IdProd" />

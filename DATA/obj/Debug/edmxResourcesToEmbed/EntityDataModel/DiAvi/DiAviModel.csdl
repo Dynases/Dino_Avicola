@@ -584,6 +584,7 @@
     <Property Name="IdProd" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="Estado" Type="Int32" Nullable="false" />
     <Property Name="Granja" Type="Int32" />
+    <Property Name="Tipo" Type="Int32" Nullable="false" />
     <Property Name="CodBar" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="Descrip" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UniVen" Type="Int32" Nullable="false" />
@@ -599,7 +600,7 @@
     <Property Name="DescripProduc" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Hora" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Hora" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="Usuario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Compra_01" Relationship="DiAviModel.FK_Compra_01_Producto" FromRole="Producto" ToRole="Compra_01" />
     <NavigationProperty Name="Seleccion_01" Relationship="DiAviModel.FK_Seleccion_01_Producto" FromRole="Producto" ToRole="Seleccion_01" />

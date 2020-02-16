@@ -542,6 +542,7 @@ namespace PRESENTER.reg
                 Cb_Grupo4.Enabled = true;
                 Cb_Grupo5.Enabled = true;
                 BtAdicionar.Enabled = true;
+                sw_TipoPro.IsReadOnly = false;  
                 Tb_IdProducto.IsInputReadOnly = false;
                 Tb_Descripcion.ReadOnly = false;
                 Tb_Cantidad.IsInputReadOnly = false;
@@ -573,6 +574,7 @@ namespace PRESENTER.reg
             Cb_Grupo3.Enabled = false;
             Cb_Grupo4.Enabled = false;
             Cb_Grupo5.Enabled = false;
+            sw_TipoPro.IsReadOnly = true;
             Tb_IdProducto.IsInputReadOnly = true;
             Tb_Descripcion.ReadOnly = true;
             Tb_Cantidad.IsInputReadOnly = true;
@@ -626,6 +628,7 @@ namespace PRESENTER.reg
                 Cb_Grupo5.Value = tabla.Select(x => x.Grupo5).First();
                 Tb_IdProducto.Value = lista.IdProducto;
                 Tb_Producto.Text = lista.Producto2;
+                sw_TipoPro.Value = lista.Tipo == 1 ? true : false;
                 Tb_Cantidad.Value = Convert.ToDouble(lista.Cantidad);
                 //Mostrar Imagenes
                 MP_MostrarImagen(tabla.Select(x => x.Imagen).First());
@@ -771,6 +774,7 @@ namespace PRESENTER.reg
                     Grupo3 = Convert.ToInt32(Cb_Grupo3.Value),
                     Grupo4 = Convert.ToInt32(Cb_Grupo4.Value),
                     Grupo5 = Convert.ToInt32(Cb_Grupo5.Value),
+                    Tipo = sw_TipoPro.Value == true ? 1 : 2 , 
                     Imagen = _imagen,
                     IdProducto = Tb_IdProducto.Text == string.Empty ? 0 : Convert.ToInt32(Tb_IdProducto.Value),
                     Producto2 = Tb_Producto.Text == string.Empty ? "": Tb_Producto.Text,
