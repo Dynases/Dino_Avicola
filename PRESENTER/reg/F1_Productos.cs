@@ -542,6 +542,9 @@ namespace PRESENTER.reg
                 Cb_Grupo4.Enabled = true;
                 Cb_Grupo5.Enabled = true;
                 BtAdicionar.Enabled = true;
+                Tb_IdProducto.IsInputReadOnly = false;
+                Tb_Descripcion.ReadOnly = false;
+                Tb_Cantidad.IsInputReadOnly = false;
                 UTGlobal.MG_CrearCarpetaImagenes(EnCarpeta.Imagen, ENSubCarpetas.ImagenesProducto);
                 UTGlobal.MG_CrearCarpetaTemporal();
                 Dgv_Buscardor.Enabled = false;
@@ -570,6 +573,9 @@ namespace PRESENTER.reg
             Cb_Grupo3.Enabled = false;
             Cb_Grupo4.Enabled = false;
             Cb_Grupo5.Enabled = false;
+            Tb_IdProducto.IsInputReadOnly = true;
+            Tb_Descripcion.ReadOnly = true;
+            Tb_Cantidad.IsInputReadOnly = true;
             BtAdicionar.Enabled = false;
             _Limpiar = false;
             Dgv_Buscardor.Enabled = true;
@@ -584,6 +590,9 @@ namespace PRESENTER.reg
             Tb_Descripcion.Clear();
             Tb_CodBarras.Clear();
             Tb_Peso.Value=0;
+            Tb_IdProducto.Value = 0;
+            Tb_Cantidad.Value = 0;
+            Tb_Producto.Clear();
             if (_Limpiar == false)
             {
                 UTGlobal.MG_SeleccionarCombo(Cb_UnidadVenta);
@@ -602,6 +611,7 @@ namespace PRESENTER.reg
                 Dgv_Buscardor.Row = _Pos;
                 _idOriginal = (int)Dgv_Buscardor.GetValue("id");
                 var tabla = new ServiceDesktop.ServiceDesktopClient().ProductoListarXId(_idOriginal).ToArray();
+                var lista = tabla.First();
                 Tb_Id.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Id.ToString())).Count() > 0 ? tabla.Select(x => x.Id).First().ToString() : "";
                 Tb_CodProducto.Text = tabla.Where(x => !string.IsNullOrEmpty(x.IdProd)).Count() > 0 ? tabla.Select(x => x.IdProd).First().ToString() : "";
                 Tb_Descripcion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Descripcion)).Count() > 0 ? tabla.Select(x => x.Descripcion).First().ToString() : "";
@@ -614,6 +624,9 @@ namespace PRESENTER.reg
                 Cb_Grupo3.Value = tabla.Select(x => x.Grupo3).First();
                 Cb_Grupo4.Value = tabla.Select(x => x.Grupo4).First();
                 Cb_Grupo5.Value = tabla.Select(x => x.Grupo5).First();
+                Tb_IdProducto.Value = lista.IdProducto;
+                Tb_Producto.Text = lista.Producto2;
+                Tb_Cantidad.Value = Convert.ToDouble(lista.Cantidad);
                 //Mostrar Imagenes
                 MP_MostrarImagen(tabla.Select(x => x.Imagen).First());
                 LblPaginacion.Text = Convert.ToString(_Pos + 1) + "/" + Dgv_Buscardor.RowCount.ToString();
@@ -750,7 +763,7 @@ namespace PRESENTER.reg
                     Estado = Convert.ToInt32(ENProductoEstado.Activo),
                     Descripcion = Tb_Descripcion.Text,
                     CodBar = Tb_CodBarras.Text,
-                    Peso = string.Empty == Tb_Peso.Text ? 0: Convert.ToDecimal(Tb_Peso.Text),
+                    Peso = string.Empty == Tb_Peso.Text ? 0 : Convert.ToDecimal(Tb_Peso.Text),
                     UniVenta = Convert.ToInt32(Cb_UnidadVenta.Value),
                     UniPeso = Convert.ToInt32(Cb_UniPeso.Value),
                     Grupo1 = Convert.ToInt32(Cb_Grupo1.Value),
@@ -759,6 +772,9 @@ namespace PRESENTER.reg
                     Grupo4 = Convert.ToInt32(Cb_Grupo4.Value),
                     Grupo5 = Convert.ToInt32(Cb_Grupo5.Value),
                     Imagen = _imagen,
+                    IdProducto = Tb_IdProducto.Text == string.Empty ? 0 : Convert.ToInt32(Tb_IdProducto.Value),
+                    Producto2 = Tb_Producto.Text == string.Empty ? "": Tb_Producto.Text,
+                    Cantidad = Tb_Cantidad.Text == string.Empty ? 0 : Convert.ToDecimal(Tb_Cantidad.Text),
                     Fecha = DateTime.Now.Date,
                     Hora = DateTime.Now.ToString("hh:mm"),
                     Usuario = UTGlobal.Usuario,

@@ -34,6 +34,9 @@ namespace REPOSITORY.Clase
                     producto.Grupo4 = Producto.Grupo4;
                     producto.Grupo5 = Producto.Grupo5;
                     producto.Imagen = Producto.Imagen;
+                    producto.IdProducto = Producto.IdProducto;
+                    producto.DescripProduc = Producto.Producto2;
+                    producto.Cantidad = Producto.Cantidad;
                     producto.Fecha = Producto.Fecha;
                     producto.Hora = Producto.Hora;
                     producto.Usuario = Producto.Usuario;
@@ -70,6 +73,9 @@ namespace REPOSITORY.Clase
                     producto.Grupo4 = Producto.Grupo4;
                     producto.Grupo5 = Producto.Grupo5;
                     producto.Imagen = Producto.Imagen;
+                    producto.IdProducto = Producto.IdProducto;
+                    producto.DescripProduc = Producto.Producto2;
+                    producto.Cantidad = Producto.Cantidad;
                     producto.Fecha = Producto.Fecha;
                     producto.Hora = Producto.Hora;
                     producto.Usuario = Producto.Usuario;
@@ -179,6 +185,9 @@ namespace REPOSITORY.Clase
                                           Grupo4 =a.Grupo4,
                                           Grupo5 =a.Grupo5,
                                           Imagen =a.Imagen,
+                                          IdProducto =  a.IdProducto,
+                                          Producto2 = a.DescripProduc,
+                                          Cantidad=a.Cantidad,
                                           Usuario =a.Usuario,
                                           Hora =a.Hora,
                                           Fecha =a.Fecha                                        

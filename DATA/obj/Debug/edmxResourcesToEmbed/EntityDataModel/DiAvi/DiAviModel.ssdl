@@ -320,6 +320,9 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     <Property Name="Grupo4" Type="int" Nullable="false" />
     <Property Name="Grupo5" Type="int" Nullable="false" />
     <Property Name="Imagen" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="DescripProduc" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="5" Nullable="false" />
     <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />

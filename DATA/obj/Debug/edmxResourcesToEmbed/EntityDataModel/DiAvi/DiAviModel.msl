@@ -216,30 +216,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Producto">
-      <EntityTypeMapping TypeName="DiAviModel.Producto">
-        <MappingFragment StoreEntitySet="Producto">
-          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-          <ScalarProperty Name="Hora" ColumnName="Hora" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
-          <ScalarProperty Name="Grupo5" ColumnName="Grupo5" />
-          <ScalarProperty Name="Grupo4" ColumnName="Grupo4" />
-          <ScalarProperty Name="Grupo3" ColumnName="Grupo3" />
-          <ScalarProperty Name="Grupo2" ColumnName="Grupo2" />
-          <ScalarProperty Name="Grupo1" ColumnName="Grupo1" />
-          <ScalarProperty Name="Peso" ColumnName="Peso" />
-          <ScalarProperty Name="UniPeso" ColumnName="UniPeso" />
-          <ScalarProperty Name="UniVen" ColumnName="UniVen" />
-          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
-          <ScalarProperty Name="CodBar" ColumnName="CodBar" />
-          <ScalarProperty Name="Granja" ColumnName="Granja" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="IdProd" ColumnName="IdProd" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Estaticos">
       <EntityTypeMapping TypeName="DiAviModel.Estaticos">
         <MappingFragment StoreEntitySet="Estaticos">
@@ -320,6 +296,33 @@
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdProvee" ColumnName="IdProvee" />
           <ScalarProperty Name="IdSucur" ColumnName="IdSucur" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="DiAviModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="DescripProduc" ColumnName="DescripProduc" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Grupo5" ColumnName="Grupo5" />
+          <ScalarProperty Name="Grupo4" ColumnName="Grupo4" />
+          <ScalarProperty Name="Grupo3" ColumnName="Grupo3" />
+          <ScalarProperty Name="Grupo2" ColumnName="Grupo2" />
+          <ScalarProperty Name="Grupo1" ColumnName="Grupo1" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="UniPeso" ColumnName="UniPeso" />
+          <ScalarProperty Name="UniVen" ColumnName="UniVen" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="CodBar" ColumnName="CodBar" />
+          <ScalarProperty Name="Granja" ColumnName="Granja" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdProd" ColumnName="IdProd" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -38,5 +38,32 @@ namespace REPOSITORY.Clase
                 throw new Exception(ex.Message);
             }
         }
+        public List<VSeleccion_01_Lista> ListarXId(int id)
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var listResult = (from a in db.Seleccion_01
+                                      join b in db.Producto on
+                                      new { idProducto = a.IdProducto }
+                                        equals new { idProducto = b.Id }
+                                      select new VSeleccion_01_Lista
+                                      {
+                                          Id = a.Id,
+                                          IdSeleccion = a.IdSeleccion,
+                                          Producto = b.Descrip,
+                                          Cantidad = a.Cantidad,
+                                          Precio = a.Precio,
+                                          Total = a.Total
+                                      }).ToList();
+                    return listResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

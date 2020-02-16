@@ -46,7 +46,7 @@
             this.Tb_Observacion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.Cb_Almacen2 = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Tb_Id = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.Cb_Almacen1 = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -356,7 +356,7 @@
             this.GPanel_DatosGenerales.Controls.Add(this.Tb_Observacion);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Almacen2);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX11);
-            this.GPanel_DatosGenerales.Controls.Add(this.textBoxX1);
+            this.GPanel_DatosGenerales.Controls.Add(this.Tb_Id);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX10);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Almacen1);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX7);
@@ -465,21 +465,21 @@
             this.labelX11.TabIndex = 341;
             this.labelX11.Text = "Ingreso";
             // 
-            // textBoxX1
+            // Tb_Id
             // 
-            this.textBoxX1.BackColor = System.Drawing.SystemColors.Window;
+            this.Tb_Id.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.textBoxX1.Location = new System.Drawing.Point(107, 14);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(66, 23);
-            this.textBoxX1.TabIndex = 339;
+            this.Tb_Id.Border.Class = "TextBoxBorder";
+            this.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.Tb_Id.Location = new System.Drawing.Point(126, 14);
+            this.Tb_Id.Name = "Tb_Id";
+            this.Tb_Id.PreventEnterBeep = true;
+            this.Tb_Id.Size = new System.Drawing.Size(87, 23);
+            this.Tb_Id.TabIndex = 339;
             // 
             // labelX10
             // 
@@ -494,9 +494,9 @@
             this.labelX10.Location = new System.Drawing.Point(3, 14);
             this.labelX10.Name = "labelX10";
             this.labelX10.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX10.Size = new System.Drawing.Size(83, 18);
+            this.labelX10.Size = new System.Drawing.Size(119, 18);
             this.labelX10.TabIndex = 338;
-            this.labelX10.Text = "Nro. Selección";
+            this.labelX10.Text = "Nro. Transformación";
             // 
             // Cb_Almacen1
             // 
@@ -588,7 +588,7 @@
         private DevComponents.DotNetBar.Controls.GroupPanel GPanel_DatosGenerales;
         internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Almacen2;
         internal DevComponents.DotNetBar.LabelX labelX11;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX Tb_Id;
         internal DevComponents.DotNetBar.LabelX labelX10;
         internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Almacen1;
         internal DevComponents.DotNetBar.LabelX labelX7;

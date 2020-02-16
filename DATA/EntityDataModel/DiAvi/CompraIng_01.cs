@@ -30,7 +30,7 @@ namespace DATA.EntityDataModel.DiAvi
         public string Hora { get; set; }
         public string Usuario { get; set; }
     
-        public virtual Producto Producto { get; set; }
         public virtual CompraIng CompraIng { get; set; }
+        public virtual Producto Producto { get; set; }
     }
 }

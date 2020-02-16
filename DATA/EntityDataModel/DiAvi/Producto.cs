@@ -18,10 +18,10 @@ namespace DATA.EntityDataModel.DiAvi
         public Producto()
         {
             this.Compra_01 = new HashSet<Compra_01>();
+            this.Seleccion_01 = new HashSet<Seleccion_01>();
             this.Transformacion_01 = new HashSet<Transformacion_01>();
             this.Precio = new HashSet<Precio>();
             this.CompraIng_01 = new HashSet<CompraIng_01>();
-            this.Seleccion_01 = new HashSet<Seleccion_01>();
         }
     
         public int Id { get; set; }
@@ -39,6 +39,9 @@ namespace DATA.EntityDataModel.DiAvi
         public int Grupo4 { get; set; }
         public int Grupo5 { get; set; }
         public string Imagen { get; set; }
+        public int IdProducto { get; set; }
+        public string DescripProduc { get; set; }
+        public decimal Cantidad { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }
@@ -46,12 +49,12 @@ namespace DATA.EntityDataModel.DiAvi
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra_01> Compra_01 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Seleccion_01> Seleccion_01 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Transformacion_01> Transformacion_01 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Precio> Precio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompraIng_01> CompraIng_01 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Seleccion_01> Seleccion_01 { get; set; }
     }
 }

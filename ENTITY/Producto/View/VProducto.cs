@@ -22,6 +22,10 @@ namespace ENTITY.Producto.View
         public int Grupo4 { get; set; }
         public int Grupo5 { get; set; }
         public string Imagen { get; set; }
+
+        public int IdProducto { get; set; }
+        public string Producto2 { get; set; }
+        public decimal Cantidad { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }

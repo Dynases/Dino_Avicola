@@ -51,6 +51,7 @@
     <Compile Include="com\Seleccion\View\VSeleccionLista.cs" />
     <Compile Include="com\Seleccion_01\View\VSeleccion_01.cs" />
     <Compile Include="com\Seleccion_01\View\VSeleccion_01_Lista.cs" />
+    <Compile Include="com\Seleccion_01\View\VSeleccion_01_ListaDet.cs" />
     <Compile Include="inv\Sucursal\View\VSucursalCombo.cs" />
     <Compile Include="Libreria\View\VLibreria.cs" />
     <Compile Include="Libreria\View\VLibreriaLista.cs" />

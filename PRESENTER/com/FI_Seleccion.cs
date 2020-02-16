@@ -15,6 +15,7 @@ using UTILITY.Enum.EnEstaticos;
 using UTILITY.Global;
 using ENTITY.com.Seleccion.View;
 using ENTITY.com.CompraIngreso_01;
+using ENTITY.com.Seleccion_01.View;
 
 namespace PRESENTER.com
 {
@@ -187,17 +188,17 @@ namespace PRESENTER.com
         {
             try
             {
-                var lresult = new ServiceDesktop.ServiceDesktopClient().Seleccion_01_Lista().ToList();
-                var lista = (from a in lresult
-                            where a.IdSeleccion.Equals(id)
-                             select new { a.Id, a.Producto, a.Cantidad, a.Precio, a.Total }).ToList();
-                if (lista.Count() > 0)
+                List<VSeleccion_01_Lista> lresult = new ServiceDesktop.ServiceDesktopClient().Seleccion_01_Lista().Where(a => a.IdSeleccion == id).ToList();
+                if (lresult.Count() > 0)
                 {
-                    Dgv_Seleccion.DataSource = lista;
+                    Dgv_Seleccion.DataSource = lresult;
                     Dgv_Seleccion.RetrieveStructure();
                     Dgv_Seleccion.AlternatingColors = true;
 
                     Dgv_Seleccion.RootTable.Columns["id"].Visible = false;
+                    Dgv_Seleccion.RootTable.Columns["IdSeleccion"].Visible = false;
+                    Dgv_Seleccion.RootTable.Columns["IdProducto"].Visible = false;
+                    Dgv_Seleccion.RootTable.Columns["Estado"].Visible = false;
 
                     Dgv_Seleccion.RootTable.Columns["Producto"].Caption = "PRODUCTO";
                     Dgv_Seleccion.RootTable.Columns["Producto"].Width = 150;
@@ -206,6 +207,7 @@ namespace PRESENTER.com
                     Dgv_Seleccion.RootTable.Columns["Producto"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
                     Dgv_Seleccion.RootTable.Columns["Producto"].Visible = true;
 
+                    Dgv_Seleccion.RootTable.Columns["Cantidad"].Key = "Cantidad";
                     Dgv_Seleccion.RootTable.Columns["Cantidad"].Caption = "CANT.";
                     Dgv_Seleccion.RootTable.Columns["Cantidad"].FormatString = "0";
                     Dgv_Seleccion.RootTable.Columns["Cantidad"].Width = 75;
@@ -438,9 +440,10 @@ namespace PRESENTER.com
         {           
             e.Cancel = false;            
         }
+
         private void Dgv_Seleccion_EditingCell(object sender, EditingCellEventArgs e)
         {
-            if (Tb_IdCompraIngreso.ReadOnly == false)
+            if (Tb_Id.ReadOnly == false)
             {
                 if (e.Column.Index == Dgv_Seleccion.RootTable.Columns["Cantidad"].Index)
                 {
@@ -458,12 +461,21 @@ namespace PRESENTER.com
         }
         private void Dgv_Seleccion_CellEdited(object sender, ColumnActionEventArgs e)
         {
-            Double cantidad, precio, total;
-            cantidad = Convert.ToDouble(Dgv_Detalle.CurrentRow.Cells["Cantidad"].Value);
-            precio = Convert.ToDouble(Dgv_Detalle.CurrentRow.Cells["Precio"].Value);
-            total = cantidad * precio;
-            Dgv_Detalle.CurrentRow.Cells[9].Value = total;
-            MP_ObtenerCalculo();
+            try
+            {
+                Double cantidad, precio, total;
+                cantidad = Convert.ToDouble(Dgv_Seleccion.CurrentRow.Cells["Cantidad"].Value);
+                precio = Convert.ToDouble(Dgv_Seleccion.CurrentRow.Cells["Precio"].Value);
+                total = cantidad * precio;
+                Dgv_Seleccion.CurrentRow.Cells["Total"].Value = total;
+                MP_ObtenerCalculo();
+            }
+            catch (Exception ex)
+            {
+
+                MP_MostrarMensajeError(ex.Message);
+            }
+           
         }
         #endregion
         #region Metodo heredados
@@ -519,10 +531,16 @@ namespace PRESENTER.com
                 return _Error;
             }          
         }
-
-
         #endregion
 
-       
+        private void Dgv_Seleccion_SelectionChanged(object sender, EventArgs e)
+        {
+            int a = 0;
+        }
+
+        private void Dgv_Detalle_SelectionChanged(object sender, EventArgs e)
+        {
+            int a = 0;
+        }
     }
 }
