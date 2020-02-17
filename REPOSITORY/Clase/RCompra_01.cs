@@ -33,11 +33,11 @@ namespace REPOSITORY.Clase
                                           Cantidad = a.Canti,
                                           Unidad = c.Descrip,
                                           Costo = a.Costo,
+                                          Total = a.Total,
                                           Lote = a.Lote,
                                           FechaVen = a.FechaVen,
                                           Utilidad = a.Utilidad,
-                                          Porcent = a.Porcent,          
-                                          Total = a.Total
+                                          Porcent = a.Porcent                                          
                                       }).ToList();
                     return listResult;
                 }

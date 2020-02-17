@@ -108,9 +108,9 @@ namespace PRESENTER.com
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             _MPos = Dgv_GBuscador.Row;
-            if (_MPos < Dgv_GBuscador.RowCount - 1 && _MPos >= 0)
+            if (_MPos > 0 && Dgv_GBuscador.RowCount > 0)
             {
-                _MPos = Dgv_GBuscador.Row + 1;
+                _MPos = _MPos - 1;
                 Dgv_GBuscador.Row = _MPos;
             }
         }
@@ -671,49 +671,56 @@ namespace PRESENTER.com
         }
         private void MP_MostrarRegistro(int _Pos)
         {
-            Dgv_GBuscador.Row = _Pos;
-            _idOriginal = (int)Dgv_GBuscador.GetValue("id");
-            if (_idOriginal != 0)
+            try
             {
-                var tabla = new ServiceDesktop.ServiceDesktopClient().ProveedorListarXId(_idOriginal).ToArray();
-                VProveedor proveedor = tabla.First();
-                if (tabla.Length > 0)
+                Dgv_GBuscador.Row = _Pos;
+                _idOriginal = (int)Dgv_GBuscador.GetValue("id");
+                if (_idOriginal != 0)
                 {
-                    Tb_Cod.Text = proveedor.Id.ToString();
-                    Tb_CodSpyre.Text = proveedor.IdSpyre.ToString();
-                    Tb_Descripcion.Text = proveedor.Descripcion.ToString();
-                    Tb_Direccion.Text = proveedor.Direccion.ToString();
-                    Tb_Contacto.Text = proveedor.Contacto.ToString();
-                    Tb_Telefono.Text = proveedor.Telefono.ToString();
-                    Tb_Email1.Text = proveedor.Email.ToString();
-                    Tb_Contacto2.Text = proveedor.Contacto.ToString();
-                    Tb_Telefono2.Text = proveedor.Email.ToString();
-                    Tb_Email2.Text = proveedor.Email.ToString();
-                    sw_Tipo.Value = proveedor.Tipo == 1 ? true : false;
-                    Cb_Ciudad.Value = proveedor.Ciudad;
-                    Cb_TipoProveedor.Value = proveedor.TipoProveeedor;
-                    _latitud = Convert.ToDouble(proveedor.Latitud);
-                    _longitud = Convert.ToDouble(proveedor.Longittud);
-                    MP_DibujarUbicacion(Tb_Descripcion.Text, "");
-                    MP_MostrarImagen(proveedor.Imagen);
-                    MP_CargarDetalle(Convert.ToInt32(Tb_Cod.Text));
-                    //Tb_Cod.Text = proveedor.Id.ToString();
-                    //Tb_CodSpyre.Text = tabla.Where(x => !string.IsNullOrEmpty(x.IdSpyre)).Count() > 0 ? tabla.Select(x => x.IdSpyre).First().ToString() : "";
-                    //Tb_Descripcion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Descripcion)).Count() > 0 ? tabla.Select(x => x.Descripcion).First().ToString() : "";
-                    //Tb_Direccion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Direccion)).Count() > 0 ? tabla.Select(x => x.Direccion).First().ToString() : "";
-                    //Tb_Contacto.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Contacto)).Count() > 0 ? tabla.Select(x => x.Contacto).First().ToString() : "";
-                    //Tb_Telefono.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Telefono)).Count() > 0 ? tabla.Select(x => x.Telefono).First().ToString() : "";
-                    //Tb_Email1.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Email)).Count() > 0 ? tabla.Select(x => x.Email).First().ToString() : "";
-                    //sw_Tipo.Value = tabla.Select(x => x.Tipo).First() == 1 ? true : false;
-                    //Cb_Ciudad.Value = tabla.Select(x => x.Ciudad).First();
-                    //Cb_TipoProveedor.Value = tabla.Select(x => x.TipoProveeedor).First();
-                    //_latitud = Convert.ToDouble(tabla.Select(x => x.Latitud).First());
-                    //_longitud = Convert.ToDouble(tabla.Select(x => x.Longittud).First());
-                    //MP_DibujarUbicacion(Tb_Descripcion.Text, "");
-                    //MP_CargarDetalle(Convert.ToInt32(Tb_Cod.Text));
+                    var tabla = new ServiceDesktop.ServiceDesktopClient().ProveedorListarXId(_idOriginal).ToArray();
+                    VProveedor proveedor = tabla.First();
+                    if (tabla.Length > 0)
+                    {
+                        Tb_Cod.Text = proveedor.Id.ToString();
+                        Tb_CodSpyre.Text = proveedor.IdSpyre.ToString();
+                        Tb_Descripcion.Text = proveedor.Descripcion.ToString();
+                        Tb_Direccion.Text = proveedor.Direccion.ToString();
+                        Tb_Contacto.Text = proveedor.Contacto.ToString();
+                        Tb_Telefono.Text = proveedor.Telefono.ToString();
+                        Tb_Email1.Text = proveedor.Email.ToString();
+                        Tb_Contacto2.Text = proveedor.Contacto.ToString();
+                        Tb_Telefono2.Text = proveedor.Email.ToString();
+                        Tb_Email2.Text = proveedor.Email.ToString();
+                        sw_Tipo.Value = proveedor.Tipo == 1 ? true : false;
+                        Cb_Ciudad.Value = proveedor.Ciudad;
+                        Cb_TipoProveedor.Value = proveedor.TipoProveeedor;
+                        _latitud = Convert.ToDouble(proveedor.Latitud);
+                        _longitud = Convert.ToDouble(proveedor.Longittud);
+                        MP_DibujarUbicacion(Tb_Descripcion.Text, "");
+                        MP_MostrarImagen(proveedor.Imagen);
+                        MP_CargarDetalle(Convert.ToInt32(Tb_Cod.Text));
+                        //Tb_Cod.Text = proveedor.Id.ToString();
+                        //Tb_CodSpyre.Text = tabla.Where(x => !string.IsNullOrEmpty(x.IdSpyre)).Count() > 0 ? tabla.Select(x => x.IdSpyre).First().ToString() : "";
+                        //Tb_Descripcion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Descripcion)).Count() > 0 ? tabla.Select(x => x.Descripcion).First().ToString() : "";
+                        //Tb_Direccion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Direccion)).Count() > 0 ? tabla.Select(x => x.Direccion).First().ToString() : "";
+                        //Tb_Contacto.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Contacto)).Count() > 0 ? tabla.Select(x => x.Contacto).First().ToString() : "";
+                        //Tb_Telefono.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Telefono)).Count() > 0 ? tabla.Select(x => x.Telefono).First().ToString() : "";
+                        //Tb_Email1.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Email)).Count() > 0 ? tabla.Select(x => x.Email).First().ToString() : "";
+                        //sw_Tipo.Value = tabla.Select(x => x.Tipo).First() == 1 ? true : false;
+                        //Cb_Ciudad.Value = tabla.Select(x => x.Ciudad).First();
+                        //Cb_TipoProveedor.Value = tabla.Select(x => x.TipoProveeedor).First();
+                        //_latitud = Convert.ToDouble(tabla.Select(x => x.Latitud).First());
+                        //_longitud = Convert.ToDouble(tabla.Select(x => x.Longittud).First());
+                        //MP_DibujarUbicacion(Tb_Descripcion.Text, "");
+                        //MP_CargarDetalle(Convert.ToInt32(Tb_Cod.Text));
+                    }
+                    LblPaginacion.Text = Convert.ToString(_Pos + 1) + "/" + Dgv_GBuscador.RowCount.ToString();
                 }
-                LblPaginacion.Text = Convert.ToString(_Pos + 1) + "/" + Dgv_GBuscador.RowCount.ToString();
-            }         
+            }
+            catch (Exception ex)
+            {
+                MP_MostrarMensajeError(ex.Message);
+            }           
         }
 
         private void MP_MostrarRegistroDetalle(int _Pos)
@@ -722,10 +729,10 @@ namespace PRESENTER.com
             {
                 //Aqui fecha validar conversion correcta salta error
                 Dgv_Detalle.Row = _Pos;
-                Cb_LineaGen.Value = Convert.ToInt32(Dgv_Detalle.GetValue("IdLinea"));
-                Tb_Fecha.Value = (DateTime)Dgv_Detalle.GetValue("Fecha");               
-                Tb_Aves.Text = Dgv_Detalle.GetValue("Cantidad").ToString();
-                Cb_TipoAlojamiento.Value = Convert.ToInt32(Dgv_Detalle.GetValue("IdTipoAloja"));
+                Cb_LineaGen.Value = Convert.ToInt32(Dgv_Detalle.GetValue(1));
+                Tb_Fecha.Value = (DateTime)Dgv_Detalle.GetValue(3);               
+                Tb_Aves.Text = Dgv_Detalle.GetValue(5).ToString();
+                Cb_TipoAlojamiento.Value = Convert.ToInt32(Dgv_Detalle.GetValue(6));
             }           
         }
         private void MP_Filtrar(int tipo)

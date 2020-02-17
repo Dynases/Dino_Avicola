@@ -53,11 +53,11 @@
             this.Tb_Id = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelTotal = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
-            this.tbMdesc = new DevComponents.Editors.DoubleInput();
-            this.tbtotal = new DevComponents.Editors.DoubleInput();
+            this.Tb_MDesc = new DevComponents.Editors.DoubleInput();
+            this.Tb_Total = new DevComponents.Editors.DoubleInput();
             this.LabelX8 = new DevComponents.DotNetBar.LabelX();
             this.LabelX11 = new DevComponents.DotNetBar.LabelX();
-            this.tbPdesc = new DevComponents.Editors.DoubleInput();
+            this.Tb_PDesc = new DevComponents.Editors.DoubleInput();
             this.LabelX9 = new DevComponents.DotNetBar.LabelX();
             this.PanelDetalle = new System.Windows.Forms.Panel();
             this.GroupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -87,9 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenta)).BeginInit();
             this.PanelTotal.SuspendLayout();
             this.Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMdesc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbtotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPdesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MDesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_Total)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_PDesc)).BeginInit();
             this.PanelDetalle.SuspendLayout();
             this.GroupPanel4.SuspendLayout();
             this.Panel5.SuspendLayout();
@@ -161,7 +161,7 @@
             // 
             // PanelContenidoBuscar
             // 
-            this.PanelContenidoBuscar.Size = new System.Drawing.Size(975, 569);
+            this.PanelContenidoBuscar.Size = new System.Drawing.Size(1023, 615);
             // 
             // btnMin
             // 
@@ -177,7 +177,7 @@
             // 
             // GMPanel_Buscardor
             // 
-            this.GMPanel_Buscardor.Size = new System.Drawing.Size(975, 569);
+            this.GMPanel_Buscardor.Size = new System.Drawing.Size(1023, 615);
             // 
             // 
             // 
@@ -209,7 +209,8 @@
             // 
             // Dgv_GBuscador
             // 
-            this.Dgv_GBuscador.Size = new System.Drawing.Size(969, 543);
+            this.Dgv_GBuscador.Size = new System.Drawing.Size(1017, 589);
+            this.Dgv_GBuscador.SelectionChanged += new System.EventHandler(this.Dgv_GBuscador_SelectionChanged);
             // 
             // LblSubtitulo
             // 
@@ -308,12 +309,13 @@
             this.lbNFactura.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbNFactura.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.lbNFactura.Location = new System.Drawing.Point(720, 11);
+            this.lbNFactura.Location = new System.Drawing.Point(717, 74);
             this.lbNFactura.Name = "lbNFactura";
             this.lbNFactura.SingleLineColor = System.Drawing.SystemColors.Control;
             this.lbNFactura.Size = new System.Drawing.Size(105, 23);
             this.lbNFactura.TabIndex = 372;
             this.lbNFactura.Text = "Nro. Factura:";
+            this.lbNFactura.Visible = false;
             // 
             // Tb_NFactura
             // 
@@ -325,12 +327,13 @@
             this.Tb_NFactura.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Tb_NFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_NFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.Tb_NFactura.Location = new System.Drawing.Point(886, 12);
+            this.Tb_NFactura.Location = new System.Drawing.Point(883, 75);
             this.Tb_NFactura.Name = "Tb_NFactura";
             this.Tb_NFactura.PreventEnterBeep = true;
             this.Tb_NFactura.Size = new System.Drawing.Size(125, 22);
             this.Tb_NFactura.TabIndex = 371;
             this.Tb_NFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Tb_NFactura.Visible = false;
             // 
             // Sw_Emision
             // 
@@ -350,6 +353,7 @@
             this.Sw_Emision.TabIndex = 369;
             this.Sw_Emision.Value = true;
             this.Sw_Emision.ValueObject = "Y";
+            this.Sw_Emision.Visible = false;
             // 
             // LabelX16
             // 
@@ -364,6 +368,7 @@
             this.LabelX16.Size = new System.Drawing.Size(75, 23);
             this.LabelX16.TabIndex = 370;
             this.LabelX16.Text = "Emisión:";
+            this.LabelX16.Visible = false;
             // 
             // Cb_Sucursal
             // 
@@ -405,7 +410,7 @@
             this.lbCredito.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbCredito.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCredito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.lbCredito.Location = new System.Drawing.Point(720, 74);
+            this.lbCredito.Location = new System.Drawing.Point(717, 44);
             this.lbCredito.Name = "lbCredito";
             this.lbCredito.SingleLineColor = System.Drawing.SystemColors.Control;
             this.lbCredito.Size = new System.Drawing.Size(156, 23);
@@ -422,7 +427,7 @@
             this.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.LabelX5.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelX5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.LabelX5.Location = new System.Drawing.Point(720, 40);
+            this.LabelX5.Location = new System.Drawing.Point(717, 10);
             this.LabelX5.Name = "LabelX5";
             this.LabelX5.SingleLineColor = System.Drawing.SystemColors.Control;
             this.LabelX5.Size = new System.Drawing.Size(129, 23);
@@ -456,7 +461,7 @@
             this.Tb_FechaVenc.ButtonDropDown.Visible = true;
             this.Tb_FechaVenc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_FechaVenc.IsPopupCalendarOpen = false;
-            this.Tb_FechaVenc.Location = new System.Drawing.Point(887, 77);
+            this.Tb_FechaVenc.Location = new System.Drawing.Point(884, 47);
             // 
             // 
             // 
@@ -499,7 +504,7 @@
             // 
             this.Sw_TipoVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Sw_TipoVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_TipoVenta.Location = new System.Drawing.Point(886, 44);
+            this.Sw_TipoVenta.Location = new System.Drawing.Point(883, 14);
             this.Sw_TipoVenta.Name = "Sw_TipoVenta";
             this.Sw_TipoVenta.OffBackColor = System.Drawing.Color.LawnGreen;
             this.Sw_TipoVenta.OffText = "CREDITO";
@@ -669,11 +674,11 @@
             // Panel4
             // 
             this.Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
-            this.Panel4.Controls.Add(this.tbMdesc);
-            this.Panel4.Controls.Add(this.tbtotal);
+            this.Panel4.Controls.Add(this.Tb_MDesc);
+            this.Panel4.Controls.Add(this.Tb_Total);
             this.Panel4.Controls.Add(this.LabelX8);
             this.Panel4.Controls.Add(this.LabelX11);
-            this.Panel4.Controls.Add(this.tbPdesc);
+            this.Panel4.Controls.Add(this.Tb_PDesc);
             this.Panel4.Controls.Add(this.LabelX9);
             this.Panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.Panel4.Location = new System.Drawing.Point(642, 0);
@@ -681,39 +686,39 @@
             this.Panel4.Size = new System.Drawing.Size(381, 123);
             this.Panel4.TabIndex = 39;
             // 
-            // tbMdesc
+            // Tb_MDesc
             // 
             // 
             // 
             // 
-            this.tbMdesc.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.tbMdesc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbMdesc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.tbMdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMdesc.Increment = 1D;
-            this.tbMdesc.Location = new System.Drawing.Point(129, 33);
-            this.tbMdesc.MinValue = 0D;
-            this.tbMdesc.Name = "tbMdesc";
-            this.tbMdesc.Size = new System.Drawing.Size(89, 21);
-            this.tbMdesc.TabIndex = 35;
-            this.tbMdesc.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_MDesc.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_MDesc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_MDesc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_MDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_MDesc.Increment = 1D;
+            this.Tb_MDesc.Location = new System.Drawing.Point(129, 33);
+            this.Tb_MDesc.MinValue = 0D;
+            this.Tb_MDesc.Name = "Tb_MDesc";
+            this.Tb_MDesc.Size = new System.Drawing.Size(89, 21);
+            this.Tb_MDesc.TabIndex = 35;
+            this.Tb_MDesc.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // tbtotal
-            // 
-            // 
+            // Tb_Total
             // 
             // 
-            this.tbtotal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.tbtotal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbtotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.tbtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbtotal.Increment = 1D;
-            this.tbtotal.Location = new System.Drawing.Point(129, 62);
-            this.tbtotal.MinValue = 0D;
-            this.tbtotal.Name = "tbtotal";
-            this.tbtotal.Size = new System.Drawing.Size(89, 21);
-            this.tbtotal.TabIndex = 37;
-            this.tbtotal.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            // 
+            // 
+            this.Tb_Total.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Total.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Total.Increment = 1D;
+            this.Tb_Total.Location = new System.Drawing.Point(129, 62);
+            this.Tb_Total.MinValue = 0D;
+            this.Tb_Total.Name = "Tb_Total";
+            this.Tb_Total.Size = new System.Drawing.Size(89, 21);
+            this.Tb_Total.TabIndex = 37;
+            this.Tb_Total.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // LabelX8
             // 
@@ -747,23 +752,23 @@
             this.LabelX11.TabIndex = 38;
             this.LabelX11.Text = "Total:";
             // 
-            // tbPdesc
+            // Tb_PDesc
             // 
             // 
             // 
             // 
-            this.tbPdesc.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.tbPdesc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbPdesc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.tbPdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPdesc.Increment = 1D;
-            this.tbPdesc.Location = new System.Drawing.Point(129, 4);
-            this.tbPdesc.LockUpdateChecked = false;
-            this.tbPdesc.MinValue = 0D;
-            this.tbPdesc.Name = "tbPdesc";
-            this.tbPdesc.Size = new System.Drawing.Size(89, 21);
-            this.tbPdesc.TabIndex = 33;
-            this.tbPdesc.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_PDesc.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_PDesc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_PDesc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_PDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_PDesc.Increment = 1D;
+            this.Tb_PDesc.Location = new System.Drawing.Point(129, 4);
+            this.Tb_PDesc.LockUpdateChecked = false;
+            this.Tb_PDesc.MinValue = 0D;
+            this.Tb_PDesc.Name = "Tb_PDesc";
+            this.Tb_PDesc.Size = new System.Drawing.Size(89, 21);
+            this.Tb_PDesc.TabIndex = 33;
+            this.Tb_PDesc.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // LabelX9
             // 
@@ -859,6 +864,8 @@
             this.Dgv_Detalle.Size = new System.Drawing.Size(1017, 60);
             this.Dgv_Detalle.TabIndex = 0;
             this.Dgv_Detalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
+            this.Dgv_Detalle.CellEdited += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Detalle_CellEdited);
+            this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell);
             // 
             // GPanelProductos
             // 
@@ -961,9 +968,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenta)).EndInit();
             this.PanelTotal.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbMdesc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbtotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPdesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MDesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_Total)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_PDesc)).EndInit();
             this.PanelDetalle.ResumeLayout(false);
             this.GroupPanel4.ResumeLayout(false);
             this.Panel5.ResumeLayout(false);
@@ -986,11 +993,11 @@
         internal Janus.Windows.GridEX.GridEX Dgv_Producto;
         internal System.Windows.Forms.Panel PanelTotal;
         internal System.Windows.Forms.Panel Panel4;
-        internal DevComponents.Editors.DoubleInput tbMdesc;
-        internal DevComponents.Editors.DoubleInput tbtotal;
+        internal DevComponents.Editors.DoubleInput Tb_MDesc;
+        internal DevComponents.Editors.DoubleInput Tb_Total;
         internal DevComponents.DotNetBar.LabelX LabelX8;
         internal DevComponents.DotNetBar.LabelX LabelX11;
-        internal DevComponents.Editors.DoubleInput tbPdesc;
+        internal DevComponents.Editors.DoubleInput Tb_PDesc;
         internal DevComponents.DotNetBar.LabelX LabelX9;
         internal System.Windows.Forms.Panel PanelContentSup;
         internal DevComponents.DotNetBar.Controls.GroupPanel GroupPanel1;
