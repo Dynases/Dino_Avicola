@@ -260,6 +260,30 @@ namespace PRESENTER.ServiceDesktop {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse")]
         System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Transformacion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Transformacion_ListaResponse")]
+        ENTITY.inv.Transformacion.View.VTransformacion[] Transformacion_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Transformacion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Transformacion_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.inv.Transformacion.View.VTransformacion[]> Transformacion_ListaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Transformacion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Transformacion_01_ListaResponse")]
+        ENTITY.inv.Transformacion_01.View.VTransformacion_01_Lista[] Transformacion_01_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Transformacion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Transformacion_01_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.inv.Transformacion_01.View.VTransformacion_01_Lista[]> Transformacion_01_ListaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Compra_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Compra_ListaResponse")]
+        ENTITY.com.Compra.View.VCompraLista[] Compra_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Compra_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Compra_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.Compra.View.VCompraLista[]> Compra_ListaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Compra_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Compra_01_ListaResponse")]
+        ENTITY.com.Compra_01.View.VCompra_01_Lista[] Compra_01_Lista();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Compra_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Compra_01_ListaResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.Compra_01.View.VCompra_01_Lista[]> Compra_01_ListaAsync();
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -687,6 +711,38 @@ namespace PRESENTER.ServiceDesktop {
         
         public System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync() {
             return base.Channel.Seleccion_01_ListaAsync();
+        }
+        
+        public ENTITY.inv.Transformacion.View.VTransformacion[] Transformacion_Lista() {
+            return base.Channel.Transformacion_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.inv.Transformacion.View.VTransformacion[]> Transformacion_ListaAsync() {
+            return base.Channel.Transformacion_ListaAsync();
+        }
+        
+        public ENTITY.inv.Transformacion_01.View.VTransformacion_01_Lista[] Transformacion_01_Lista() {
+            return base.Channel.Transformacion_01_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.inv.Transformacion_01.View.VTransformacion_01_Lista[]> Transformacion_01_ListaAsync() {
+            return base.Channel.Transformacion_01_ListaAsync();
+        }
+        
+        public ENTITY.com.Compra.View.VCompraLista[] Compra_Lista() {
+            return base.Channel.Compra_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.Compra.View.VCompraLista[]> Compra_ListaAsync() {
+            return base.Channel.Compra_ListaAsync();
+        }
+        
+        public ENTITY.com.Compra_01.View.VCompra_01_Lista[] Compra_01_Lista() {
+            return base.Channel.Compra_01_Lista();
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.Compra_01.View.VCompra_01_Lista[]> Compra_01_ListaAsync() {
+            return base.Channel.Compra_01_ListaAsync();
         }
     }
 }

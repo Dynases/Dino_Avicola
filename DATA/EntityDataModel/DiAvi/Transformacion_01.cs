@@ -15,7 +15,7 @@ namespace DATA.EntityDataModel.DiAvi
     public partial class Transformacion_01
     {
         public int Id { get; set; }
-        public Nullable<int> IdTransformacion { get; set; }
+        public int IdTransformacion { get; set; }
         public int IdProducto { get; set; }
         public int Estado { get; set; }
         public decimal TotalProd { get; set; }

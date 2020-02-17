@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Janus.Windows.GridEX.GridEXLayout cbSucursal_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
+            Janus.Windows.GridEX.GridEXLayout Cb_Sucursal_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F1_Compra));
             this.PanelContentSup = new System.Windows.Forms.Panel();
             this.GroupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.lbNFactura = new DevComponents.DotNetBar.LabelX();
-            this.tbNFactura = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.swEmision = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.Tb_NFactura = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Sw_Emision = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.LabelX16 = new DevComponents.DotNetBar.LabelX();
-            this.cbSucursal = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
+            this.Cb_Sucursal = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.LabelX7 = new DevComponents.DotNetBar.LabelX();
             this.lbCredito = new DevComponents.DotNetBar.LabelX();
             this.LabelX5 = new DevComponents.DotNetBar.LabelX();
             this.LabelX4 = new DevComponents.DotNetBar.LabelX();
-            this.tbFechaVenc = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.swTipoVenta = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.tbFechaVenta = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.Tb_FechaVenc = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.Sw_TipoVenta = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.Tb_FechaVenta = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.LabelX1 = new DevComponents.DotNetBar.LabelX();
-            this.tbObservacion = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Tb_Observacion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LabelX3 = new DevComponents.DotNetBar.LabelX();
-            this.tbProveedor = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Tb_Proveedor = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
-            this.tbCodigo = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Tb_Id = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelTotal = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.tbMdesc = new DevComponents.Editors.DoubleInput();
@@ -62,10 +62,10 @@
             this.PanelDetalle = new System.Windows.Forms.Panel();
             this.GroupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Panel5 = new System.Windows.Forms.Panel();
-            this.grdetalle = new Janus.Windows.GridEX.GridEX();
+            this.Dgv_Detalle = new Janus.Windows.GridEX.GridEX();
             this.GPanelProductos = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Panel7 = new System.Windows.Forms.Panel();
-            this.grProductos = new Janus.Windows.GridEX.GridEX();
+            this.Dgv_Producto = new Janus.Windows.GridEX.GridEX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -82,9 +82,9 @@
             this.PanelContentSup.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
             this.Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbSucursal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFechaVenc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFechaVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cb_Sucursal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenta)).BeginInit();
             this.PanelTotal.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbMdesc)).BeginInit();
@@ -93,10 +93,10 @@
             this.PanelDetalle.SuspendLayout();
             this.GroupPanel4.SuspendLayout();
             this.Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).BeginInit();
             this.GPanelProductos.SuspendLayout();
             this.Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Producto)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoRegistro
@@ -276,23 +276,23 @@
             this.Panel2.AutoScroll = true;
             this.Panel2.BackColor = System.Drawing.Color.White;
             this.Panel2.Controls.Add(this.lbNFactura);
-            this.Panel2.Controls.Add(this.tbNFactura);
-            this.Panel2.Controls.Add(this.swEmision);
+            this.Panel2.Controls.Add(this.Tb_NFactura);
+            this.Panel2.Controls.Add(this.Sw_Emision);
             this.Panel2.Controls.Add(this.LabelX16);
-            this.Panel2.Controls.Add(this.cbSucursal);
+            this.Panel2.Controls.Add(this.Cb_Sucursal);
             this.Panel2.Controls.Add(this.LabelX7);
             this.Panel2.Controls.Add(this.lbCredito);
             this.Panel2.Controls.Add(this.LabelX5);
             this.Panel2.Controls.Add(this.LabelX4);
-            this.Panel2.Controls.Add(this.tbFechaVenc);
-            this.Panel2.Controls.Add(this.swTipoVenta);
-            this.Panel2.Controls.Add(this.tbFechaVenta);
+            this.Panel2.Controls.Add(this.Tb_FechaVenc);
+            this.Panel2.Controls.Add(this.Sw_TipoVenta);
+            this.Panel2.Controls.Add(this.Tb_FechaVenta);
             this.Panel2.Controls.Add(this.LabelX1);
-            this.Panel2.Controls.Add(this.tbObservacion);
+            this.Panel2.Controls.Add(this.Tb_Observacion);
             this.Panel2.Controls.Add(this.LabelX3);
-            this.Panel2.Controls.Add(this.tbProveedor);
+            this.Panel2.Controls.Add(this.Tb_Proveedor);
             this.Panel2.Controls.Add(this.LabelX2);
-            this.Panel2.Controls.Add(this.tbCodigo);
+            this.Panel2.Controls.Add(this.Tb_Id);
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel2.Location = new System.Drawing.Point(0, 0);
             this.Panel2.Name = "Panel2";
@@ -315,41 +315,41 @@
             this.lbNFactura.TabIndex = 372;
             this.lbNFactura.Text = "Nro. Factura:";
             // 
-            // tbNFactura
+            // Tb_NFactura
             // 
-            this.tbNFactura.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tbNFactura.Border.Class = "TextBoxBorder";
-            this.tbNFactura.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbNFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.tbNFactura.Location = new System.Drawing.Point(886, 12);
-            this.tbNFactura.Name = "tbNFactura";
-            this.tbNFactura.PreventEnterBeep = true;
-            this.tbNFactura.Size = new System.Drawing.Size(125, 22);
-            this.tbNFactura.TabIndex = 371;
-            this.tbNFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // swEmision
+            this.Tb_NFactura.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
+            this.Tb_NFactura.Border.Class = "TextBoxBorder";
+            this.Tb_NFactura.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_NFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_NFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Tb_NFactura.Location = new System.Drawing.Point(886, 12);
+            this.Tb_NFactura.Name = "Tb_NFactura";
+            this.Tb_NFactura.PreventEnterBeep = true;
+            this.Tb_NFactura.Size = new System.Drawing.Size(125, 22);
+            this.Tb_NFactura.TabIndex = 371;
+            this.Tb_NFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            this.swEmision.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swEmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swEmision.Location = new System.Drawing.Point(514, 70);
-            this.swEmision.Name = "swEmision";
-            this.swEmision.OffBackColor = System.Drawing.Color.LawnGreen;
-            this.swEmision.OffText = "RECIBO";
-            this.swEmision.OnBackColor = System.Drawing.Color.Gold;
-            this.swEmision.OnText = "FACTURA";
-            this.swEmision.Size = new System.Drawing.Size(166, 22);
-            this.swEmision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swEmision.TabIndex = 369;
-            this.swEmision.Value = true;
-            this.swEmision.ValueObject = "Y";
+            // Sw_Emision
+            // 
+            // 
+            // 
+            // 
+            this.Sw_Emision.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Sw_Emision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sw_Emision.Location = new System.Drawing.Point(514, 70);
+            this.Sw_Emision.Name = "Sw_Emision";
+            this.Sw_Emision.OffBackColor = System.Drawing.Color.LawnGreen;
+            this.Sw_Emision.OffText = "RECIBO";
+            this.Sw_Emision.OnBackColor = System.Drawing.Color.Gold;
+            this.Sw_Emision.OnText = "FACTURA";
+            this.Sw_Emision.Size = new System.Drawing.Size(166, 22);
+            this.Sw_Emision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Sw_Emision.TabIndex = 369;
+            this.Sw_Emision.Value = true;
+            this.Sw_Emision.ValueObject = "Y";
             // 
             // LabelX16
             // 
@@ -365,20 +365,20 @@
             this.LabelX16.TabIndex = 370;
             this.LabelX16.Text = "Emisión:";
             // 
-            // cbSucursal
+            // Cb_Sucursal
             // 
-            cbSucursal_DesignTimeLayout.LayoutString = resources.GetString("cbSucursal_DesignTimeLayout.LayoutString");
-            this.cbSucursal.DesignTimeLayout = cbSucursal_DesignTimeLayout;
-            this.cbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSucursal.Location = new System.Drawing.Point(513, 40);
-            this.cbSucursal.Name = "cbSucursal";
-            this.cbSucursal.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
-            this.cbSucursal.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
-            this.cbSucursal.SelectedIndex = -1;
-            this.cbSucursal.SelectedItem = null;
-            this.cbSucursal.Size = new System.Drawing.Size(164, 22);
-            this.cbSucursal.TabIndex = 240;
-            this.cbSucursal.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
+            Cb_Sucursal_DesignTimeLayout.LayoutString = resources.GetString("Cb_Sucursal_DesignTimeLayout.LayoutString");
+            this.Cb_Sucursal.DesignTimeLayout = Cb_Sucursal_DesignTimeLayout;
+            this.Cb_Sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cb_Sucursal.Location = new System.Drawing.Point(513, 40);
+            this.Cb_Sucursal.Name = "Cb_Sucursal";
+            this.Cb_Sucursal.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
+            this.Cb_Sucursal.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
+            this.Cb_Sucursal.SelectedIndex = -1;
+            this.Cb_Sucursal.SelectedItem = null;
+            this.Cb_Sucursal.Size = new System.Drawing.Size(164, 22);
+            this.Cb_Sucursal.TabIndex = 240;
+            this.Cb_Sucursal.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             // 
             // LabelX7
             // 
@@ -411,6 +411,7 @@
             this.lbCredito.Size = new System.Drawing.Size(156, 23);
             this.lbCredito.TabIndex = 233;
             this.lbCredito.Text = "Vencimiento De Credito:";
+            this.lbCredito.Visible = false;
             // 
             // LabelX5
             // 
@@ -444,117 +445,117 @@
             this.LabelX4.TabIndex = 231;
             this.LabelX4.Text = "Fecha Compra:";
             // 
-            // tbFechaVenc
+            // Tb_FechaVenc
             // 
             // 
             // 
             // 
-            this.tbFechaVenc.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.tbFechaVenc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenc.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.tbFechaVenc.ButtonDropDown.Visible = true;
-            this.tbFechaVenc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFechaVenc.IsPopupCalendarOpen = false;
-            this.tbFechaVenc.Location = new System.Drawing.Point(887, 77);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tbFechaVenc.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenc.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.tbFechaVenc.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.tbFechaVenc.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenc.MonthCalendar.DisplayMonth = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
-            this.tbFechaVenc.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            // 
-            // 
-            // 
-            this.tbFechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.tbFechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.tbFechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.tbFechaVenc.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenc.MonthCalendar.TodayButtonVisible = true;
-            this.tbFechaVenc.Name = "tbFechaVenc";
-            this.tbFechaVenc.Size = new System.Drawing.Size(124, 22);
-            this.tbFechaVenc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tbFechaVenc.TabIndex = 7;
-            this.tbFechaVenc.Visible = false;
-            // 
-            // swTipoVenta
-            // 
-            // 
-            // 
-            // 
-            this.swTipoVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swTipoVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTipoVenta.Location = new System.Drawing.Point(886, 44);
-            this.swTipoVenta.Name = "swTipoVenta";
-            this.swTipoVenta.OffBackColor = System.Drawing.Color.LawnGreen;
-            this.swTipoVenta.OffText = "CREDITO";
-            this.swTipoVenta.OnBackColor = System.Drawing.Color.Gold;
-            this.swTipoVenta.OnText = "CONTADO";
-            this.swTipoVenta.Size = new System.Drawing.Size(125, 22);
-            this.swTipoVenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swTipoVenta.TabIndex = 6;
-            this.swTipoVenta.Value = true;
-            this.swTipoVenta.ValueObject = "Y";
-            // 
-            // tbFechaVenta
-            // 
-            // 
-            // 
-            // 
-            this.tbFechaVenta.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.tbFechaVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenta.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.tbFechaVenta.ButtonDropDown.Visible = true;
-            this.tbFechaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFechaVenta.IsPopupCalendarOpen = false;
-            this.tbFechaVenta.Location = new System.Drawing.Point(513, 13);
+            this.Tb_FechaVenc.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_FechaVenc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenc.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.Tb_FechaVenc.ButtonDropDown.Visible = true;
+            this.Tb_FechaVenc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_FechaVenc.IsPopupCalendarOpen = false;
+            this.Tb_FechaVenc.Location = new System.Drawing.Point(887, 77);
             // 
             // 
             // 
             // 
             // 
             // 
-            this.tbFechaVenta.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenta.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.tbFechaVenta.MonthCalendar.ClearButtonVisible = true;
+            this.Tb_FechaVenc.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenc.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.Tb_FechaVenc.MonthCalendar.ClearButtonVisible = true;
             // 
             // 
             // 
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.tbFechaVenta.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenta.MonthCalendar.DisplayMonth = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
-            this.tbFechaVenta.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.Tb_FechaVenc.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenc.MonthCalendar.DisplayMonth = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
+            this.Tb_FechaVenc.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
             // 
             // 
             // 
-            this.tbFechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.tbFechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.tbFechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.tbFechaVenta.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbFechaVenta.MonthCalendar.TodayButtonVisible = true;
-            this.tbFechaVenta.Name = "tbFechaVenta";
-            this.tbFechaVenta.Size = new System.Drawing.Size(164, 22);
-            this.tbFechaVenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tbFechaVenta.TabIndex = 4;
+            this.Tb_FechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.Tb_FechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.Tb_FechaVenc.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.Tb_FechaVenc.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenc.MonthCalendar.TodayButtonVisible = true;
+            this.Tb_FechaVenc.Name = "Tb_FechaVenc";
+            this.Tb_FechaVenc.Size = new System.Drawing.Size(124, 22);
+            this.Tb_FechaVenc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tb_FechaVenc.TabIndex = 7;
+            this.Tb_FechaVenc.Visible = false;
+            // 
+            // Sw_TipoVenta
+            // 
+            // 
+            // 
+            // 
+            this.Sw_TipoVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Sw_TipoVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sw_TipoVenta.Location = new System.Drawing.Point(886, 44);
+            this.Sw_TipoVenta.Name = "Sw_TipoVenta";
+            this.Sw_TipoVenta.OffBackColor = System.Drawing.Color.LawnGreen;
+            this.Sw_TipoVenta.OffText = "CREDITO";
+            this.Sw_TipoVenta.OnBackColor = System.Drawing.Color.Gold;
+            this.Sw_TipoVenta.OnText = "CONTADO";
+            this.Sw_TipoVenta.Size = new System.Drawing.Size(125, 22);
+            this.Sw_TipoVenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Sw_TipoVenta.TabIndex = 6;
+            this.Sw_TipoVenta.Value = true;
+            this.Sw_TipoVenta.ValueObject = "Y";
+            // 
+            // Tb_FechaVenta
+            // 
+            // 
+            // 
+            // 
+            this.Tb_FechaVenta.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_FechaVenta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenta.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.Tb_FechaVenta.ButtonDropDown.Visible = true;
+            this.Tb_FechaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_FechaVenta.IsPopupCalendarOpen = false;
+            this.Tb_FechaVenta.Location = new System.Drawing.Point(513, 13);
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.Tb_FechaVenta.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenta.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.Tb_FechaVenta.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.Tb_FechaVenta.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenta.MonthCalendar.DisplayMonth = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
+            this.Tb_FechaVenta.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            // 
+            // 
+            // 
+            this.Tb_FechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.Tb_FechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.Tb_FechaVenta.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.Tb_FechaVenta.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_FechaVenta.MonthCalendar.TodayButtonVisible = true;
+            this.Tb_FechaVenta.Name = "Tb_FechaVenta";
+            this.Tb_FechaVenta.Size = new System.Drawing.Size(164, 22);
+            this.Tb_FechaVenta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tb_FechaVenta.TabIndex = 4;
             // 
             // LabelX1
             // 
@@ -573,22 +574,22 @@
             this.LabelX1.TabIndex = 224;
             this.LabelX1.Text = "Código:";
             // 
-            // tbObservacion
+            // Tb_Observacion
             // 
-            this.tbObservacion.BackColor = System.Drawing.Color.White;
+            this.Tb_Observacion.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.tbObservacion.Border.Class = "TextBoxBorder";
-            this.tbObservacion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.tbObservacion.Location = new System.Drawing.Point(151, 68);
-            this.tbObservacion.Multiline = true;
-            this.tbObservacion.Name = "tbObservacion";
-            this.tbObservacion.PreventEnterBeep = true;
-            this.tbObservacion.Size = new System.Drawing.Size(249, 52);
-            this.tbObservacion.TabIndex = 3;
+            this.Tb_Observacion.Border.Class = "TextBoxBorder";
+            this.Tb_Observacion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Observacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Observacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Tb_Observacion.Location = new System.Drawing.Point(151, 68);
+            this.Tb_Observacion.Multiline = true;
+            this.Tb_Observacion.Name = "Tb_Observacion";
+            this.Tb_Observacion.PreventEnterBeep = true;
+            this.Tb_Observacion.Size = new System.Drawing.Size(249, 52);
+            this.Tb_Observacion.TabIndex = 3;
             // 
             // LabelX3
             // 
@@ -606,21 +607,21 @@
             this.LabelX3.TabIndex = 226;
             this.LabelX3.Text = "Observacion:";
             // 
-            // tbProveedor
+            // Tb_Proveedor
             // 
-            this.tbProveedor.BackColor = System.Drawing.Color.White;
+            this.Tb_Proveedor.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.tbProveedor.Border.Class = "TextBoxBorder";
-            this.tbProveedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.tbProveedor.Location = new System.Drawing.Point(151, 40);
-            this.tbProveedor.Name = "tbProveedor";
-            this.tbProveedor.PreventEnterBeep = true;
-            this.tbProveedor.Size = new System.Drawing.Size(249, 22);
-            this.tbProveedor.TabIndex = 1;
+            this.Tb_Proveedor.Border.Class = "TextBoxBorder";
+            this.Tb_Proveedor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Proveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Tb_Proveedor.Location = new System.Drawing.Point(151, 40);
+            this.Tb_Proveedor.Name = "Tb_Proveedor";
+            this.Tb_Proveedor.PreventEnterBeep = true;
+            this.Tb_Proveedor.Size = new System.Drawing.Size(249, 22);
+            this.Tb_Proveedor.TabIndex = 1;
             // 
             // LabelX2
             // 
@@ -638,21 +639,21 @@
             this.LabelX2.TabIndex = 225;
             this.LabelX2.Text = "Proveedor:";
             // 
-            // tbCodigo
+            // Tb_Id
             // 
             // 
             // 
             // 
-            this.tbCodigo.Border.Class = "TextBoxBorder";
-            this.tbCodigo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.tbCodigo.Location = new System.Drawing.Point(151, 12);
-            this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.PreventEnterBeep = true;
-            this.tbCodigo.Size = new System.Drawing.Size(63, 22);
-            this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Tb_Id.Border.Class = "TextBoxBorder";
+            this.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Tb_Id.Location = new System.Drawing.Point(151, 12);
+            this.Tb_Id.Name = "Tb_Id";
+            this.Tb_Id.PreventEnterBeep = true;
+            this.Tb_Id.Size = new System.Drawing.Size(63, 22);
+            this.Tb_Id.TabIndex = 0;
+            this.Tb_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PanelTotal
             // 
@@ -837,27 +838,27 @@
             // Panel5
             // 
             this.Panel5.BackColor = System.Drawing.Color.White;
-            this.Panel5.Controls.Add(this.grdetalle);
+            this.Panel5.Controls.Add(this.Dgv_Detalle);
             this.Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel5.Location = new System.Drawing.Point(0, 0);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(1017, 60);
             this.Panel5.TabIndex = 0;
             // 
-            // grdetalle
+            // Dgv_Detalle
             // 
-            this.grdetalle.BackColor = System.Drawing.Color.GhostWhite;
-            this.grdetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdetalle.HeaderFormatStyle.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdetalle.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.grdetalle.Location = new System.Drawing.Point(0, 0);
-            this.grdetalle.Name = "grdetalle";
-            this.grdetalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
-            this.grdetalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
-            this.grdetalle.Size = new System.Drawing.Size(1017, 60);
-            this.grdetalle.TabIndex = 0;
-            this.grdetalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
+            this.Dgv_Detalle.BackColor = System.Drawing.Color.GhostWhite;
+            this.Dgv_Detalle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dgv_Detalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_Detalle.HeaderFormatStyle.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_Detalle.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Dgv_Detalle.Location = new System.Drawing.Point(0, 0);
+            this.Dgv_Detalle.Name = "Dgv_Detalle";
+            this.Dgv_Detalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
+            this.Dgv_Detalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
+            this.Dgv_Detalle.Size = new System.Drawing.Size(1017, 60);
+            this.Dgv_Detalle.TabIndex = 0;
+            this.Dgv_Detalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             // 
             // GPanelProductos
             // 
@@ -906,28 +907,28 @@
             // Panel7
             // 
             this.Panel7.BackColor = System.Drawing.Color.White;
-            this.Panel7.Controls.Add(this.grProductos);
+            this.Panel7.Controls.Add(this.Dgv_Producto);
             this.Panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel7.Location = new System.Drawing.Point(0, 0);
             this.Panel7.Name = "Panel7";
             this.Panel7.Size = new System.Drawing.Size(1017, 127);
             this.Panel7.TabIndex = 0;
             // 
-            // grProductos
+            // Dgv_Producto
             // 
-            this.grProductos.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
-            this.grProductos.BackColor = System.Drawing.Color.GhostWhite;
-            this.grProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grProductos.HeaderFormatStyle.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grProductos.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.grProductos.Location = new System.Drawing.Point(0, 0);
-            this.grProductos.Name = "grProductos";
-            this.grProductos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
-            this.grProductos.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
-            this.grProductos.Size = new System.Drawing.Size(1017, 127);
-            this.grProductos.TabIndex = 0;
-            this.grProductos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
+            this.Dgv_Producto.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            this.Dgv_Producto.BackColor = System.Drawing.Color.GhostWhite;
+            this.Dgv_Producto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dgv_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_Producto.HeaderFormatStyle.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_Producto.HeaderFormatStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
+            this.Dgv_Producto.Location = new System.Drawing.Point(0, 0);
+            this.Dgv_Producto.Name = "Dgv_Producto";
+            this.Dgv_Producto.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
+            this.Dgv_Producto.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
+            this.Dgv_Producto.Size = new System.Drawing.Size(1017, 127);
+            this.Dgv_Producto.TabIndex = 0;
+            this.Dgv_Producto.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             // 
             // F1_Compra
             // 
@@ -955,9 +956,9 @@
             this.GroupPanel1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbSucursal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFechaVenc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFechaVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cb_Sucursal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaVenta)).EndInit();
             this.PanelTotal.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbMdesc)).EndInit();
@@ -966,10 +967,10 @@
             this.PanelDetalle.ResumeLayout(false);
             this.GroupPanel4.ResumeLayout(false);
             this.Panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).EndInit();
             this.GPanelProductos.ResumeLayout(false);
             this.Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Producto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -979,10 +980,10 @@
         internal System.Windows.Forms.Panel PanelDetalle;
         internal DevComponents.DotNetBar.Controls.GroupPanel GroupPanel4;
         internal System.Windows.Forms.Panel Panel5;
-        internal Janus.Windows.GridEX.GridEX grdetalle;
+        internal Janus.Windows.GridEX.GridEX Dgv_Detalle;
         internal DevComponents.DotNetBar.Controls.GroupPanel GPanelProductos;
         internal System.Windows.Forms.Panel Panel7;
-        internal Janus.Windows.GridEX.GridEX grProductos;
+        internal Janus.Windows.GridEX.GridEX Dgv_Producto;
         internal System.Windows.Forms.Panel PanelTotal;
         internal System.Windows.Forms.Panel Panel4;
         internal DevComponents.Editors.DoubleInput tbMdesc;
@@ -995,22 +996,22 @@
         internal DevComponents.DotNetBar.Controls.GroupPanel GroupPanel1;
         internal System.Windows.Forms.Panel Panel2;
         internal DevComponents.DotNetBar.LabelX lbNFactura;
-        internal DevComponents.DotNetBar.Controls.TextBoxX tbNFactura;
-        internal DevComponents.DotNetBar.Controls.SwitchButton swEmision;
+        internal DevComponents.DotNetBar.Controls.TextBoxX Tb_NFactura;
+        internal DevComponents.DotNetBar.Controls.SwitchButton Sw_Emision;
         internal DevComponents.DotNetBar.LabelX LabelX16;
-        internal Janus.Windows.GridEX.EditControls.MultiColumnCombo cbSucursal;
+        internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Sucursal;
         internal DevComponents.DotNetBar.LabelX LabelX7;
         internal DevComponents.DotNetBar.LabelX lbCredito;
         internal DevComponents.DotNetBar.LabelX LabelX5;
         internal DevComponents.DotNetBar.LabelX LabelX4;
-        internal DevComponents.Editors.DateTimeAdv.DateTimeInput tbFechaVenc;
-        internal DevComponents.DotNetBar.Controls.SwitchButton swTipoVenta;
-        internal DevComponents.Editors.DateTimeAdv.DateTimeInput tbFechaVenta;
+        internal DevComponents.Editors.DateTimeAdv.DateTimeInput Tb_FechaVenc;
+        internal DevComponents.DotNetBar.Controls.SwitchButton Sw_TipoVenta;
+        internal DevComponents.Editors.DateTimeAdv.DateTimeInput Tb_FechaVenta;
         internal DevComponents.DotNetBar.LabelX LabelX1;
-        internal DevComponents.DotNetBar.Controls.TextBoxX tbObservacion;
+        internal DevComponents.DotNetBar.Controls.TextBoxX Tb_Observacion;
         internal DevComponents.DotNetBar.LabelX LabelX3;
-        internal DevComponents.DotNetBar.Controls.TextBoxX tbProveedor;
+        internal DevComponents.DotNetBar.Controls.TextBoxX Tb_Proveedor;
         internal DevComponents.DotNetBar.LabelX LabelX2;
-        internal DevComponents.DotNetBar.Controls.TextBoxX tbCodigo;
+        internal DevComponents.DotNetBar.Controls.TextBoxX Tb_Id;
     }
 }

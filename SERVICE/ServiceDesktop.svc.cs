@@ -18,6 +18,10 @@ using ENTITY.com.CompraIngreso_01;
 using System.Data;
 using ENTITY.com.Seleccion.View;
 using ENTITY.com.Seleccion_01.View;
+using ENTITY.inv.Transformacion.View;
+using ENTITY.inv.Transformacion_01.View;
+using ENTITY.com.Compra.View;
+using ENTITY.com.Compra_01.View;
 
 namespace SERVICE
 {
@@ -419,5 +423,67 @@ namespace SERVICE
             }
         }
         #endregion
+
+        #region Seleccion
+        public List<VTransformacion> Transformacion_Lista()
+        {
+            try
+            {
+                var listResult = new LTransformacion().Listar();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        #endregion
+        #region Seleccion_01
+        public List<VTransformacion_01_Lista> Transformacion_01_Lista()
+        {
+            try
+            {
+                var listResult = new LTransformacion_01().Listar();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        #endregion
+        #region Compra
+        public List<VCompraLista> Compra_Lista()
+        {
+
+            try
+            {
+                var listResult = new LCompra().Listar();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<VCompra_01_Lista> Compra_01_Lista()
+        {
+            try
+            {
+                var listResult = new LCompra_01().Listar();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        #endregion
+
     }
 }

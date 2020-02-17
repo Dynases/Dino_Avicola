@@ -33,7 +33,6 @@ namespace DATA.EntityDataModel.DiAvi
         public virtual DbSet<Deposito> Deposito { get; set; }
         public virtual DbSet<Sucursal> Sucursal { get; set; }
         public virtual DbSet<Transformacion> Transformacion { get; set; }
-        public virtual DbSet<Transformacion_01> Transformacion_01 { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Precio> Precio { get; set; }
         public virtual DbSet<PrecioCat> PrecioCat { get; set; }
@@ -43,5 +42,6 @@ namespace DATA.EntityDataModel.DiAvi
         public virtual DbSet<Seleccion_01> Seleccion_01 { get; set; }
         public virtual DbSet<CompraIng> CompraIng { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }
+        public virtual DbSet<Transformacion_01> Transformacion_01 { get; set; }
     }
 }

@@ -1,9 +1,13 @@
 ﻿using ENTITY.Cliente.View;
+using ENTITY.com.Compra.View;
+using ENTITY.com.Compra_01.View;
 using ENTITY.com.CompraIngreso.View;
 using ENTITY.com.CompraIngreso_01;
 using ENTITY.com.Seleccion.View;
 using ENTITY.com.Seleccion_01.View;
 using ENTITY.inv.Sucursal.View;
+using ENTITY.inv.Transformacion.View;
+using ENTITY.inv.Transformacion_01.View;
 using ENTITY.Libreria.View;
 using ENTITY.Producto.View;
 using ENTITY.Proveedor.View;
@@ -126,6 +130,25 @@ namespace SERVICE
         #region Seleccion_01
         [OperationContract]
         List<VSeleccion_01_Lista> Seleccion_01_Lista();
+        #endregion
+
+        #region Transformacion
+        [OperationContract]
+        List<VTransformacion> Transformacion_Lista();
+        #endregion
+        #region Transformacion_01
+        [OperationContract]
+        List<VTransformacion_01_Lista> Transformacion_01_Lista();
+        #endregion
+
+        #region Compra
+        [OperationContract]
+        List<VCompraLista> Compra_Lista();
+        #endregion
+
+        #region Compra_01
+        [OperationContract]
+        List<VCompra_01_Lista> Compra_01_Lista();
         #endregion
         // TODO: agregue aquí sus operaciones de servicio
     }

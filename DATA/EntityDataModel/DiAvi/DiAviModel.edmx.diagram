@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="DiAviModel.Deposito" Width="1.5" PointX="1.5" PointY="22.25" />
         <EntityTypeShape EntityType="DiAviModel.Sucursal" Width="1.5" PointX="0.75" PointY="16.875" />
         <EntityTypeShape EntityType="DiAviModel.Transformacion" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DiAviModel.Transformacion_01" Width="1.75" PointX="3" PointY="10.75" />
         <EntityTypeShape EntityType="DiAviModel.Cliente" Width="1.5" PointX="5.75" PointY="2.75" />
         <EntityTypeShape EntityType="DiAviModel.Precio" Width="1.5" PointX="3" PointY="6.375" />
         <EntityTypeShape EntityType="DiAviModel.PrecioCat" Width="1.5" PointX="0.75" PointY="4.375" />
@@ -25,7 +24,6 @@
         <AssociationConnector Association="DiAviModel.FK_Proveed_01_Proveed" />
         <AssociationConnector Association="DiAviModel.FK_Deposito" />
         <AssociationConnector Association="DiAviModel.FK__Precio_Almacen" />
-        <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Transformacion" />
         <AssociationConnector Association="DiAviModel.FK__Precio_Cat" />
         <EntityTypeShape EntityType="DiAviModel.Seleccion" Width="1.5" PointX="6" PointY="21.75" />
         <EntityTypeShape EntityType="DiAviModel.Seleccion_01" Width="1.5" PointX="8.25" PointY="15.875" />
@@ -38,9 +36,11 @@
         <EntityTypeShape EntityType="DiAviModel.Producto" Width="1.5" PointX="0.75" PointY="9.75" />
         <AssociationConnector Association="DiAviModel.FK_Compra_01_Producto" />
         <AssociationConnector Association="DiAviModel.FK_Seleccion_01_Producto" />
-        <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Producto" />
         <AssociationConnector Association="DiAviModel.FK__Precio_Product" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdPro__46B27FE2" />
+        <EntityTypeShape EntityType="DiAviModel.Transformacion_01" Width="1.5" PointX="3" PointY="11" />
+        <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Transformacion" />
+        <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Producto" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

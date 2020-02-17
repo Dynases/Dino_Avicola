@@ -52,8 +52,10 @@
     <Compile Include="Base\BaseConexionPrincipal.cs" />
     <Compile Include="Base\BD.cs" />
     <Compile Include="Clase\RCliente.cs" />
+    <Compile Include="Clase\RCompra.cs" />
     <Compile Include="Clase\RCompraIngreso.cs" />
     <Compile Include="Clase\RCompraIngreso_01.cs" />
+    <Compile Include="Clase\RCompra_01.cs" />
     <Compile Include="Clase\RLibreria.cs" />
     <Compile Include="Clase\RPrecio.cs" />
     <Compile Include="Clase\RPrecioCategoria.cs" />
@@ -63,7 +65,10 @@
     <Compile Include="Clase\RSeleccion.cs" />
     <Compile Include="Clase\RSucursal.cs" />
     <Compile Include="Clase\RSeleccion_01.cs" />
+    <Compile Include="Clase\RTransformacion.cs" />
+    <Compile Include="Clase\RTransformacion_01.cs" />
     <Compile Include="Interface\ICliente.cs" />
+    <Compile Include="Interface\ICompra.cs" />
     <Compile Include="Interface\ICompraIngreso.cs" />
     <Compile Include="Interface\ICompraIngreso_01.cs" />
     <Compile Include="Interface\ILibreria.cs" />
@@ -75,6 +80,9 @@
     <Compile Include="Interface\ISeleccion.cs" />
     <Compile Include="Interface\ISeleccion_01.cs" />
     <Compile Include="Interface\ISucursal.cs" />
+    <Compile Include="Interface\ITransformacion.cs" />
+    <Compile Include="Interface\ITransformacion_01.cs" />
+    <Compile Include="Interface\ICompra_01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

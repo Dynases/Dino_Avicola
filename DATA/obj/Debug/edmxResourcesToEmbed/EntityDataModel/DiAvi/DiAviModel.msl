@@ -145,19 +145,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Transformacion_01">
-      <EntityTypeMapping TypeName="DiAviModel.Transformacion_01">
-        <MappingFragment StoreEntitySet="Transformacion_01">
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
-          <ScalarProperty Name="TotalProd" ColumnName="TotalProd" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-          <ScalarProperty Name="IdTransformacion" ColumnName="IdTransformacion" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Cliente">
       <EntityTypeMapping TypeName="DiAviModel.Cliente">
         <MappingFragment StoreEntitySet="Cliente">
@@ -324,6 +311,19 @@
           <ScalarProperty Name="Granja" ColumnName="Granja" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdProd" ColumnName="IdProd" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transformacion_01">
+      <EntityTypeMapping TypeName="DiAviModel.Transformacion_01">
+        <MappingFragment StoreEntitySet="Transformacion_01">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TotalProd" ColumnName="TotalProd" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdTransformacion" ColumnName="IdTransformacion" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

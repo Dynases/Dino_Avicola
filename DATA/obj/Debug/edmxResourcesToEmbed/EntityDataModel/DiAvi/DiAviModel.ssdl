@@ -239,7 +239,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdTransformacion" Type="int" />
+    <Property Name="IdTransformacion" Type="int" Nullable="false" />
     <Property Name="IdProducto" Type="int" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
     <Property Name="TotalProd" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -533,7 +533,7 @@ advertencia 6002: La tabla o vista 'DiAvi.COM.CompraIng_01' no tiene definida ni
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Transformacion_01_Transformacion">
-    <End Role="Transformacion" Type="Self.Transformacion" Multiplicity="0..1" />
+    <End Role="Transformacion" Type="Self.Transformacion" Multiplicity="1" />
     <End Role="Transformacion_01" Type="Self.Transformacion_01" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Transformacion">
