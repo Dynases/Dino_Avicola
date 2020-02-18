@@ -66,6 +66,7 @@
             this.GPanelProductos = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Panel7 = new System.Windows.Forms.Panel();
             this.Dgv_Producto = new Janus.Windows.GridEX.GridEX();
+            this.btn_Agregar = new DevComponents.DotNetBar.ButtonX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -276,6 +277,7 @@
             // 
             this.Panel2.AutoScroll = true;
             this.Panel2.BackColor = System.Drawing.Color.White;
+            this.Panel2.Controls.Add(this.btn_Agregar);
             this.Panel2.Controls.Add(this.lbNFactura);
             this.Panel2.Controls.Add(this.Tb_NFactura);
             this.Panel2.Controls.Add(this.Sw_Emision);
@@ -937,6 +939,26 @@
             this.Dgv_Producto.TabIndex = 0;
             this.Dgv_Producto.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Agregar.BackColor = System.Drawing.Color.White;
+            this.btn_Agregar.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btn_Agregar.FadeEffect = false;
+            this.btn_Agregar.FocusCuesEnabled = false;
+            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Image = global::PRESENTER.Properties.Resources.GRABACION_EXITOSA;
+            this.btn_Agregar.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btn_Agregar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btn_Agregar.Location = new System.Drawing.Point(270, 3);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_Agregar.Size = new System.Drawing.Size(130, 39);
+            this.btn_Agregar.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.btn_Agregar.SymbolSize = 5F;
+            this.btn_Agregar.TabIndex = 373;
+            this.btn_Agregar.Text = "Plantilla";
+            // 
             // F1_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1020,5 +1042,6 @@
         internal DevComponents.DotNetBar.Controls.TextBoxX Tb_Proveedor;
         internal DevComponents.DotNetBar.LabelX LabelX2;
         internal DevComponents.DotNetBar.Controls.TextBoxX Tb_Id;
+        internal DevComponents.DotNetBar.ButtonX btn_Agregar;
     }
 }

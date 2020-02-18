@@ -791,7 +791,6 @@
         private DevComponents.DotNetBar.SuperTabItem SuperTalRegistro;
         protected DevComponents.DotNetBar.SuperTabControlPanel PanelContenidoRegistro;
         protected DevComponents.DotNetBar.SuperTabControl superTabControl1;
-        internal Bunifu.Framework.UI.BunifuGradientPanel PanelMenu;
         protected System.Windows.Forms.Label LblTitulo;
         protected DevComponents.DotNetBar.ButtonX BtnImprimir;
         protected DevComponents.DotNetBar.ButtonX BtnAtras;
@@ -830,5 +829,6 @@
         protected DevComponents.DotNetBar.Controls.GroupPanel GMPanel_Buscardor;
         protected Janus.Windows.GridEX.GridEX Dgv_GBuscador;
         protected System.Windows.Forms.Label LblSubtitulo;
+        protected Bunifu.Framework.UI.BunifuGradientPanel PanelMenu;
     }
 }

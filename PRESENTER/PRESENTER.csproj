@@ -426,6 +426,7 @@
     <None Include="Resources\WARNING.png" />
     <None Include="Resources\TRANSFORMACION.png" />
     <None Include="Resources\hojaruta.png" />
+    <None Include="Resource\avicola02.jpg" />
     <Content Include="Resource\BUSQUEDA.png" />
     <Content Include="Resource\CANCEL.png" />
     <None Include="Resource\CLIENTE.png" />

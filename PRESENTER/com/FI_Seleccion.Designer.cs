@@ -69,6 +69,8 @@
             this.LabelX4 = new DevComponents.DotNetBar.LabelX();
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
             this.LabelX1 = new DevComponents.DotNetBar.LabelX();
+            this.Tb_MERMA = new DevComponents.Editors.DoubleInput();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -102,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cb_Tipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaEnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MERMA)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoRegistro
@@ -529,6 +532,8 @@
             // 
             this.GPanel_DatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
             this.GPanel_DatosGenerales.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.GPanel_DatosGenerales.Controls.Add(this.Tb_MERMA);
+            this.GPanel_DatosGenerales.Controls.Add(this.labelX16);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Almacen);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX11);
             this.GPanel_DatosGenerales.Controls.Add(this.Tb_Id);
@@ -976,6 +981,39 @@
             this.LabelX1.TabIndex = 225;
             this.LabelX1.Text = "Nro. Nota de Recepción";
             // 
+            // Tb_MERMA
+            // 
+            // 
+            // 
+            // 
+            this.Tb_MERMA.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_MERMA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_MERMA.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_MERMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_MERMA.Increment = 1D;
+            this.Tb_MERMA.Location = new System.Drawing.Point(110, 317);
+            this.Tb_MERMA.MinValue = 0D;
+            this.Tb_MERMA.Name = "Tb_MERMA";
+            this.Tb_MERMA.Size = new System.Drawing.Size(84, 22);
+            this.Tb_MERMA.TabIndex = 345;
+            this.Tb_MERMA.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            // 
+            // labelX16
+            // 
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.labelX16.Location = new System.Drawing.Point(3, 316);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.labelX16.Size = new System.Drawing.Size(80, 23);
+            this.labelX16.TabIndex = 346;
+            this.labelX16.Text = "MERMA";
+            // 
             // FI_Seleccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1020,6 +1058,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cb_Tipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaRec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaEnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MERMA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1064,5 +1103,7 @@
         internal DevComponents.DotNetBar.LabelX labelX12;
         internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Almacen;
         internal DevComponents.DotNetBar.LabelX labelX11;
+        internal DevComponents.Editors.DoubleInput Tb_MERMA;
+        internal DevComponents.DotNetBar.LabelX labelX16;
     }
 }

@@ -47,6 +47,7 @@ namespace PRESENTER.com
                 btnMax.Visible = false;
                 MP_CargarEncabezado();
                 MP_InHabilitar();
+                Tb_MERMA.Value = 0;
             }
             catch (Exception ex)
             {
