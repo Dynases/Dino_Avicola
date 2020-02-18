@@ -341,6 +341,18 @@ namespace SERVICE
         }
         #endregion
         #region Compra Ingreso
+        public bool CompraIngreso_Guardar(VCompraIngresoLista vCompraIngreso, List<VCompraIngreso_01> detalle, ref int id,string usuario)
+        {
+            try
+            {
+                var result = new LCompraIngreso().Guardar(vCompraIngreso, detalle, ref id,usuario);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public List<VCompraIngreso> CmmpraIngresoListar()
         {
             try
@@ -385,6 +397,20 @@ namespace SERVICE
             try
             {
                 var listResult = new LCompraIngreso_01().ListarXId2(IdGrupo2);
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<VCompraIngresoNota> CompraIngreso_NotaXId(int id)
+        {
+
+            try
+            {
+                var listResult = new LCompraIngreso().ListarNotaXId(id);
                 return listResult;
             }
             catch (Exception ex)
@@ -483,6 +509,9 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
+
+   
+
         #endregion
 
     }

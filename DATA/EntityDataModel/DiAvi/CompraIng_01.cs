@@ -18,7 +18,6 @@ namespace DATA.EntityDataModel.DiAvi
         public int IdCompra { get; set; }
         public int IdProduc { get; set; }
         public int Estado { get; set; }
-        public int UniMin { get; set; }
         public decimal Caja { get; set; }
         public decimal Grupo { get; set; }
         public decimal Maple { get; set; }

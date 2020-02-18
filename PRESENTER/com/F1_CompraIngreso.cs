@@ -1,8 +1,10 @@
 ﻿using DevComponents.DotNetBar;
+using ENTITY.com.CompraIngreso.View;
 using ENTITY.com.CompraIngreso_01;
 using ENTITY.Libreria.View;
 using Janus.Windows.GridEX;
 using Janus.Windows.GridEX.EditControls;
+using PRESENTER.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTILITY;
 using UTILITY.Enum.EnEstaticos;
 using UTILITY.Global;
 
@@ -30,7 +33,7 @@ namespace PRESENTER.com
         string _NombreFormulario = "COMPRA INGRESO";
         bool _Limpiar = false;
         int _idOriginal = 0;
-        int _idProveedor = 0;
+        int _idProveedor = 10;
         int _MPos = 0;
         #endregion
         #region Eventos
@@ -170,6 +173,44 @@ namespace PRESENTER.com
         private void Dgv_Detalle_CellValueChanged(object sender, ColumnActionEventArgs e)
         {
         }
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            if (Dgv_GBuscador.RowCount > 0)
+            {
+                _MPos = 0;
+                Dgv_GBuscador.Row = _MPos;
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            _MPos = Dgv_GBuscador.Row;
+            if (_MPos > 0 && Dgv_GBuscador.RowCount > 0)
+            {
+                _MPos = _MPos - 1;
+                Dgv_GBuscador.Row = _MPos;
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            _MPos = Dgv_GBuscador.Row;
+            if (_MPos < Dgv_GBuscador.RowCount - 1 && _MPos >= 0)
+            {
+                _MPos = Dgv_GBuscador.Row + 1;
+                Dgv_GBuscador.Row = _MPos;
+            }
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            _MPos = Dgv_GBuscador.Row;
+            if (Dgv_GBuscador.RowCount > 0)
+            {
+                _MPos = Dgv_GBuscador.RowCount - 1;
+                Dgv_GBuscador.Row = _MPos;
+            }
+        }
         #endregion
 
         #region Metodos privados
@@ -182,6 +223,7 @@ namespace PRESENTER.com
                 btnMax.Visible = false;
                 MP_CargarEncabezado();
                 MP_InHabilitar();
+                Tb_MERMA.Value = 0;
             }
             catch (Exception ex)
             {
@@ -294,8 +336,8 @@ namespace PRESENTER.com
         {
             if (lresult.Count() > 0)
             {
-                DataTable result = ListaATabla(lresult);
-                Dgv_Detalle.DataSource = result;
+                //DataTable result = ListaATabla(lresult);
+                Dgv_Detalle.DataSource = lresult;
                 Dgv_Detalle.RetrieveStructure();
                 Dgv_Detalle.AlternatingColors = true;
 
@@ -572,6 +614,68 @@ namespace PRESENTER.com
         #endregion
 
         #region Metodo heredados
+        public override bool MH_NuevoRegistro()
+        {           
+            bool resultado = false;
+            string mensaje = "";
+           
+                VCompraIngresoLista CompraIngreso = new VCompraIngresoLista()
+                {
+                    IdSucur = 2,
+                    IdProvee = _idProveedor,
+                    estado = 1,
+                    NumNota = Tb_NUmGranja.Text,
+                    FechaEnt = Tb_FechaEnt.Value,
+                    FechaRec = Tb_FechaRec.Value,
+                    Placa = Tb_Placa.Text,
+                    CantidadSemanas= Tb_Edad.Text,
+                    Tipo = Convert.ToInt32(Cb_Tipo.Value),
+                    Observacion = Tb_Observacion.Text,
+                    Entregado = Tb_Entregado.Text,
+                    Recibido = Convert.ToInt32(Cb_Recibido.Value),
+                    TotalRecibido = Convert.ToDecimal( Tb_TotalEnviado.Value),
+                    TotalVendido = Convert.ToDecimal(Tb_TotalVendido.Value),
+                    Total = Convert.ToDecimal(Tb_TSaldoTo.Value),                    
+                    Fecha = DateTime.Now.Date,
+                    Hora = DateTime.Now.ToString("hh:mm"),
+                    Usuario = UTGlobal.Usuario,
+                };
+                int id = Tb_Cod.Text == string.Empty ? 0 : Convert.ToInt32(Tb_Cod.Text);
+                int idAux = id;
+                var detalle = ((List<VCompraIngreso_01>)Dgv_Detalle.DataSource).ToArray<VCompraIngreso_01>();
+
+                resultado = new ServiceDesktop.ServiceDesktopClient().CompraIngreso_Guardar(CompraIngreso, detalle, ref id,TxtNombreUsu.Text);
+                if (resultado)
+                {
+                    if (idAux == 0)//Registar
+                    {
+                        Tb_NUmGranja.Focus();
+                        MP_CargarEncabezado();
+                        MP_Limpiar();
+                        _Limpiar = true;
+                        mensaje = GLMensaje.Nuevo_Exito(_NombreFormulario, id.ToString());
+                    }
+                    else//Modificar
+                    {
+                        MP_Filtrar(1);
+                        MP_InHabilitar();//El formulario
+                        _Limpiar = true;
+                        mensaje = GLMensaje.Modificar_Exito(_NombreFormulario, id.ToString());
+                        MH_Habilitar();//El menu                   
+                    }
+                }
+                //Resultado
+                if (resultado)
+                {
+                    ToastNotification.Show(this, mensaje, PRESENTER.Properties.Resources.GRABACION_EXITOSA, (int)GLMensajeTamano.Chico, eToastGlowColor.Green, eToastPosition.TopCenter);
+                }
+                else
+                {
+                    mensaje = GLMensaje.Registro_Error(_NombreFormulario);
+                    ToastNotification.Show(this, mensaje, PRESENTER.Properties.Resources.CANCEL, (int)GLMensajeTamano.Chico, eToastGlowColor.Green, eToastPosition.TopCenter);
+                }
+            return resultado;
+        }
 
         public override void MH_Nuevo()
         {
@@ -617,20 +721,12 @@ namespace PRESENTER.com
                 Cb_Tipo.BackColor = Color.White;
             return _Error;
         }
-
-
-
-
-
-
         #endregion
 
         private void tb_Proveedor_KeyDown(object sender, KeyEventArgs e)
         {
-
             if (Tb_FechaEnt.IsInputReadOnly == false)
-            {
-              
+            {              
                     var lista = new ServiceDesktop.ServiceDesktopClient().ListarEncabezado();                   
                     List<GLCelda> listEstCeldas = new List<GLCelda>();
                     listEstCeldas.Add(new GLCelda (){campo = "Id", visible = true, titulo = "ID",tamano = 80});
@@ -652,5 +748,25 @@ namespace PRESENTER.com
                     //listEstCeldas.Add(New Modelo.Celda("yddias", False, "CRED", 50));                
             }
         }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            if (Tb_Cod.ReadOnly == true)
+            {
+                if (UTGlobal.visualizador != null)
+                {
+                    UTGlobal.visualizador.Close();
+                }
+                UTGlobal.visualizador = new Visualizador();
+                var lista = new ServiceDesktop.ServiceDesktopClient().CompraIngreso_NotaXId(Convert.ToInt32(Tb_Cod.Text));
+                var ObjetoReport = new RCompraIngreso();
+                ObjetoReport.SetDataSource(lista);
+                UTGlobal.visualizador.ReporteGeneral.ReportSource = ObjetoReport;
+                UTGlobal.visualizador.ShowDialog();
+                UTGlobal.visualizador.BringToFront();
+            }
+        }
+
+     
     }
 }

@@ -11,6 +11,7 @@ namespace REPOSITORY.Clase
 {
     public class RCompra : BaseConexion, ICompra
     {
+        #region CONSULTA
         public List<VCompraLista> Lista()
         {
             try
@@ -29,8 +30,8 @@ namespace REPOSITORY.Clase
                                           FechaDoc = a.FechaDoc,
                                           TipoVenta = a.TipoVenta,
                                           NombreTipo = a.TipoVenta == 1 ? "CONTADO" : "CREDITO",
-                                          Descu =a. Descu,
-                                          Total =a.Total,
+                                          Descu = a.Descu,
+                                          Total = a.Total,
                                           Fecha = a.Fecha,
                                           Hora = a.Hora,
                                           Usuario = a.Usuario
@@ -43,5 +44,7 @@ namespace REPOSITORY.Clase
                 throw new Exception(ex.Message);
             }
         }
+        #endregion
+
     }
 }

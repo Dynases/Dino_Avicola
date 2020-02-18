@@ -6,11 +6,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ENTITY.com.CompraIngreso.View;
+using DATA.EntityDataModel.DiAvi;
 
 namespace REPOSITORY.Clase
 {
     public class RCompraIngreso : BaseConexion, ICompraIngreso
     {
+        #region Transacciones
+        public bool Guardar(VCompraIngresoLista vCompraIngreso, ref int id)
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var idAux = id;
+                    CompraIng CompraIngreso;
+                    if (id > 0)
+                    {
+                        CompraIngreso = db.CompraIng.Where(a => a.Id == idAux).FirstOrDefault();
+                        if (CompraIngreso == null)
+                            throw new Exception("No existe la compra con id " + idAux);
+                    }
+                    else
+                    {
+                        CompraIngreso = new CompraIng();
+                        db.CompraIng.Add(CompraIngreso);
+                    }
+
+                    CompraIngreso.IdSucur = vCompraIngreso.IdSucur;
+                    CompraIngreso.IdProvee = vCompraIngreso.IdProvee;
+                    CompraIngreso.Estado = vCompraIngreso.estado;
+                    CompraIngreso.NumNota = vCompraIngreso.NumNota;
+                    CompraIngreso.FechaEnt = vCompraIngreso.FechaEnt;
+                    CompraIngreso.FechaRec = vCompraIngreso.FechaRec;          
+                    CompraIngreso.Placa = vCompraIngreso.Placa;
+                    CompraIngreso.EdadSemana = vCompraIngreso.CantidadSemanas;
+                    CompraIngreso.Tipo = vCompraIngreso.Tipo;
+                    CompraIngreso.Obser = vCompraIngreso.Observacion;
+                    CompraIngreso.Entregado = vCompraIngreso.Entregado;
+                    CompraIngreso.Recibido = vCompraIngreso.Recibido;
+                    CompraIngreso.TotalVendido = vCompraIngreso.TotalVendido;
+                    CompraIngreso.TotalRecibido = vCompraIngreso.TotalRecibido;
+                    CompraIngreso.Total = vCompraIngreso.Total;          
+                    CompraIngreso.Fecha = vCompraIngreso.Fecha;
+                    CompraIngreso.Hora = vCompraIngreso.Hora;
+                    CompraIngreso.Usuario = vCompraIngreso.Usuario;
+                    db.SaveChanges();
+                    id = CompraIngreso.Id;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        #endregion
         #region Consulta
         public List<VCompraIngreso> Listar()
         {
@@ -34,12 +86,44 @@ namespace REPOSITORY.Clase
                                           Id = a.Id,
                                           Proveedor = c.Descrip,
                                           FechaEnt = a.FechaEnt,
-                                          FechaRec = a.Fecha,
+                                          FechaRec = a.FechaRec,
                                           Entregado = a.Entregado,
                                           Total = a.Total,
                                           Fecha = a.Fecha,
                                           Hora = a.Hora,
                                           Usuario = a.Usuario,
+                                      }).ToList();
+                    return listResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<VCompraIngresoNota> ListarNotaXId(int Id)
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var listResult = (from a in db.V_NotaCompraIngreso
+                                      where a.Id.Equals(Id)
+                                      select new VCompraIngresoNota
+                                      {
+                                          Id = a.Id,
+                                          NumNota=a.NumNota,
+                                          FechaRec = a.FechaRec,
+                                          FechaEnt = a.FechaEnt,
+                                          Proveedor= a.Proveedor,
+                                          IdSkype= a.IdSpyre,
+                                          MarcaTipo =a.MarcaTipo,
+                                          IdProducto = a.IdProduc,
+                                          Producto = a.Producto,
+                                          TotalCant = a.TotalCant,
+                                          PrecioCost = a.PrecioCost,
+                                          Total = a.Total,
                                       }).ToList();
                     return listResult;
                 }

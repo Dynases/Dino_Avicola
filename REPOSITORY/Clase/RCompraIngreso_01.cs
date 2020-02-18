@@ -6,11 +6,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ENTITY.com.CompraIngreso_01;
+using DATA.EntityDataModel.DiAvi;
 
 namespace REPOSITORY.Clase
 {
     public class RCompraIngreso_01 : BaseConexion, ICompraIngreso_01
     {
+        public bool Guardar(List<VCompraIngreso_01>  Lista, int Id, string usuario)
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var listResult = db.CompraIng_01.Where(a => a.IdCompra == Id).ToList();
+                    if (listResult.Count != 0)
+                        db.CompraIng_01.RemoveRange(listResult);
+
+                    foreach (var vCompraIngreso_01 in Lista)
+                    {
+                        var compraIng_01 = new CompraIng_01();
+                        compraIng_01.IdCompra = Id;
+                        compraIng_01.IdProduc = vCompraIngreso_01.IdProduc;
+                        compraIng_01.Estado = 1; //Estatico                       
+                        compraIng_01.Caja = vCompraIngreso_01.Caja;
+                        compraIng_01.Cantidad = vCompraIngreso_01.Cantidad;
+                        compraIng_01.Grupo = vCompraIngreso_01.Grupo;
+                        compraIng_01.Maple = vCompraIngreso_01.Maple;
+                        compraIng_01.Cantidad = vCompraIngreso_01.Cantidad;
+                        compraIng_01.TotalCant = vCompraIngreso_01.TotalCant;
+                        compraIng_01.PrecioCost = vCompraIngreso_01.PrecioCost;
+                        compraIng_01.Total = vCompraIngreso_01.Total;
+                        compraIng_01.Fecha = DateTime.Now.Date;
+                        compraIng_01.Hora = DateTime.Now.ToString("HH:mm");
+                        compraIng_01.Usuario = usuario;
+                        db.CompraIng_01.Add(compraIng_01);
+                    }
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public List<VCompraIngreso_01> ListarXId(int id)
         {
 
@@ -70,7 +110,7 @@ namespace REPOSITORY.Clase
                                       {
                                           idProduc = b.IdProduc
                                       }
-                                      where b.IdPrecioCat.Equals(1) && c.Grupo2.Equals(IdGrupo2)
+                                      where b.IdPrecioCat.Equals(1) && c.Grupo2.Equals(IdGrupo2) && c.Tipo.Equals(2)
                                       select new VCompraIngreso_01
                                       {
                                           Id = 0,

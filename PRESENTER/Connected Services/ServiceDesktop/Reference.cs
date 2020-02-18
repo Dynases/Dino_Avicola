@@ -237,6 +237,20 @@ namespace PRESENTER.ServiceDesktop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CmmpraIngresoListarXId", ReplyAction="http://tempuri.org/IServiceDesktop/CmmpraIngresoListarXIdResponse")]
         System.Threading.Tasks.Task<ENTITY.com.CompraIngreso.View.VCompraIngresoLista[]> CmmpraIngresoListarXIdAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXId", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXIdResponse")]
+        ENTITY.com.CompraIngreso.View.VCompraIngresoNota[] CompraIngreso_NotaXId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXId", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXIdResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.CompraIngreso.View.VCompraIngresoNota[]> CompraIngreso_NotaXIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_Guardar", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_GuardarResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITY.com.CompraIngreso.View.VCompraIngresoNota))]
+        PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse CompraIngreso_Guardar(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request);
+        
+        // CODEGEN: Generando contrato de mensaje, ya que la operación tiene múltiples valores de devolución.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_Guardar", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_GuardarResponse")]
+        System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse> CompraIngreso_GuardarAsync(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId", ReplyAction="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXIdResponse")]
         ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId(int id);
         
@@ -410,6 +424,54 @@ namespace PRESENTER.ServiceDesktop {
         
         public ProductoGuardarResponse(bool ProductoGuardarResult, int id) {
             this.ProductoGuardarResult = ProductoGuardarResult;
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CompraIngreso_Guardar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CompraIngreso_GuardarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ENTITY.com.CompraIngreso.View.VCompraIngresoLista proveedor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] detalle;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string usuario;
+        
+        public CompraIngreso_GuardarRequest() {
+        }
+        
+        public CompraIngreso_GuardarRequest(ENTITY.com.CompraIngreso.View.VCompraIngresoLista proveedor, ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] detalle, int id, string usuario) {
+            this.proveedor = proveedor;
+            this.detalle = detalle;
+            this.id = id;
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CompraIngreso_GuardarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CompraIngreso_GuardarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool CompraIngreso_GuardarResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public int id;
+        
+        public CompraIngreso_GuardarResponse() {
+        }
+        
+        public CompraIngreso_GuardarResponse(bool CompraIngreso_GuardarResult, int id) {
+            this.CompraIngreso_GuardarResult = CompraIngreso_GuardarResult;
             this.id = id;
         }
     }
@@ -679,6 +741,34 @@ namespace PRESENTER.ServiceDesktop {
         
         public System.Threading.Tasks.Task<ENTITY.com.CompraIngreso.View.VCompraIngresoLista[]> CmmpraIngresoListarXIdAsync(int id) {
             return base.Channel.CmmpraIngresoListarXIdAsync(id);
+        }
+        
+        public ENTITY.com.CompraIngreso.View.VCompraIngresoNota[] CompraIngreso_NotaXId(int id) {
+            return base.Channel.CompraIngreso_NotaXId(id);
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.CompraIngreso.View.VCompraIngresoNota[]> CompraIngreso_NotaXIdAsync(int id) {
+            return base.Channel.CompraIngreso_NotaXIdAsync(id);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse PRESENTER.ServiceDesktop.IServiceDesktop.CompraIngreso_Guardar(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request) {
+            return base.Channel.CompraIngreso_Guardar(request);
+        }
+        
+        public bool CompraIngreso_Guardar(ENTITY.com.CompraIngreso.View.VCompraIngresoLista proveedor, ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] detalle, ref int id, string usuario) {
+            PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest inValue = new PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest();
+            inValue.proveedor = proveedor;
+            inValue.detalle = detalle;
+            inValue.id = id;
+            inValue.usuario = usuario;
+            PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse retVal = ((PRESENTER.ServiceDesktop.IServiceDesktop)(this)).CompraIngreso_Guardar(inValue);
+            id = retVal.id;
+            return retVal.CompraIngreso_GuardarResult;
+        }
+        
+        public System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse> CompraIngreso_GuardarAsync(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request) {
+            return base.Channel.CompraIngreso_GuardarAsync(request);
         }
         
         public ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId(int id) {

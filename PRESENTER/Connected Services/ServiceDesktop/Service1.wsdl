@@ -179,6 +179,18 @@
   <wsdl:message name="IServiceDesktop_CmmpraIngresoListarXId_OutputMessage">
     <wsdl:part name="parameters" element="tns:CmmpraIngresoListarXIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceDesktop_CompraIngreso_NotaXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompraIngreso_NotaXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDesktop_CompraIngreso_NotaXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompraIngreso_NotaXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDesktop_CompraIngreso_Guardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompraIngreso_Guardar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDesktop_CompraIngreso_Guardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompraIngreso_GuardarResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceDesktop_CmmpraIngreso_01ListarXId_InputMessage">
     <wsdl:part name="parameters" element="tns:CmmpraIngreso_01ListarXId" />
   </wsdl:message>
@@ -331,6 +343,14 @@
     <wsdl:operation name="CmmpraIngresoListarXId">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/CmmpraIngresoListarXId" message="tns:IServiceDesktop_CmmpraIngresoListarXId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceDesktop/CmmpraIngresoListarXIdResponse" message="tns:IServiceDesktop_CmmpraIngresoListarXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompraIngreso_NotaXId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXId" message="tns:IServiceDesktop_CompraIngreso_NotaXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXIdResponse" message="tns:IServiceDesktop_CompraIngreso_NotaXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompraIngreso_Guardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/CompraIngreso_Guardar" message="tns:IServiceDesktop_CompraIngreso_Guardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDesktop/CompraIngreso_GuardarResponse" message="tns:IServiceDesktop_CompraIngreso_Guardar_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CmmpraIngreso_01ListarXId">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId" message="tns:IServiceDesktop_CmmpraIngreso_01ListarXId_InputMessage" />
@@ -594,6 +614,24 @@
     </wsdl:operation>
     <wsdl:operation name="CmmpraIngresoListarXId">
       <soap:operation soapAction="http://tempuri.org/IServiceDesktop/CmmpraIngresoListarXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompraIngreso_NotaXId">
+      <soap:operation soapAction="http://tempuri.org/IServiceDesktop/CompraIngreso_NotaXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompraIngreso_Guardar">
+      <soap:operation soapAction="http://tempuri.org/IServiceDesktop/CompraIngreso_Guardar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

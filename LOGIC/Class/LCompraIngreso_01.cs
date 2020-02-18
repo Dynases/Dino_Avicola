@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace LOGIC.Class
 {
@@ -16,6 +17,24 @@ namespace LOGIC.Class
         {
             iCompraIngreso_01 = new RCompraIngreso_01();
         }
+        #region Transacciones
+        public bool Guardar(List<VCompraIngreso_01> lista, int Id,string usuario)
+        {
+            try
+            {
+                using (var scope = new TransactionScope())
+                {
+                    var result = iCompraIngreso_01.Guardar(lista, Id, usuario);
+                    scope.Complete();
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        #endregion
         #region Consulta
 
         public List<VCompraIngreso_01> ListarXId(int id)

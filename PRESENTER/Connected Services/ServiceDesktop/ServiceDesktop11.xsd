@@ -30,8 +30,10 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CantidadSemanas" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Entregado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaEnt" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaRec" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IdProvee" type="xs:int" />
       <xs:element minOccurs="0" name="IdProvee_01" type="xs:int" />
@@ -45,7 +47,31 @@
       <xs:element minOccurs="0" name="Total" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalRecibido" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalVendido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="VCompraIngresoLista" nillable="true" type="tns:VCompraIngresoLista" />
+  <xs:complexType name="ArrayOfVCompraIngresoNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VCompraIngresoNota" nillable="true" type="tns:VCompraIngresoNota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVCompraIngresoNota" nillable="true" type="tns:ArrayOfVCompraIngresoNota" />
+  <xs:complexType name="VCompraIngresoNota">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VCompraIngresoLista">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+          <xs:element minOccurs="0" name="MarcaTipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrecioCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCant" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VCompraIngresoNota" nillable="true" type="tns:VCompraIngresoNota" />
 </xs:schema>

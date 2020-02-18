@@ -11,7 +11,7 @@ namespace ENTITY.com.CompraIngreso.View
         public int Id { get; set; }
         public int IdSucur { get; set; }
         public int IdProvee { get; set; }
-
+        public int estado { get; set; }
         public int IdProvee_01 { get; set; }
         public string Proveedor { get; set; }
         public string NumNota { get; set; }
@@ -26,6 +26,11 @@ namespace ENTITY.com.CompraIngreso.View
         public decimal Total { get; set; }
         public decimal TotalRecibido { get; set; }
         public decimal TotalVendido { get; set; }
+
+
+        public System.DateTime Fecha { get; set; }
+        public string Hora { get; set; }
+        public string Usuario { get; set; }
 
 
 

@@ -61,6 +61,7 @@
             this.GPanel_Detalle = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Dgv_Detalle = new Janus.Windows.GridEX.GridEX();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
@@ -71,7 +72,8 @@
             this.Tb_TotalFisico = new DevComponents.Editors.DoubleInput();
             this.Tb_TotalEnviado = new DevComponents.Editors.DoubleInput();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
+            this.Tb_MERMA = new DevComponents.Editors.DoubleInput();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -102,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalFisico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalEnviado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MERMA)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoRegistro
@@ -133,6 +136,26 @@
             this.superTabControl1.Size = new System.Drawing.Size(1133, 630);
             this.superTabControl1.Controls.SetChildIndex(this.PanelContenidoBuscar, 0);
             this.superTabControl1.Controls.SetChildIndex(this.PanelContenidoRegistro, 0);
+            // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
+            // btnPrimero
+            // 
+            this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // btnUltimo
+            // 
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // TxtNombreUsu
             // 
@@ -235,6 +258,8 @@
             // 
             this.GPanel_DatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
             this.GPanel_DatosGenerales.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.GPanel_DatosGenerales.Controls.Add(this.Tb_MERMA);
+            this.GPanel_DatosGenerales.Controls.Add(this.labelX16);
             this.GPanel_DatosGenerales.Controls.Add(this.btn_Recibido);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Recibido);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX11);
@@ -807,7 +832,6 @@
             this.Dgv_Detalle.CellValueChanged += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Detalle_CellValueChanged);
             this.Dgv_Detalle.CellEdited += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Detalle_CellEdited);
             this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell);
-           // this.Dgv_Detalle.UpdatingCell += new Janus.Windows.GridEX.UpdatingCellEventHandler(this.Dgv_Detalle_UpdatingCell);
             // 
             // panel3
             // 
@@ -828,6 +852,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(785, 117);
             this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 15);
+            this.label1.TabIndex = 236;
+            this.label1.Text = "Medidas: Cajas = 360 /  Grupo = 300 / Maple = 30 ";
             // 
             // labelX14
             // 
@@ -999,16 +1034,38 @@
             this.labelX12.TabIndex = 220;
             this.labelX12.Text = "TOTAL ENVIADO(h)";
             // 
-            // label1
+            // labelX16
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 15);
-            this.label1.TabIndex = 236;
-            this.label1.Text = "Medidas: Cajas = 360 /  Grupo = 300 / Maple = 30 ";
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.labelX16.Location = new System.Drawing.Point(0, 395);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.labelX16.Size = new System.Drawing.Size(80, 23);
+            this.labelX16.TabIndex = 344;
+            this.labelX16.Text = "MERMA";
+            // 
+            // Tb_MERMA
+            // 
+            // 
+            // 
+            // 
+            this.Tb_MERMA.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_MERMA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_MERMA.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_MERMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_MERMA.Increment = 1D;
+            this.Tb_MERMA.Location = new System.Drawing.Point(107, 396);
+            this.Tb_MERMA.MinValue = 0D;
+            this.Tb_MERMA.Name = "Tb_MERMA";
+            this.Tb_MERMA.Size = new System.Drawing.Size(84, 22);
+            this.Tb_MERMA.TabIndex = 237;
+            this.Tb_MERMA.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // F1_CompraIngreso
             // 
@@ -1050,6 +1107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalFisico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_TotalEnviado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_MERMA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1097,5 +1155,7 @@
         internal DevComponents.DotNetBar.LabelX labelX14;
         internal DevComponents.DotNetBar.LabelX labelX15;
         private System.Windows.Forms.Label label1;
+        internal DevComponents.Editors.DoubleInput Tb_MERMA;
+        internal DevComponents.DotNetBar.LabelX labelX16;
     }
 }

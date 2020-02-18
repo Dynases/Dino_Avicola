@@ -398,7 +398,8 @@ namespace PRESENTER.com
                 Tb_Recep_TPrecio.Value = Convert.ToDouble(Precio);
                 Tb_Recep_Total.Value = Tb_Recep_TCantidad.Value * Tb_Recep_TPrecio.Value;
                 Tb_Selecc_TCantidad.Value = Convert.ToDouble(Dgv_Seleccion.GetTotal(Dgv_Seleccion.RootTable.Columns["Cantidad"], AggregateFunction.Sum));
-                Tb_Selecc_TPrecio.Value = Convert.ToDouble(Dgv_Seleccion.GetTotal(Dgv_Seleccion.RootTable.Columns["Precio"], AggregateFunction.Sum)) / Dgv_Seleccion.RowCount;
+                Tb_Selecc_TPrecio.Value = Convert.ToDouble(Precio);
+                //Tb_Selecc_TPrecio.Value = Convert.ToDouble(Dgv_Seleccion.GetTotal(Dgv_Seleccion.RootTable.Columns["Precio"], AggregateFunction.Sum)) / Dgv_Seleccion.RowCount;
                 Tb_Selecc_Total.Value = Tb_Selecc_TCantidad.Value * Tb_Selecc_TPrecio.Value;
             }
             catch (Exception ex)

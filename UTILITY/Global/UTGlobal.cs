@@ -22,6 +22,7 @@ namespace UTILITY.Global
         public static int Mayusculas =0;
         public static int UsuarioRol = 0;
         public static string NombreButton = "";
+        public static Visualizador visualizador;
         //**Carpetas
         #region Carpetas
         public static  string RutaTemporal = @"C:\Temporal";
@@ -68,7 +69,7 @@ namespace UTILITY.Global
                 combo.DisplayMember = "Descripcion";
                 combo.DropDownList.DataSource = lSucursal;
                 combo.DropDownList.Refresh();
-                combo.Value = 1;
+                combo.Value = 2;
             }
             catch (Exception)
             {

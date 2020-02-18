@@ -439,6 +439,7 @@
             this.BtnExportar.TabIndex = 71;
             this.BtnExportar.Text = "EXPORTAR";
             this.BtnExportar.TextColor = System.Drawing.Color.White;
+            this.BtnExportar.Visible = false;
             // 
             // reflectionLabelLogo
             // 

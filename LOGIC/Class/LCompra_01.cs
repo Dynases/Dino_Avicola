@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace LOGIC.Class
 {
@@ -16,6 +17,9 @@ namespace LOGIC.Class
         {
             iCompra_01 = new RCompra_01();
         }
+        #region Transacciones
+       
+        #endregion
         #region Consulta
         public List<VCompra_01_Lista> Listar()
         {
