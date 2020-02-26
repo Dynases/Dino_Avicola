@@ -475,8 +475,8 @@ namespace PRESENTER.com
                 }
                 tabla.Rows.Add(fila);
             }
-            return (tabla);
-        }     
+           return (tabla);
+        }        
         private void MP_Habilitar()
         {
             Tb_Cod.ReadOnly = false;
@@ -554,7 +554,7 @@ namespace PRESENTER.com
                 {
                     Tb_Cod.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Id.ToString())).Count() > 0 ? tabla.Select(x => x.Id).First().ToString() : "";
                     Tb_NUmGranja.Text = tabla.Where(x => !string.IsNullOrEmpty(x.NumNota)).Count() > 0 ? tabla.Select(x => x.NumNota).First().ToString() : "";
-                    Tb_FechaEnt.Value = tabla.Select(x => x.FechaEnt).First();
+                    Tb_FechaEnt.Value = tabla.Select(x => x.FechaEnt).First(); //registro.FechaEnt;
                     Tb_FechaRec.Value = tabla.Select(x => x.FechaRec).First();
                     Tb_Placa.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Placa)).Count() > 0 ? tabla.Select(x => x.Placa).First().ToString() : "";
                     tb_Proveedor.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Proveedor)).Count() > 0 ? tabla.Select(x => x.Proveedor).First().ToString() : "";
@@ -727,8 +727,8 @@ namespace PRESENTER.com
         {
             if (Tb_FechaEnt.IsInputReadOnly == false)
             {              
-                    var lista = new ServiceDesktop.ServiceDesktopClient().ListarEncabezado();                   
-                    List<GLCelda> listEstCeldas = new List<GLCelda>();
+                   var lista = new ServiceDesktop.ServiceDesktopClient().ListarEncabezado();                
+                   List<GLCelda> listEstCeldas = new List<GLCelda>();
                     listEstCeldas.Add(new GLCelda (){campo = "Id", visible = true, titulo = "ID",tamano = 80});
                     listEstCeldas.Add(new GLCelda() { campo = "Descripcion", visible = true, titulo = "DESCRIPCION", tamano = 200 });
                     listEstCeldas.Add(new GLCelda() { campo = "Contacto", visible = true, titulo = "CONTACTO", tamano = 150 });
@@ -736,7 +736,22 @@ namespace PRESENTER.com
                     listEstCeldas.Add(new GLCelda() { campo = "NombreCiudad", visible = true, titulo = "CIUDAD", tamano = 120 });
                     listEstCeldas.Add(new GLCelda() { campo = "Telefono", visible = true, titulo = "TELEFONO", tamano = 100 });
                     GLEfecto efecto = new GLEfecto();
-                    efecto.Tipo = 3;                 
+                    efecto.Tipo = 3;
+                    efecto.Tabla = lista;
+                efecto.SelectCol = 2;
+                efecto.listaCelda = listEstCeldas;
+                efecto.Alto = 50;
+                efecto.Ancho = 350;
+                efecto.Context = "SELECCIONE UN PROVEEDOR";
+                efecto.ShowDialog();
+                bool bandera = false;
+                bandera = efecto.Band;
+                if (bandera)
+                {
+                    Janus.Windows.GridEX.GridEXRow Row = efecto.Row;
+                    _idProveedor = Convert.ToInt32(Row.Cells["Id"].Value);
+                }
+                
                     //listEstCeldas.Add(New Modelo.Celda("ydrazonsocial", true, "RAZÓN SOCIAL", 180));
                     //listEstCeldas.Add(New Modelo.Celda("yddesc", True, "NOMBRE", 280));
                     //listEstCeldas.Add(New Modelo.Celda("yddctnum", True, "N. Documento".ToUpper, 150));

@@ -100,6 +100,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModeloAyuda";
             this.Text = "ModeloAyuda";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ModeloAyuda_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloAyuda_KeyPress);
             this.GPPanelP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grJBuscador)).EndInit();
             this.ResumeLayout(false);
