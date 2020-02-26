@@ -98,7 +98,6 @@ D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\ENTITY.pdb
 D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\UTILITY.pdb
 D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\EntityFramework.xml
 D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\EntityFramework.SqlServer.xml
-D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\DevComponents.DotNetBar2.xml
 D:\DYNASYS\Dino_Avicola\REPOSITORY\obj\Debug\REPOSITORY.csprojAssemblyReference.cache
 D:\DYNASYS\Dino_Avicola\REPOSITORY\obj\Debug\REPOSITORY.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\REPOSITORY\obj\Debug\REPOSITORY.dll

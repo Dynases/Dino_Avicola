@@ -7,65 +7,140 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_NewBackgroundProfile>False</_NewBackgroundProfile>
-    <_PublishTargetUrl>D:\Publicaciones\ServicioDiAvi</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\ServicioDiAvi</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/CrystalDecisions.CrystalReports.Engine.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ClientDoc.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommLayer.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonControls.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonObjectModel.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Controllers.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CubeDefModel.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataDefModel.dll">
+      <publishTime>08/31/2017 05:21:24</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataSetConversion.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ObjectFactory.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Prompting.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ReportDefModel.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.XmlSerialize.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportSource.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Shared.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Windows.Forms.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
     <File Include="bin/DATA.dll">
-      <publishTime>01/10/2020 23:00:23</publishTime>
+      <publishTime>02/26/2020 16:23:00</publishTime>
     </File>
     <File Include="bin/DATA.dll.config">
-      <publishTime>01/06/2020 22:35:20</publishTime>
+      <publishTime>02/26/2020 10:41:43</publishTime>
+    </File>
+    <File Include="bin/DATA.pdb">
+      <publishTime>02/26/2020 16:23:00</publishTime>
     </File>
     <File Include="bin/DevComponents.DotNetBar2.dll">
       <publishTime>10/06/2015 14:57:36</publishTime>
     </File>
     <File Include="bin/ENTITY.dll">
-      <publishTime>01/10/2020 23:00:24</publishTime>
+      <publishTime>02/26/2020 16:23:00</publishTime>
+    </File>
+    <File Include="bin/ENTITY.pdb">
+      <publishTime>02/26/2020 16:23:00</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>01/04/2017 00:44:16</publishTime>
+      <publishTime>02/26/2020 10:41:48</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>01/04/2017 00:44:16</publishTime>
+      <publishTime>02/26/2020 10:41:48</publishTime>
+    </File>
+    <File Include="bin/FlashControlV71.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
     </File>
     <File Include="bin/Janus.Data.v3.dll">
-      <publishTime>02/14/2019 13:19:16</publishTime>
+      <publishTime>02/26/2020 10:41:47</publishTime>
     </File>
     <File Include="bin/Janus.Windows.Common.v3.dll">
-      <publishTime>02/14/2019 13:19:22</publishTime>
+      <publishTime>02/26/2020 10:41:44</publishTime>
     </File>
     <File Include="bin/Janus.Windows.GridEX.v3.dll">
-      <publishTime>02/14/2019 13:20:04</publishTime>
+      <publishTime>02/26/2020 10:41:44</publishTime>
     </File>
     <File Include="bin/LOGIC.dll">
-      <publishTime>01/10/2020 23:02:40</publishTime>
+      <publishTime>02/26/2020 17:25:20</publishTime>
     </File>
     <File Include="bin/LOGIC.dll.config">
-      <publishTime>01/06/2020 22:35:20</publishTime>
+      <publishTime>02/26/2020 10:41:43</publishTime>
+    </File>
+    <File Include="bin/LOGIC.pdb">
+      <publishTime>02/26/2020 17:25:20</publishTime>
     </File>
     <File Include="bin/REPOSITORY.dll">
-      <publishTime>01/10/2020 23:02:40</publishTime>
+      <publishTime>02/26/2020 17:25:20</publishTime>
     </File>
     <File Include="bin/REPOSITORY.dll.config">
-      <publishTime>01/06/2020 22:35:21</publishTime>
+      <publishTime>02/26/2020 10:41:45</publishTime>
+    </File>
+    <File Include="bin/REPOSITORY.pdb">
+      <publishTime>02/26/2020 17:25:20</publishTime>
     </File>
     <File Include="bin/SERVICE.dll">
-      <publishTime>01/10/2020 23:02:41</publishTime>
+      <publishTime>02/26/2020 18:52:06</publishTime>
+    </File>
+    <File Include="bin/SERVICE.pdb">
+      <publishTime>02/26/2020 18:52:06</publishTime>
+    </File>
+    <File Include="bin/ShockwaveFlashObjects.dll">
+      <publishTime>08/31/2017 05:21:26</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>02/26/2020 10:02:34</publishTime>
     </File>
     <File Include="bin/UTILITY.dll">
-      <publishTime>01/10/2020 23:02:39</publishTime>
+      <publishTime>02/26/2020 17:25:20</publishTime>
+    </File>
+    <File Include="bin/UTILITY.pdb">
+      <publishTime>02/26/2020 17:25:20</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>01/06/2020 22:35:21</publishTime>
+      <publishTime>02/26/2020 10:41:47</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>01/10/2020 23:03:41</publishTime>
+      <publishTime>02/26/2020 18:52:07</publishTime>
     </File>
     <File Include="ServiceDesktop.svc">
-      <publishTime>01/06/2020 22:35:21</publishTime>
+      <publishTime>02/26/2020 10:41:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/10/2020 23:02:42</publishTime>
+      <publishTime>02/26/2020 18:52:06</publishTime>
     </File>
   </ItemGroup>
 </Project>

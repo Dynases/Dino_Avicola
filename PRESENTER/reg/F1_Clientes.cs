@@ -139,7 +139,7 @@ namespace PRESENTER.reg
             LblTitulo.Text = _NombreFormulario;
             //Carga las librerias al combobox desde una lista
             UTGlobal.MG_ArmarCombo(Cb_CliCiudad,
-                                   new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.CLIENTE),
+                                   new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo (Convert.ToInt32(ENEstaticosGrupo.CLIENTE),
                                                                                                  Convert.ToInt32(ENEstaticosOrden.CIUDAD_CLIENTE)).ToList());
             UTGlobal.MG_ArmarCombo(Cb_CliFacturacion,
                                    new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.CLIENTE),

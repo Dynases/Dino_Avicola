@@ -116,7 +116,6 @@ D:\DYNASYS\Dino_Avicola\SERVICE\bin\DATA.pdb
 D:\DYNASYS\Dino_Avicola\SERVICE\bin\DATA.dll.config
 D:\DYNASYS\Dino_Avicola\SERVICE\bin\REPOSITORY.pdb
 D:\DYNASYS\Dino_Avicola\SERVICE\bin\REPOSITORY.dll.config
-D:\DYNASYS\Dino_Avicola\SERVICE\bin\DevComponents.DotNetBar2.xml
 D:\DYNASYS\Dino_Avicola\SERVICE\obj\Debug\SERVICE.csprojAssemblyReference.cache
 D:\DYNASYS\Dino_Avicola\SERVICE\obj\Debug\SERVICE.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\SERVICE\obj\Debug\SERVICE.dll
