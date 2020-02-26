@@ -121,8 +121,6 @@ namespace SERVICE
         [OperationContract]
         bool CompraIngreso_Guardar(VCompraIngresoLista proveedor, List<VCompraIngreso_01> detalle, ref int id,string usuario);
         #endregion
-
-
         #region Compra Ingreso_01
         [OperationContract]
         List<VCompraIngreso_01> CmmpraIngreso_01ListarXId(int id);
@@ -137,7 +135,6 @@ namespace SERVICE
         [OperationContract]
         List<VSeleccion_01_Lista> Seleccion_01_Lista();
         #endregion
-
         #region Transformacion
         [OperationContract]
         List<VTransformacion> Transformacion_Lista();
@@ -146,12 +143,10 @@ namespace SERVICE
         [OperationContract]
         List<VTransformacion_01_Lista> Transformacion_01_Lista();
         #endregion
-
         #region Compra
         [OperationContract]
         List<VCompraLista> Compra_Lista();
         #endregion
-
         #region Compra_01
         [OperationContract]
         List<VCompra_01_Lista> Compra_01_Lista();
