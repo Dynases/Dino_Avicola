@@ -6,12 +6,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ENTITY.com.Seleccion.View;
+using DATA.EntityDataModel.DiAvi;
 
 namespace REPOSITORY.Clase
 {
 
     public class RSeleccion : BaseConexion, ISeleccion
     {
+        #region tRANSACCIONES
+        public bool Guardar(VSeleccionLista vSeleccion, ref int id)
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var idAux = id;
+                    Seleccion seleccion;
+                    if (id > 0)
+                    {
+                        seleccion = db.CompraIng.Where(a => a.Id == idAux).FirstOrDefault();
+                        if (seleccion == null)
+                            throw new Exception("No existe la compra con id " + idAux);
+                    }
+                    else
+                    {
+                        seleccion = new CompraIng();
+                        db.CompraIng.Add(seleccion);
+                    }
+
+                    seleccion.IdSucur = vSeleccion.IdSucur;
+                    seleccion.IdProvee = vSeleccion.IdProvee;
+                    seleccion.Estado = vSeleccion.estado;
+                    seleccion.NumNota = vSeleccion.NumNota;
+                    seleccion.FechaEnt = vSeleccion.FechaEnt;
+                    seleccion.FechaRec = vSeleccion.FechaRec;
+                    seleccion.Placa = vSeleccion.Placa;
+                    seleccion.EdadSemana = vSeleccion.CantidadSemanas;
+                    seleccion.Tipo = vSeleccion.Tipo;
+                    seleccion.Obser = vSeleccion.Observacion;
+                    seleccion.Entregado = vSeleccion.Entregado;
+                    seleccion.Recibido = vSeleccion.Recibido;
+                    seleccion.TotalVendido = vSeleccion.TotalVendido;
+                    seleccion.TotalRecibido = vSeleccion.TotalRecibido;
+                    seleccion.Total = vSeleccion.Total;
+                    seleccion.Fecha = vSeleccion.Fecha;
+                    seleccion.Hora = vSeleccion.Hora;
+                    seleccion.Usuario = vSeleccion.Usuario;
+                    db.SaveChanges();
+                    id = seleccion.Id;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        #endregion
         public List<VSeleccionLista> Listar()
         {
             try

@@ -9,3 +9,13 @@ D:\DYNASYS\Dino_Avicola\DATA\obj\Debug\DATA.csprojAssemblyReference.cache
 D:\DYNASYS\Dino_Avicola\DATA\obj\Debug\DATA.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\DATA\obj\Debug\DATA.dll
 D:\DYNASYS\Dino_Avicola\DATA\obj\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.dll.config
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.xml
+D:\GitHub\Dino_Avicola\DiAvi\DATA\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.dll
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.pdb
+D:\GitHub\Dino_Avicola\DiAvi\DATA\obj\Debug\DATA.csprojResolveAssemblyReference.cache

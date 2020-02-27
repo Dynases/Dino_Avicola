@@ -24,9 +24,7 @@
         <AssociationConnector Association="DiAviModel.FK_Deposito" />
         <AssociationConnector Association="DiAviModel.FK__Precio_Almacen" />
         <AssociationConnector Association="DiAviModel.FK__Precio_Cat" />
-        <EntityTypeShape EntityType="DiAviModel.Seleccion" Width="1.5" PointX="6" PointY="21.75" />
         <EntityTypeShape EntityType="DiAviModel.Seleccion_01" Width="1.5" PointX="8.25" PointY="15.875" />
-        <AssociationConnector Association="DiAviModel.FK_Seleccion_01_Seleccion" />
         <EntityTypeShape EntityType="DiAviModel.Producto" Width="1.5" PointX="0.75" PointY="9.75" />
         <AssociationConnector Association="DiAviModel.FK_Compra_01_Producto" />
         <AssociationConnector Association="DiAviModel.FK_Seleccion_01_Producto" />
@@ -42,7 +40,9 @@
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdPro__43D61337" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdSuc__42E1EEFE" />
+        <EntityTypeShape EntityType="DiAviModel.Seleccion" Width="1.5" PointX="6" PointY="21.625" />
         <AssociationConnector Association="DiAviModel.FK_Seleccion_CompraIng" />
+        <AssociationConnector Association="DiAviModel.FK_Seleccion_01_Seleccion" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

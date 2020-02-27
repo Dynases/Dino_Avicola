@@ -221,6 +221,12 @@
   <wsdl:message name="IServiceDesktop_Seleccion_01_Lista_OutputMessage">
     <wsdl:part name="parameters" element="tns:Seleccion_01_ListaResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceDesktop_Seleccion_01_ListarXId_Vacio_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccion_01_ListarXId_Vacio" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDesktop_Seleccion_01_ListarXId_Vacio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccion_01_ListarXId_VacioResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceDesktop_Transformacion_Lista_InputMessage">
     <wsdl:part name="parameters" element="tns:Transformacion_Lista" />
   </wsdl:message>
@@ -377,6 +383,10 @@
     <wsdl:operation name="Seleccion_01_Lista">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista" message="tns:IServiceDesktop_Seleccion_01_Lista_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse" message="tns:IServiceDesktop_Seleccion_01_Lista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccion_01_ListarXId_Vacio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_Vacio" message="tns:IServiceDesktop_Seleccion_01_ListarXId_Vacio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_VacioResponse" message="tns:IServiceDesktop_Seleccion_01_ListarXId_Vacio_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Transformacion_Lista">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceDesktop/Transformacion_Lista" message="tns:IServiceDesktop_Transformacion_Lista_InputMessage" />
@@ -687,6 +697,15 @@
     </wsdl:operation>
     <wsdl:operation name="Seleccion_01_Lista">
       <soap:operation soapAction="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccion_01_ListarXId_Vacio">
+      <soap:operation soapAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_Vacio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

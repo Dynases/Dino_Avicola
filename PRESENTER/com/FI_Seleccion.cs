@@ -191,165 +191,78 @@ namespace PRESENTER.com
             try
             {
                 List<VSeleccion_01_Lista> lresult = new ServiceDesktop.ServiceDesktopClient().Seleccion_01_Lista().Where(a => a.IdSeleccion == id).ToList();
-                if (lresult.Count() > 0)
-                {
-                    Dgv_Seleccion.DataSource = lresult;
-                    Dgv_Seleccion.RetrieveStructure();
-                    Dgv_Seleccion.AlternatingColors = true;
-
-                    Dgv_Seleccion.RootTable.Columns["id"].Visible = false;
-                    Dgv_Seleccion.RootTable.Columns["IdSeleccion"].Visible = false;
-                    Dgv_Seleccion.RootTable.Columns["IdProducto"].Visible = false;
-                    Dgv_Seleccion.RootTable.Columns["Estado"].Visible = false;
-
-                    Dgv_Seleccion.RootTable.Columns["Producto"].Caption = "PRODUCTO";
-                    Dgv_Seleccion.RootTable.Columns["Producto"].Width = 150;
-                    Dgv_Seleccion.RootTable.Columns["Producto"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                    Dgv_Seleccion.RootTable.Columns["Producto"].CellStyle.FontSize = 9;
-                    Dgv_Seleccion.RootTable.Columns["Producto"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
-                    Dgv_Seleccion.RootTable.Columns["Producto"].Visible = true;
-
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].Key = "Cantidad";
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].Caption = "CANT.";
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].FormatString = "0";
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].Width = 75;
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].CellStyle.FontSize = 9;
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                    Dgv_Seleccion.RootTable.Columns["Cantidad"].Visible = true;
-
-                    Dgv_Seleccion.RootTable.Columns["Precio"].Caption = "PRECIO";
-                    Dgv_Seleccion.RootTable.Columns["Precio"].FormatString = "0.00";
-                    Dgv_Seleccion.RootTable.Columns["Precio"].Width = 75;
-                    Dgv_Seleccion.RootTable.Columns["Precio"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                    Dgv_Seleccion.RootTable.Columns["Precio"].CellStyle.FontSize = 9;
-                    Dgv_Seleccion.RootTable.Columns["Precio"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                    Dgv_Seleccion.RootTable.Columns["Precio"].Visible = true;
-
-                    Dgv_Seleccion.RootTable.Columns["Total"].Caption = "TOTAL";
-                    Dgv_Seleccion.RootTable.Columns["Total"].FormatString = "0.00";
-                    Dgv_Seleccion.RootTable.Columns["Total"].Width = 90;
-                    Dgv_Seleccion.RootTable.Columns["Total"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                    Dgv_Seleccion.RootTable.Columns["Total"].CellStyle.FontSize = 9;
-                    Dgv_Seleccion.RootTable.Columns["Total"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                    Dgv_Seleccion.RootTable.Columns["Total"].Visible = true;
-
-                    //Dgv_Buscardor.FilterRowButtonStyle = FilterRowButtonStyle.ConditionOperatorDropDown;
-                    Dgv_Seleccion.GroupByBoxVisible = false;
-                    Dgv_Seleccion.VisualStyle = VisualStyle.Office2007;
-                }
+                ArmarDetalle(lresult);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace, GLMensaje.Error);
             }
         }
-        private void MP_CargarDetalle_Nuevo()
-        {
-            try
-            {               
-                //Consulta segun un Categoria 
-                var lresult = new ServiceDesktop.ServiceDesktopClient().CmmpraIngreso_01ListarXId2(Convert.ToInt32( Cb_Tipo.Value)).Where(a => a.Producto != "SIN SELECCION NAT.").ToList();
-                MP_ArmarDetalle_Vacio(lresult);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace, GLMensaje.Error);
-            }
 
-        }
-        private void MP_ArmarDetalle_Vacio(List<VCompraIngreso_01> lresult)
+        private void ArmarDetalle(List<VSeleccion_01_Lista> lresult)
         {
             if (lresult.Count() > 0)
             {
-                //DataTable result = ListaATabla(lresult);
                 Dgv_Seleccion.DataSource = lresult;
                 Dgv_Seleccion.RetrieveStructure();
                 Dgv_Seleccion.AlternatingColors = true;
 
-                Dgv_Seleccion.RootTable.Columns[0].Key = "id";
-                Dgv_Seleccion.RootTable.Columns[0].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["id"].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["IdSeleccion"].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["IdProducto"].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["Estado"].Visible = false;
 
-                Dgv_Seleccion.RootTable.Columns[1].Key = "IdProduc";
-                Dgv_Seleccion.RootTable.Columns[1].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["Producto"].Caption = "PRODUCTO";
+                Dgv_Seleccion.RootTable.Columns["Producto"].Width = 150;
+                Dgv_Seleccion.RootTable.Columns["Producto"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                Dgv_Seleccion.RootTable.Columns["Producto"].CellStyle.FontSize = 9;
+                Dgv_Seleccion.RootTable.Columns["Producto"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                Dgv_Seleccion.RootTable.Columns["Producto"].Visible = true;
 
-                Dgv_Seleccion.RootTable.Columns[2].Key = "Producto";
-                Dgv_Seleccion.RootTable.Columns[2].Caption = "PRODUCTO";
-                Dgv_Seleccion.RootTable.Columns[2].Width = 150;
-                Dgv_Seleccion.RootTable.Columns[2].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[2].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[2].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
-                Dgv_Seleccion.RootTable.Columns[2].Visible = true;
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].Key = "Cantidad";
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].Caption = "CANT.";
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].FormatString = "0";
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].Width = 75;
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].CellStyle.FontSize = 9;
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                Dgv_Seleccion.RootTable.Columns["Cantidad"].Visible = true;
 
-                Dgv_Seleccion.RootTable.Columns[3].Key = "Caja";
-                Dgv_Seleccion.RootTable.Columns[3].Caption = "CAJA";
-                Dgv_Seleccion.RootTable.Columns[3].FormatString = "0";
-                Dgv_Seleccion.RootTable.Columns[3].Width = 90;
-                Dgv_Seleccion.RootTable.Columns[3].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[3].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[3].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[3].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["Precio"].Caption = "PRECIO";
+                Dgv_Seleccion.RootTable.Columns["Precio"].FormatString = "0.00";
+                Dgv_Seleccion.RootTable.Columns["Precio"].Width = 75;
+                Dgv_Seleccion.RootTable.Columns["Precio"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                Dgv_Seleccion.RootTable.Columns["Precio"].CellStyle.FontSize = 9;
+                Dgv_Seleccion.RootTable.Columns["Precio"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                Dgv_Seleccion.RootTable.Columns["Precio"].Visible = true;
 
-                Dgv_Seleccion.RootTable.Columns[4].Key = "Grupo";
-                Dgv_Seleccion.RootTable.Columns[4].Caption = "GRUPO";
-                Dgv_Seleccion.RootTable.Columns[4].FormatString = "0";
-                Dgv_Seleccion.RootTable.Columns[4].Width = 90;
-                Dgv_Seleccion.RootTable.Columns[4].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[4].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[4].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[4].Visible = false;
+                Dgv_Seleccion.RootTable.Columns["Total"].Caption = "TOTAL";
+                Dgv_Seleccion.RootTable.Columns["Total"].FormatString = "0.00";
+                Dgv_Seleccion.RootTable.Columns["Total"].Width = 90;
+                Dgv_Seleccion.RootTable.Columns["Total"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                Dgv_Seleccion.RootTable.Columns["Total"].CellStyle.FontSize = 9;
+                Dgv_Seleccion.RootTable.Columns["Total"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                Dgv_Seleccion.RootTable.Columns["Total"].Visible = true;
 
-                Dgv_Seleccion.RootTable.Columns[5].Key = "Maple";
-                Dgv_Seleccion.RootTable.Columns[5].Caption = "MAPLE";
-                Dgv_Seleccion.RootTable.Columns[5].FormatString = "0";
-                Dgv_Seleccion.RootTable.Columns[5].Width = 90;
-                Dgv_Seleccion.RootTable.Columns[5].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[5].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[5].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[5].Visible = false;
-
-                Dgv_Seleccion.RootTable.Columns[6].Key = "Cantidad";
-                Dgv_Seleccion.RootTable.Columns[6].Caption = "UNIDADES";
-                Dgv_Seleccion.RootTable.Columns[6].FormatString = "0";
-                Dgv_Seleccion.RootTable.Columns[6].Width = 90;
-                Dgv_Seleccion.RootTable.Columns[6].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[6].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[6].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[6].Visible = false;
-
-                Dgv_Seleccion.RootTable.Columns[7].Key = "TotalCant";
-                Dgv_Seleccion.RootTable.Columns[7].Caption = "CANT.";
-                Dgv_Seleccion.RootTable.Columns[7].FormatString = "0";
-                Dgv_Seleccion.RootTable.Columns[7].Width = 75;
-                Dgv_Seleccion.RootTable.Columns[7].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[7].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[7].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[7].Visible = true;
-
-                Dgv_Seleccion.RootTable.Columns[8].Key = "PrecioCost";
-                Dgv_Seleccion.RootTable.Columns[8].Caption = "PRECIO";
-                Dgv_Seleccion.RootTable.Columns[8].FormatString = "0.00";
-                Dgv_Seleccion.RootTable.Columns[8].Width = 75;
-                Dgv_Seleccion.RootTable.Columns[8].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[8].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[8].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[8].Visible = true;
-
-                Dgv_Seleccion.RootTable.Columns[9].Key = "Total";
-                Dgv_Seleccion.RootTable.Columns[9].Caption = "TOTAL";
-                Dgv_Seleccion.RootTable.Columns[9].FormatString = "0.00";
-                Dgv_Seleccion.RootTable.Columns[9].Width = 90;
-                Dgv_Seleccion.RootTable.Columns[9].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
-                Dgv_Seleccion.RootTable.Columns[9].CellStyle.FontSize = 9;
-                Dgv_Seleccion.RootTable.Columns[9].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
-                Dgv_Seleccion.RootTable.Columns[9].Visible = true;
-
-                //Habilitar filtradores              
                 //Dgv_Buscardor.FilterRowButtonStyle = FilterRowButtonStyle.ConditionOperatorDropDown;
                 Dgv_Seleccion.GroupByBoxVisible = false;
                 Dgv_Seleccion.VisualStyle = VisualStyle.Office2007;
             }
         }
+
+        private void MP_CargarDetalle_Nuevo(int IdCompraIngreso_01)
+        {
+            try
+            {               
+                //Consulta segun un Categoria 
+                var lresult = new ServiceDesktop.ServiceDesktopClient().Seleccion_01_ListarXId_Vacio(IdCompraIngreso_01).Where(a => !a.Producto.Contains("SIN SELECCION")).ToList();
+                ArmarDetalle(lresult);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, GLMensaje.Error);
+            }
+        }       
         private void MP_InicioArmarCombo()
         {
             //Carga las librerias al combobox desde una lista
@@ -696,7 +609,7 @@ namespace PRESENTER.com
                         Tb_Edad.Text = Row.Cells["EdadSemana"].Value.ToString();
                         Cb_Almacen.Value = Row.Cells["IdSucur"].Value;
                         MP_CargarDetalle(Convert.ToInt32(Tb_IdCompraIngreso.Text));
-                        MP_CargarDetalle_Nuevo();
+                        MP_CargarDetalle_Nuevo(Convert.ToInt32(Tb_IdCompraIngreso.Text));
                     }
                 }         
             }

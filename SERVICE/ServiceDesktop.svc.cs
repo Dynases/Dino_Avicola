@@ -460,6 +460,18 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
+        public List<VSeleccion_01_Lista> Seleccion_01_ListarXId_Vacio(int IdCompraIngreso_01)
+        {
+            try
+            {
+                var listResult = new LSeleccion_01().ListarXId_Vacio(IdCompraIngreso_01);
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         #endregion
 
         #region Seleccion
@@ -521,11 +533,6 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
-
-
-
-
-
         #endregion
 
     }

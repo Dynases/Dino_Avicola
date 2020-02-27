@@ -281,6 +281,12 @@ namespace PRESENTER.ServiceDesktop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse")]
         System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_Vacio", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_VacioResponse")]
+        ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_ListarXId_Vacio(int IdCompraInreso_01);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_Vacio", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListarXId_VacioResponse")]
+        System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListarXId_VacioAsync(int IdCompraInreso_01);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Transformacion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Transformacion_ListaResponse")]
         ENTITY.inv.Transformacion.View.VTransformacion[] Transformacion_Lista();
         
@@ -815,6 +821,14 @@ namespace PRESENTER.ServiceDesktop {
         
         public System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListaAsync() {
             return base.Channel.Seleccion_01_ListaAsync();
+        }
+        
+        public ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_ListarXId_Vacio(int IdCompraInreso_01) {
+            return base.Channel.Seleccion_01_ListarXId_Vacio(IdCompraInreso_01);
+        }
+        
+        public System.Threading.Tasks.Task<ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[]> Seleccion_01_ListarXId_VacioAsync(int IdCompraInreso_01) {
+            return base.Channel.Seleccion_01_ListarXId_VacioAsync(IdCompraInreso_01);
         }
         
         public ENTITY.inv.Transformacion.View.VTransformacion[] Transformacion_Lista() {

@@ -315,7 +315,7 @@
             this.Dgv_Seleccion.TabIndex = 258;
             this.Dgv_Seleccion.CellEdited += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Seleccion_CellEdited);
             this.Dgv_Seleccion.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Seleccion_EditingCell);
-            this.Dgv_Seleccion.SelectionChanged += new System.EventHandler(this.Dgv_Seleccion_SelectionChanged);
+           // this.Dgv_Seleccion.SelectionChanged += new System.EventHandler(this.Dgv_Seleccion_SelectionChanged);
             // 
             // GPanel_Detalle
             // 
@@ -370,7 +370,7 @@
             this.Dgv_Detalle.Size = new System.Drawing.Size(363, 356);
             this.Dgv_Detalle.TabIndex = 258;
             this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell_1);
-            this.Dgv_Detalle.SelectionChanged += new System.EventHandler(this.Dgv_Detalle_SelectionChanged);
+           // this.Dgv_Detalle.SelectionChanged += new System.EventHandler(this.Dgv_Detalle_SelectionChanged);
             // 
             // panel1
             // 

@@ -53,7 +53,6 @@ D:\GOGS\DiAvi\DIAvi\PRESENTER\obj\Debug\PRESENTER.pdb
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\PRESENTER.exe.config
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\PRESENTER.exe
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\PRESENTER.pdb
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\CrystalDecisions.Shared.dll
@@ -73,8 +72,6 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\ENTITY.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\EntityFramework.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\FlashControlV71.dll
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\GMap.NET.Core.dll
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\GMap.NET.WindowsForms.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\itextsharp.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\MetroFramework.dll
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\bin\Debug\MetroFramework.Fonts.dll
@@ -206,3 +203,4 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.pdb
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources

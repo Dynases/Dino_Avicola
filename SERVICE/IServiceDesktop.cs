@@ -137,6 +137,8 @@ namespace SERVICE
         #region Seleccion_01
         [OperationContract]
         List<VSeleccion_01_Lista> Seleccion_01_Lista();
+        [OperationContract]
+        List<VSeleccion_01_Lista> Seleccion_01_ListarXId_Vacio(int IdCompraInreso_01);
         #endregion
         #region Transformacion
         [OperationContract]

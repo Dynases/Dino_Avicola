@@ -9,7 +9,9 @@ namespace ENTITY.com.Seleccion.View
    public class VSeleccion
     {
         public int Id { get; set; }
+        public int IdSucur { get; set; }
         public int IdCompraIng { get; set; }
+        public int Estado { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Total { get; set; }

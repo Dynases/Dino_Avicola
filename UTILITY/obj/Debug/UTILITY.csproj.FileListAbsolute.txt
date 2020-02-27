@@ -50,7 +50,6 @@ D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.SuperGrid.Design.dl
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DevComponents.TreeGX.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\ENTITY.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\FlashControlV71.dll
-D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\Janus.Windows.GridEX.v3.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\DATA.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -64,7 +63,6 @@ D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\ShockwaveFlashObjects.dll
-D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\Janus.Windows.Common.v3.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\EntityFramework.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\GitHub\Dino_Avicola\DiAvi\UTILITY\bin\Debug\stdole.dll

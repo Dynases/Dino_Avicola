@@ -27,5 +27,16 @@ namespace LOGIC.Class
                 throw new Exception(ex.Message);
             }
         }
-    }
+        public List<VSeleccion_01_Lista> ListarXId_Vacio(int Id)
+            {
+                try
+                {
+                    return iSeleccion_01.ListarXId_Vacio(Id);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
 }

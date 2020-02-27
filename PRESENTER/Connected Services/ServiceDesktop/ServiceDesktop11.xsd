@@ -37,22 +37,6 @@
       <xs:element minOccurs="0" name="EdadSeman" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaNac" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-<<<<<<< HEAD
-      <xs:element minOccurs="0" name="IdProvee" type="xs:int" />
-      <xs:element minOccurs="0" name="IdProvee_01" type="xs:int" />
-      <xs:element minOccurs="0" name="IdSucur" type="xs:int" />
-      <xs:element minOccurs="0" name="NumNota" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Placa" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Recibido" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
-      <xs:element minOccurs="0" name="TotalRecibido" type="xs:decimal" />
-      <xs:element minOccurs="0" name="TotalVendido" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="estado" type="xs:int" />
-=======
       <xs:element minOccurs="0" name="IdLinea" type="xs:int" />
       <xs:element minOccurs="0" name="IdTipoAloja" type="xs:int" />
       <xs:element minOccurs="0" name="Linea" nillable="true" type="xs:string" />
@@ -63,7 +47,6 @@
   <xs:complexType name="ArrayOfVProveedor">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="VProveedor" nillable="true" type="tns:VProveedor" />
->>>>>>> dcayo
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfVProveedor" nillable="true" type="tns:ArrayOfVProveedor" />
@@ -72,24 +55,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="VProveedorLista" nillable="true" type="tns:VProveedorLista" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< HEAD
-  <xs:element name="ArrayOfVCompraIngresoNota" nillable="true" type="tns:ArrayOfVCompraIngresoNota" />
-  <xs:complexType name="VCompraIngresoNota">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:VCompraIngresoLista">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
-          <xs:element minOccurs="0" name="IdSkype" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="MarcaTipo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="PrecioCost" type="xs:decimal" />
-          <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Total" type="xs:decimal" />
-          <xs:element minOccurs="0" name="TotalCant" type="xs:decimal" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-=======
   <xs:element name="ArrayOfVProveedorLista" nillable="true" type="tns:ArrayOfVProveedorLista" />
   <xs:complexType name="VProveedorLista">
     <xs:sequence>
@@ -100,7 +65,6 @@
       <xs:element minOccurs="0" name="NombreCiudad" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
     </xs:sequence>
->>>>>>> dcayo
   </xs:complexType>
   <xs:element name="VProveedorLista" nillable="true" type="tns:VProveedorLista" />
 </xs:schema>
