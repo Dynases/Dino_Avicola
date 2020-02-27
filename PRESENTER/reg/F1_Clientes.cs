@@ -25,6 +25,7 @@ using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using System.IO;
 using UTILITY.Enum.EnCarpetas;
+using PRESENTER.frm;
 
 namespace PRESENTER.reg
 {
@@ -537,7 +538,7 @@ namespace PRESENTER.reg
             int IdCliente = Convert.ToInt32(Txb_CliCod.Text);
             bool resultadoRegistro = false;
             //Pregunta si eliminara el registro
-            GLEfecto efecto = new GLEfecto();
+            Efecto efecto = new Efecto();
             efecto.Tipo = 2;
             efecto.Context = GLMensaje.Pregunta_Eliminar.ToUpper();
             efecto.Header = GLMensaje.Mensaje_Principal.ToUpper();

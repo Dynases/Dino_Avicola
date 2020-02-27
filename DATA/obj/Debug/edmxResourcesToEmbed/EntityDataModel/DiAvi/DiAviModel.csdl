@@ -69,8 +69,14 @@
       <End Role="Producto" EntitySet="Producto" />
       <End Role="Transformacion_01" EntitySet="Transformacion_01" />
     </AssociationSet>
-    <EntitySet Name="CompraIng" EntityType="DiAviModel.CompraIng" />
     <EntitySet Name="CompraIng_01" EntityType="DiAviModel.CompraIng_01" />
+    <AssociationSet Name="FK__CompraIng__IdPro__46B27FE2" Association="DiAviModel.FK__CompraIng__IdPro__46B27FE2">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="CompraIng_01" EntitySet="CompraIng_01" />
+    </AssociationSet>
+    <EntitySet Name="V_NotaCompraIngreso" EntityType="DiAviModel.V_NotaCompraIngreso" />
+    <EntitySet Name="CompraIng" EntityType="DiAviModel.CompraIng" />
+    <EntitySet Name="Vr_CompraIngreso" EntityType="DiAviModel.Vr_CompraIngreso" />
     <AssociationSet Name="FK__CompraIng__IdCom__45BE5BA9" Association="DiAviModel.FK__CompraIng__IdCom__45BE5BA9">
       <End Role="CompraIng" EntitySet="CompraIng" />
       <End Role="CompraIng_01" EntitySet="CompraIng_01" />
@@ -87,11 +93,6 @@
       <End Role="CompraIng" EntitySet="CompraIng" />
       <End Role="Seleccion" EntitySet="Seleccion" />
     </AssociationSet>
-    <AssociationSet Name="FK__CompraIng__IdPro__46B27FE2" Association="DiAviModel.FK__CompraIng__IdPro__46B27FE2">
-      <End Role="Producto" EntitySet="Producto" />
-      <End Role="CompraIng_01" EntitySet="CompraIng_01" />
-    </AssociationSet>
-    <EntitySet Name="V_NotaCompraIngreso" EntityType="DiAviModel.V_NotaCompraIngreso" />
   </EntityContainer>
   <EntityType Name="Libreria">
     <Key>
@@ -545,34 +546,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="CompraIng">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IdSucur" Type="Int32" Nullable="false" />
-    <Property Name="IdProvee" Type="Int32" Nullable="false" />
-    <Property Name="Estado" Type="Int32" Nullable="false" />
-    <Property Name="NumNota" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="true" />
-    <Property Name="FechaEnt" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="FechaRec" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Placa" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-    <Property Name="EdadSemana" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
-    <Property Name="Tipo" Type="Int32" Nullable="false" />
-    <Property Name="Obser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Entregado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Recibido" Type="Int32" Nullable="false" />
-    <Property Name="TotalRecibido" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="TotalVendido" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Hora" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CompraIng_01" Relationship="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" FromRole="CompraIng" ToRole="CompraIng_01" />
-    <NavigationProperty Name="Proveed" Relationship="DiAviModel.FK__CompraIng__IdPro__43D61337" FromRole="CompraIng" ToRole="Proveed" />
-    <NavigationProperty Name="Sucursal" Relationship="DiAviModel.FK__CompraIng__IdSuc__42E1EEFE" FromRole="CompraIng" ToRole="Sucursal" />
-    <NavigationProperty Name="Seleccion" Relationship="DiAviModel.FK_Seleccion_CompraIng" FromRole="CompraIng" ToRole="Seleccion" />
-  </EntityType>
   <EntityType Name="CompraIng_01">
     <Key>
       <PropertyRef Name="Id" />
@@ -591,8 +564,100 @@
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Hora" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="Usuario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CompraIng" Relationship="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" FromRole="CompraIng_01" ToRole="CompraIng" />
     <NavigationProperty Name="Producto" Relationship="DiAviModel.FK__CompraIng__IdPro__46B27FE2" FromRole="CompraIng_01" ToRole="Producto" />
+    <NavigationProperty Name="CompraIng" Relationship="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" FromRole="CompraIng_01" ToRole="CompraIng" />
+  </EntityType>
+  <Association Name="FK__CompraIng__IdPro__46B27FE2">
+    <End Type="DiAviModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="DiAviModel.CompraIng_01" Role="CompraIng_01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompraIng_01">
+        <PropertyRef Name="IdProduc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="V_NotaCompraIngreso">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="NumNota" />
+      <PropertyRef Name="FechaRec" />
+      <PropertyRef Name="FechaEnt" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="IdSpyre" />
+      <PropertyRef Name="MarcaTipo" />
+      <PropertyRef Name="IdProduc" />
+      <PropertyRef Name="Producto" />
+      <PropertyRef Name="TotalCant" />
+      <PropertyRef Name="PrecioCost" />
+      <PropertyRef Name="Total" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NumNota" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRec" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaEnt" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Proveedor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdSpyre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MarcaTipo" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="IdProduc" Type="Int32" Nullable="false" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCant" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PrecioCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CompraIng">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSucur" Type="Int32" Nullable="false" />
+    <Property Name="IdProvee" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="NumNota" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="true" />
+    <Property Name="FechaEnt" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaRec" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Placa" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EdadSemana" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="Int32" Nullable="false" />
+    <Property Name="Obser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Entregado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Recibido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalRecibido" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalVendido" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Hora" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CompraIng_01" Relationship="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" FromRole="CompraIng" ToRole="CompraIng_01" />
+    <NavigationProperty Name="Proveed" Relationship="DiAviModel.FK__CompraIng__IdPro__43D61337" FromRole="CompraIng" ToRole="Proveed" />
+    <NavigationProperty Name="Sucursal" Relationship="DiAviModel.FK__CompraIng__IdSuc__42E1EEFE" FromRole="CompraIng" ToRole="Sucursal" />
+    <NavigationProperty Name="Seleccion" Relationship="DiAviModel.FK_Seleccion_CompraIng" FromRole="CompraIng" ToRole="Seleccion" />
+  </EntityType>
+  <EntityType Name="Vr_CompraIngreso">
+    <Key>
+      <PropertyRef Name="NotaRecepcion" />
+      <PropertyRef Name="NotaGranja" />
+      <PropertyRef Name="FechaRecep" />
+      <PropertyRef Name="FechaEnt" />
+      <PropertyRef Name="Codaparov" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="Descrip" />
+      <PropertyRef Name="TotalCant" />
+      <PropertyRef Name="PrecioCost" />
+      <PropertyRef Name="Total" />
+    </Key>
+    <Property Name="NotaRecepcion" Type="Int32" Nullable="false" />
+    <Property Name="NotaGranja" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRecep" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaEnt" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Codaparov" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Proveedor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCant" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PrecioCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
   </EntityType>
   <Association Name="FK__CompraIng__IdCom__45BE5BA9">
     <End Type="DiAviModel.CompraIng" Role="CompraIng" Multiplicity="1" />
@@ -642,44 +707,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CompraIng__IdPro__46B27FE2">
-    <End Type="DiAviModel.Producto" Role="Producto" Multiplicity="1" />
-    <End Type="DiAviModel.CompraIng_01" Role="CompraIng_01" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="CompraIng_01">
-        <PropertyRef Name="IdProduc" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="V_NotaCompraIngreso">
-    <Key>
-      <PropertyRef Name="Id" />
-      <PropertyRef Name="NumNota" />
-      <PropertyRef Name="FechaRec" />
-      <PropertyRef Name="FechaEnt" />
-      <PropertyRef Name="Proveedor" />
-      <PropertyRef Name="IdSpyre" />
-      <PropertyRef Name="MarcaTipo" />
-      <PropertyRef Name="IdProduc" />
-      <PropertyRef Name="Producto" />
-      <PropertyRef Name="TotalCant" />
-      <PropertyRef Name="PrecioCost" />
-      <PropertyRef Name="Total" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="NumNota" Type="String" Nullable="false" MaxLength="26" FixedLength="false" Unicode="true" />
-    <Property Name="FechaRec" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="FechaEnt" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Proveedor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IdSpyre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="MarcaTipo" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="IdProduc" Type="Int32" Nullable="false" />
-    <Property Name="Producto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TotalCant" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="PrecioCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-  </EntityType>
 </Schema>

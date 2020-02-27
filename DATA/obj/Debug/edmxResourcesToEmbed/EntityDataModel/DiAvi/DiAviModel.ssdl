@@ -78,7 +78,7 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
     <Property Name="Tipo" Type="int" Nullable="false" />
     <Property Name="Obser" Type="nvarchar" MaxLength="50" />
     <Property Name="Entregado" Type="nvarchar" MaxLength="50" />
-    <Property Name="Recibido" Type="int" Nullable="false" />
+    <Property Name="Recibido" Type="nvarchar" MaxLength="50" />
     <Property Name="TotalRecibido" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="TotalVendido" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -341,6 +341,32 @@ advertencia 6002: La tabla o vista 'DiAvi.dbo.V_NotaCompraIngreso' no tiene defi
     <Property Name="PrecioCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DiAvi.dbo.Vr_CompraIngreso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vr_CompraIngreso">
+    <Key>
+      <PropertyRef Name="NotaRecepcion" />
+      <PropertyRef Name="NotaGranja" />
+      <PropertyRef Name="FechaRecep" />
+      <PropertyRef Name="FechaEnt" />
+      <PropertyRef Name="Codaparov" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="Descrip" />
+      <PropertyRef Name="TotalCant" />
+      <PropertyRef Name="PrecioCost" />
+      <PropertyRef Name="Total" />
+    </Key>
+    <Property Name="NotaRecepcion" Type="int" Nullable="false" />
+    <Property Name="NotaGranja" Type="nvarchar" MaxLength="26" Nullable="false" />
+    <Property Name="FechaRecep" Type="date" Nullable="false" />
+    <Property Name="FechaEnt" Type="date" Nullable="false" />
+    <Property Name="Codaparov" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Proveedor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalCant" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PrecioCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
   <Association Name="FK__CompraIng__IdCom__45BE5BA9">
     <End Role="CompraIng" Type="Self.CompraIng" Multiplicity="1" />
     <End Role="CompraIng_01" Type="Self.CompraIng_01" Multiplicity="*" />
@@ -598,6 +624,20 @@ advertencia 6002: La tabla o vista 'DiAvi.dbo.V_NotaCompraIngreso' no tiene defi
     [V_NotaCompraIngreso].[PrecioCost] AS [PrecioCost], 
     [V_NotaCompraIngreso].[Total] AS [Total]
     FROM [dbo].[V_NotaCompraIngreso] AS [V_NotaCompraIngreso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vr_CompraIngreso" EntityType="Self.Vr_CompraIngreso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vr_CompraIngreso].[NotaRecepcion] AS [NotaRecepcion], 
+    [Vr_CompraIngreso].[NotaGranja] AS [NotaGranja], 
+    [Vr_CompraIngreso].[FechaRecep] AS [FechaRecep], 
+    [Vr_CompraIngreso].[FechaEnt] AS [FechaEnt], 
+    [Vr_CompraIngreso].[Codaparov] AS [Codaparov], 
+    [Vr_CompraIngreso].[Proveedor] AS [Proveedor], 
+    [Vr_CompraIngreso].[Descrip] AS [Descrip], 
+    [Vr_CompraIngreso].[TotalCant] AS [TotalCant], 
+    [Vr_CompraIngreso].[PrecioCost] AS [PrecioCost], 
+    [Vr_CompraIngreso].[Total] AS [Total]
+    FROM [dbo].[Vr_CompraIngreso] AS [Vr_CompraIngreso]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__CompraIng__IdCom__45BE5BA9" Association="Self.FK__CompraIng__IdCom__45BE5BA9">
       <End Role="CompraIng" EntitySet="CompraIng" />

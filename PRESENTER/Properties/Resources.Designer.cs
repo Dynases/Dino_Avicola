@@ -133,6 +133,16 @@ namespace PRESENTER.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CUESTION {
+            get {
+                object obj = ResourceManager.GetObject("CUESTION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FONDO {
             get {
                 object obj = ResourceManager.GetObject("FONDO", resourceCulture);

@@ -125,3 +125,4 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.csproj.GenerateResour
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.pdb
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.frm.Efecto.resources

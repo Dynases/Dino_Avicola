@@ -24,6 +24,7 @@ using GMap.NET.WindowsForms;
 using ENTITY.Producto.View;
 using System.IO;
 using UTILITY.Enum.EnCarpetas;
+using PRESENTER.frm;
 
 namespace PRESENTER.reg
 {
@@ -853,7 +854,7 @@ namespace PRESENTER.reg
                 return false;
             }
            //Pregunta si eliminara el registro
-            GLEfecto efecto = new GLEfecto();
+            Efecto efecto = new Efecto();
             efecto.Tipo = 2;
             efecto.Context = GLMensaje.Pregunta_Eliminar.ToUpper();
             efecto.Header = GLMensaje.Mensaje_Principal.ToUpper() ;

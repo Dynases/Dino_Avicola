@@ -12,24 +12,17 @@ namespace DATA.EntityDataModel.DiAvi
     using System;
     using System.Collections.Generic;
     
-    public partial class CompraIng_01
+    public partial class Vr_CompraIngreso
     {
-        public int Id { get; set; }
-        public int IdCompra { get; set; }
-        public int IdProduc { get; set; }
-        public int Estado { get; set; }
-        public decimal Caja { get; set; }
-        public decimal Grupo { get; set; }
-        public decimal Maple { get; set; }
-        public decimal Cantidad { get; set; }
+        public int NotaRecepcion { get; set; }
+        public string NotaGranja { get; set; }
+        public System.DateTime FechaRecep { get; set; }
+        public System.DateTime FechaEnt { get; set; }
+        public string Codaparov { get; set; }
+        public string Proveedor { get; set; }
+        public string Descrip { get; set; }
         public decimal TotalCant { get; set; }
         public decimal PrecioCost { get; set; }
         public decimal Total { get; set; }
-        public System.DateTime Fecha { get; set; }
-        public string Hora { get; set; }
-        public string Usuario { get; set; }
-    
-        public virtual Producto Producto { get; set; }
-        public virtual CompraIng CompraIng { get; set; }
     }
 }

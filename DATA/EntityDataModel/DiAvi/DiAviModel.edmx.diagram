@@ -34,14 +34,15 @@
         <EntityTypeShape EntityType="DiAviModel.Transformacion_01" Width="1.5" PointX="3" PointY="11" />
         <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Transformacion" />
         <AssociationConnector Association="DiAviModel.FK_Transformacion_01_Producto" />
-        <EntityTypeShape EntityType="DiAviModel.CompraIng" Width="1.5" PointX="3.75" PointY="20.625" />
         <EntityTypeShape EntityType="DiAviModel.CompraIng_01" Width="1.5" PointX="6" PointY="15.875" />
+        <AssociationConnector Association="DiAviModel.FK__CompraIng__IdPro__46B27FE2" />
+        <EntityTypeShape EntityType="DiAviModel.V_NotaCompraIngreso" Width="1.5" PointX="8.375" PointY="5.75" />
+        <EntityTypeShape EntityType="DiAviModel.CompraIng" Width="1.5" PointX="3.75" PointY="20.625" />
+        <EntityTypeShape EntityType="DiAviModel.Vr_CompraIngreso" Width="1.5" PointX="10.375" PointY="0.75" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdCom__45BE5BA9" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdPro__43D61337" />
         <AssociationConnector Association="DiAviModel.FK__CompraIng__IdSuc__42E1EEFE" />
         <AssociationConnector Association="DiAviModel.FK_Seleccion_CompraIng" />
-        <AssociationConnector Association="DiAviModel.FK__CompraIng__IdPro__46B27FE2" />
-        <EntityTypeShape EntityType="DiAviModel.V_NotaCompraIngreso" Width="1.5" PointX="8.375" PointY="5.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

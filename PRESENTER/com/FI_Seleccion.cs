@@ -16,6 +16,7 @@ using UTILITY.Global;
 using ENTITY.com.Seleccion.View;
 using ENTITY.com.CompraIngreso_01;
 using ENTITY.com.Seleccion_01.View;
+using PRESENTER.frm;
 
 namespace PRESENTER.com
 {
@@ -332,7 +333,9 @@ namespace PRESENTER.com
                 {
                     UTGlobal.MG_SeleccionarCombo(Cb_Tipo);                    
                 }
-                ((List<VCompraIngreso_01>)Dgv_Detalle.DataSource).Clear();
+                //((List<VCompraIngreso_01>)Dgv_Detalle.DataSource).Clear();
+                Dgv_Detalle.DataSource = null;
+                Dgv_Seleccion.DataSource = null;
                 Tb_Recep_TCantidad.Value = 0;
                 Tb_Recep_TPrecio.Value = 0;
                 Tb_Recep_Total.Value = 0;
@@ -543,6 +546,53 @@ namespace PRESENTER.com
         private void Dgv_Detalle_SelectionChanged(object sender, EventArgs e)
         {
             int a = 0;
+        }
+
+        private void Tb_IdCompraIngreso_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Tb_FechaEnt.IsInputReadOnly == false)
+            {
+                if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Enter)
+                {
+                    var lista = new ServiceDesktop.ServiceDesktopClient().CompraIngreso_ListarEncabezado();
+                    List<GLCelda> listEstCeldas = new List<GLCelda>();
+                    listEstCeldas.Add(new GLCelda() { campo = "Id", visible = true, titulo = "ID", tamano = 80 });
+                    listEstCeldas.Add(new GLCelda() { campo = "NumNota", visible = true, titulo = "NOTA DE GRANJA", tamano = 80 });
+                    listEstCeldas.Add(new GLCelda() { campo = "FechaEnt", visible = true, titulo = "FECHA ENTRADA", tamano = 80 });
+                    listEstCeldas.Add(new GLCelda() { campo = "FechaRec", visible = true, titulo = "FECHA RECEPCION", tamano = 80 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Placa", visible = true, titulo = "PLACA", tamano = 120 });
+                    listEstCeldas.Add(new GLCelda() { campo = "IdProvee", visible = false, titulo = "IdProvee", tamano = 100 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Proveedor", visible = true, titulo = "PROVEEDOR", tamano = 150 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Tipo", visible = false, titulo = "Tipo", tamano = 100 });
+                    listEstCeldas.Add(new GLCelda() { campo = "EdadSemana", visible = false, titulo = "EDAD SEMANA", tamano = 100 });
+                    listEstCeldas.Add(new GLCelda() { campo = "IdSucur", visible = false, titulo = "IdSucur", tamano = 100 });
+                    Efecto efecto = new Efecto();
+                    efecto.Tipo = 3;
+                    efecto.Tabla = lista;
+                    efecto.SelectCol = 2;
+                    efecto.listaCelda = listEstCeldas;
+                    efecto.Alto = 50;
+                    efecto.Ancho = 350;
+                    efecto.Context = "SELECCIONE UN INGRESO";
+                    efecto.ShowDialog();
+                    bool bandera = false;
+                    bandera = efecto.Band;
+                    if (bandera)
+                    {
+                        Janus.Windows.GridEX.GridEXRow Row = efecto.Row;
+                        Tb_IdCompraIngreso.Text = Row.Cells["Id"].Value.ToString();
+                        Tb_NUmGranja.Text = Row.Cells["NumNota"].Value.ToString();
+                        Tb_FechaEnt.Value = Convert.ToDateTime( Row.Cells["FechaEnt"].Value);
+                        Tb_FechaRec.Value = Convert.ToDateTime(Row.Cells["FechaRec"].Value);
+                        Cb_Tipo.Value = Row.Cells["Tipo"].Value;
+                        tb_Proveedor.Text = Row.Cells["Proveedor"].Value.ToString();
+                        Tb_Placa.Text = Row.Cells["Placa"].Value.ToString();
+                        Tb_Edad.Text = Row.Cells["EdadSemana"].Value.ToString();
+                        Cb_Almacen.Value = Row.Cells["IdSucur"].Value;
+                        MP_CargarDetalle(Convert.ToInt32(Tb_IdCompraIngreso.Text));
+                    }
+                }         
+            }
         }
     }
 }
