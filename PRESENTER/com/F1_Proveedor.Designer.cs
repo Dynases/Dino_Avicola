@@ -76,22 +76,22 @@
             this.LabelX1 = new DevComponents.DotNetBar.LabelX();
             this.GPanel_InfoAdicional = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl2 = new DevComponents.DotNetBar.SuperTabControl();
-            this.SuperTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.BtnMapaMax = new DevComponents.DotNetBar.ButtonX();
-            this.btnMapaMin = new DevComponents.DotNetBar.ButtonX();
-            this.Gmc_Proveedor = new GMap.NET.WindowsForms.GMapControl();
-            this.SuperTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.SuperTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.grayuda = new Janus.Windows.GridEX.GridEX();
             this.SuperTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.SuperTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.Pc_Img = new System.Windows.Forms.PictureBox();
             this.BtAdicionar = new DevComponents.DotNetBar.ButtonX();
             this.LabelX15 = new DevComponents.DotNetBar.LabelX();
             this.SuperTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.SuperTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.BtnMapaMax = new DevComponents.DotNetBar.ButtonX();
+            this.btnMapaMin = new DevComponents.DotNetBar.ButtonX();
+            this.Gmc_Proveedor = new GMap.NET.WindowsForms.GMapControl();
+            this.SuperTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.GPanel_Detalle = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Dgv_Detalle = new Janus.Windows.GridEX.GridEX();
-            this.Pc_Img = new System.Windows.Forms.PictureBox();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -105,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.GMPanel_Buscardor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GBuscador)).BeginInit();
+            this.PanelMenu.SuspendLayout();
             this.GPanel_DatosGenerales.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cb_LineaGen)).BeginInit();
@@ -116,28 +117,23 @@
             this.GPanel_InfoAdicional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).BeginInit();
             this.superTabControl2.SuspendLayout();
-            this.SuperTabControlPanel2.SuspendLayout();
             this.SuperTabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grayuda)).BeginInit();
             this.SuperTabControlPanel3.SuspendLayout();
             this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).BeginInit();
+            this.SuperTabControlPanel2.SuspendLayout();
             this.GPanel_Detalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LblSubtitulo
-            // 
-            this.LblSubtitulo.Size = new System.Drawing.Size(1043, 36);
-            this.LblSubtitulo.Text = "Registre un nuevo proveedor. Visualice y/o modifique la información de un proveed" +
-    "or previamente registrado. ";
             // 
             // PanelContenidoRegistro
             // 
             this.PanelContenidoRegistro.Controls.Add(this.GPanel_Detalle);
             this.PanelContenidoRegistro.Controls.Add(this.GPanel_InfoAdicional);
             this.PanelContenidoRegistro.Controls.Add(this.GPanel_DatosGenerales);
-            this.PanelContenidoRegistro.Size = new System.Drawing.Size(1043, 608);
+            this.PanelContenidoRegistro.Size = new System.Drawing.Size(1043, 607);
+            this.PanelContenidoRegistro.Controls.SetChildIndex(this.PanelMenu, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.LblSubtitulo, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.GPanel_DatosGenerales, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.GPanel_InfoAdicional, 0);
@@ -219,6 +215,7 @@
             // 
             // PanelContenidoBuscar
             // 
+            this.PanelContenidoBuscar.Location = new System.Drawing.Point(0, 34);
             this.PanelContenidoBuscar.Size = new System.Drawing.Size(1043, 608);
             // 
             // btnMin
@@ -267,9 +264,20 @@
             // 
             // Dgv_GBuscador
             // 
-            this.Dgv_GBuscador.Size = new System.Drawing.Size(1037, 582);
+            this.Dgv_GBuscador.Size = new System.Drawing.Size(1037, 580);
             this.Dgv_GBuscador.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_GBuscador_EditingCell);
             this.Dgv_GBuscador.SelectionChanged += new System.EventHandler(this.Dgv_GBuscador_SelectionChanged);
+            // 
+            // LblSubtitulo
+            // 
+            this.LblSubtitulo.Size = new System.Drawing.Size(1043, 36);
+            this.LblSubtitulo.Text = "Registre un nuevo proveedor. Visualice y/o modifique la información de un proveed" +
+    "or previamente registrado. ";
+            // 
+            // PanelMenu
+            // 
+            this.PanelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelMenu.BackgroundImage")));
+            this.PanelMenu.Size = new System.Drawing.Size(1043, 72);
             // 
             // GPanel_DatosGenerales
             // 
@@ -353,7 +361,7 @@
             this.Tb_Telefono2.Location = new System.Drawing.Point(320, 166);
             this.Tb_Telefono2.Name = "Tb_Telefono2";
             this.Tb_Telefono2.PreventEnterBeep = true;
-            this.Tb_Telefono2.Size = new System.Drawing.Size(109, 23);
+            this.Tb_Telefono2.Size = new System.Drawing.Size(109, 25);
             this.Tb_Telefono2.TabIndex = 379;
             // 
             // Tb_Email2
@@ -369,7 +377,7 @@
             this.Tb_Email2.Location = new System.Drawing.Point(474, 166);
             this.Tb_Email2.Name = "Tb_Email2";
             this.Tb_Email2.PreventEnterBeep = true;
-            this.Tb_Email2.Size = new System.Drawing.Size(193, 23);
+            this.Tb_Email2.Size = new System.Drawing.Size(193, 25);
             this.Tb_Email2.TabIndex = 380;
             // 
             // Tb_Contacto2
@@ -385,7 +393,7 @@
             this.Tb_Contacto2.Location = new System.Drawing.Point(103, 166);
             this.Tb_Contacto2.Name = "Tb_Contacto2";
             this.Tb_Contacto2.PreventEnterBeep = true;
-            this.Tb_Contacto2.Size = new System.Drawing.Size(153, 23);
+            this.Tb_Contacto2.Size = new System.Drawing.Size(153, 25);
             this.Tb_Contacto2.TabIndex = 378;
             // 
             // labelX13
@@ -454,7 +462,7 @@
             this.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(59)))), ((int)(((byte)(66)))));
-            this.GroupBox1.Location = new System.Drawing.Point(0, 195);
+            this.GroupBox1.Location = new System.Drawing.Point(0, 193);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(713, 99);
             this.GroupBox1.TabIndex = 377;
@@ -509,7 +517,7 @@
             this.labelX11.Location = new System.Drawing.Point(319, 61);
             this.labelX11.Name = "labelX11";
             this.labelX11.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX11.Size = new System.Drawing.Size(124, 16);
+            this.labelX11.Size = new System.Drawing.Size(137, 18);
             this.labelX11.TabIndex = 220;
             this.labelX11.Text = "Tipo alojamiento(*)";
             // 
@@ -524,7 +532,7 @@
             this.Cb_LineaGen.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
             this.Cb_LineaGen.SelectedIndex = -1;
             this.Cb_LineaGen.SelectedItem = null;
-            this.Cb_LineaGen.Size = new System.Drawing.Size(122, 22);
+            this.Cb_LineaGen.Size = new System.Drawing.Size(122, 24);
             this.Cb_LineaGen.TabIndex = 221;
             this.Cb_LineaGen.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             this.Cb_LineaGen.ValueChanged += new System.EventHandler(this.Cb_LineaGen_ValueChanged);
@@ -542,7 +550,7 @@
             this.Tb_Aves.Location = new System.Drawing.Point(449, 24);
             this.Tb_Aves.MinValue = 0D;
             this.Tb_Aves.Name = "Tb_Aves";
-            this.Tb_Aves.Size = new System.Drawing.Size(122, 22);
+            this.Tb_Aves.Size = new System.Drawing.Size(122, 24);
             this.Tb_Aves.TabIndex = 11;
             this.Tb_Aves.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
@@ -588,7 +596,7 @@
             this.Tb_Fecha.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Tb_Fecha.MonthCalendar.TodayButtonVisible = true;
             this.Tb_Fecha.Name = "Tb_Fecha";
-            this.Tb_Fecha.Size = new System.Drawing.Size(120, 22);
+            this.Tb_Fecha.Size = new System.Drawing.Size(120, 24);
             this.Tb_Fecha.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Tb_Fecha.TabIndex = 9;
             // 
@@ -605,7 +613,7 @@
             this.LabelX5.Location = new System.Drawing.Point(6, 24);
             this.LabelX5.Name = "LabelX5";
             this.LabelX5.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.LabelX5.Size = new System.Drawing.Size(151, 16);
+            this.LabelX5.Size = new System.Drawing.Size(167, 18);
             this.LabelX5.TabIndex = 213;
             this.LabelX5.Text = "Fecha de Nacimiento (*)";
             // 
@@ -634,7 +642,7 @@
             this.Cb_TipoAlojamiento.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
             this.Cb_TipoAlojamiento.SelectedIndex = -1;
             this.Cb_TipoAlojamiento.SelectedItem = null;
-            this.Cb_TipoAlojamiento.Size = new System.Drawing.Size(122, 22);
+            this.Cb_TipoAlojamiento.Size = new System.Drawing.Size(122, 24);
             this.Cb_TipoAlojamiento.TabIndex = 12;
             this.Cb_TipoAlojamiento.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             this.Cb_TipoAlojamiento.ValueChanged += new System.EventHandler(this.Cb_TipoAlojamiento_ValueChanged);
@@ -669,7 +677,7 @@
             this.labelX10.Location = new System.Drawing.Point(320, 24);
             this.labelX10.Name = "labelX10";
             this.labelX10.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX10.Size = new System.Drawing.Size(104, 16);
+            this.labelX10.Size = new System.Drawing.Size(115, 18);
             this.labelX10.TabIndex = 214;
             this.labelX10.Text = "Aves Alojadas(*)";
             // 
@@ -747,7 +755,7 @@
             this.Cb_Ciudad.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
             this.Cb_Ciudad.SelectedIndex = -1;
             this.Cb_Ciudad.SelectedItem = null;
-            this.Cb_Ciudad.Size = new System.Drawing.Size(162, 22);
+            this.Cb_Ciudad.Size = new System.Drawing.Size(162, 24);
             this.Cb_Ciudad.TabIndex = 5;
             this.Cb_Ciudad.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
             this.Cb_Ciudad.ValueChanged += new System.EventHandler(this.Cb_Ciudad_ValueChanged);
@@ -766,7 +774,7 @@
             this.Cb_TipoProveedor.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
             this.Cb_TipoProveedor.SelectedIndex = -1;
             this.Cb_TipoProveedor.SelectedItem = null;
-            this.Cb_TipoProveedor.Size = new System.Drawing.Size(160, 22);
+            this.Cb_TipoProveedor.Size = new System.Drawing.Size(160, 24);
             this.Cb_TipoProveedor.TabIndex = 4;
             this.Cb_TipoProveedor.Tag = "1";
             this.Cb_TipoProveedor.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
@@ -801,7 +809,7 @@
             this.Tb_CodSpyre.Location = new System.Drawing.Point(262, 14);
             this.Tb_CodSpyre.Name = "Tb_CodSpyre";
             this.Tb_CodSpyre.PreventEnterBeep = true;
-            this.Tb_CodSpyre.Size = new System.Drawing.Size(66, 23);
+            this.Tb_CodSpyre.Size = new System.Drawing.Size(66, 25);
             this.Tb_CodSpyre.TabIndex = 1;
             // 
             // Tb_Direccion
@@ -834,7 +842,7 @@
             this.Tb_Telefono.Location = new System.Drawing.Point(320, 136);
             this.Tb_Telefono.Name = "Tb_Telefono";
             this.Tb_Telefono.PreventEnterBeep = true;
-            this.Tb_Telefono.Size = new System.Drawing.Size(109, 23);
+            this.Tb_Telefono.Size = new System.Drawing.Size(109, 25);
             this.Tb_Telefono.TabIndex = 7;
             // 
             // Tb_Email1
@@ -850,7 +858,7 @@
             this.Tb_Email1.Location = new System.Drawing.Point(474, 136);
             this.Tb_Email1.Name = "Tb_Email1";
             this.Tb_Email1.PreventEnterBeep = true;
-            this.Tb_Email1.Size = new System.Drawing.Size(193, 23);
+            this.Tb_Email1.Size = new System.Drawing.Size(193, 25);
             this.Tb_Email1.TabIndex = 8;
             // 
             // Tb_Contacto
@@ -866,7 +874,7 @@
             this.Tb_Contacto.Location = new System.Drawing.Point(103, 136);
             this.Tb_Contacto.Name = "Tb_Contacto";
             this.Tb_Contacto.PreventEnterBeep = true;
-            this.Tb_Contacto.Size = new System.Drawing.Size(153, 23);
+            this.Tb_Contacto.Size = new System.Drawing.Size(153, 25);
             this.Tb_Contacto.TabIndex = 6;
             // 
             // Tb_Descripcion
@@ -882,7 +890,7 @@
             this.Tb_Descripcion.Location = new System.Drawing.Point(103, 42);
             this.Tb_Descripcion.Name = "Tb_Descripcion";
             this.Tb_Descripcion.PreventEnterBeep = true;
-            this.Tb_Descripcion.Size = new System.Drawing.Size(225, 23);
+            this.Tb_Descripcion.Size = new System.Drawing.Size(225, 25);
             this.Tb_Descripcion.TabIndex = 2;
             // 
             // Tb_Cod
@@ -898,7 +906,7 @@
             this.Tb_Cod.Location = new System.Drawing.Point(103, 12);
             this.Tb_Cod.Name = "Tb_Cod";
             this.Tb_Cod.PreventEnterBeep = true;
-            this.Tb_Cod.Size = new System.Drawing.Size(66, 23);
+            this.Tb_Cod.Size = new System.Drawing.Size(66, 25);
             this.Tb_Cod.TabIndex = 247;
             // 
             // LabelX3
@@ -1010,7 +1018,7 @@
             this.labelX7.Location = new System.Drawing.Point(178, 16);
             this.labelX7.Name = "labelX7";
             this.labelX7.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX7.Size = new System.Drawing.Size(78, 18);
+            this.labelX7.Size = new System.Drawing.Size(86, 20);
             this.labelX7.TabIndex = 225;
             this.labelX7.Text = "Código Spyre";
             // 
@@ -1027,7 +1035,7 @@
             this.LabelX1.Location = new System.Drawing.Point(5, 14);
             this.LabelX1.Name = "LabelX1";
             this.LabelX1.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.LabelX1.Size = new System.Drawing.Size(88, 18);
+            this.LabelX1.Size = new System.Drawing.Size(97, 20);
             this.LabelX1.TabIndex = 225;
             this.LabelX1.Text = "Código Interno";
             // 
@@ -1041,7 +1049,7 @@
             this.GPanel_InfoAdicional.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GPanel_InfoAdicional.Location = new System.Drawing.Point(725, 111);
             this.GPanel_InfoAdicional.Name = "GPanel_InfoAdicional";
-            this.GPanel_InfoAdicional.Size = new System.Drawing.Size(324, 320);
+            this.GPanel_InfoAdicional.Size = new System.Drawing.Size(315, 320);
             // 
             // 
             // 
@@ -1099,7 +1107,7 @@
             this.superTabControl2.ReorderTabsEnabled = true;
             this.superTabControl2.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.superTabControl2.SelectedTabIndex = 2;
-            this.superTabControl2.Size = new System.Drawing.Size(318, 294);
+            this.superTabControl2.Size = new System.Drawing.Size(309, 292);
             this.superTabControl2.TabFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.superTabControl2.TabIndex = 223;
             this.superTabControl2.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -1108,6 +1116,106 @@
             this.SuperTabItem3});
             this.superTabControl2.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl2.Text = "superTabControl2";
+            // 
+            // SuperTabControlPanel1
+            // 
+            this.SuperTabControlPanel1.Controls.Add(this.grayuda);
+            this.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SuperTabControlPanel1.Location = new System.Drawing.Point(0, 27);
+            this.SuperTabControlPanel1.Name = "SuperTabControlPanel1";
+            this.SuperTabControlPanel1.Size = new System.Drawing.Size(309, 265);
+            this.SuperTabControlPanel1.TabIndex = 1;
+            this.SuperTabControlPanel1.TabItem = this.SuperTabItem1;
+            // 
+            // grayuda
+            // 
+            this.grayuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grayuda.Location = new System.Drawing.Point(0, 0);
+            this.grayuda.Name = "grayuda";
+            this.grayuda.Size = new System.Drawing.Size(309, 265);
+            this.grayuda.TabIndex = 0;
+            // 
+            // SuperTabItem1
+            // 
+            this.SuperTabItem1.AttachedControl = this.SuperTabControlPanel1;
+            this.SuperTabItem1.GlobalItem = false;
+            this.SuperTabItem1.Name = "SuperTabItem1";
+            this.SuperTabItem1.TabFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuperTabItem1.Text = "Ayuda";
+            // 
+            // SuperTabControlPanel3
+            // 
+            this.SuperTabControlPanel3.Controls.Add(this.Panel2);
+            this.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SuperTabControlPanel3.Location = new System.Drawing.Point(0, 27);
+            this.SuperTabControlPanel3.Name = "SuperTabControlPanel3";
+            this.SuperTabControlPanel3.Size = new System.Drawing.Size(309, 265);
+            this.SuperTabControlPanel3.TabIndex = 0;
+            this.SuperTabControlPanel3.TabItem = this.SuperTabItem3;
+            // 
+            // Panel2
+            // 
+            this.Panel2.AutoScroll = true;
+            this.Panel2.AutoSize = true;
+            this.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.Panel2.Controls.Add(this.Pc_Img);
+            this.Panel2.Controls.Add(this.BtAdicionar);
+            this.Panel2.Controls.Add(this.LabelX15);
+            this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel2.Location = new System.Drawing.Point(0, 0);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(309, 265);
+            this.Panel2.TabIndex = 223;
+            // 
+            // Pc_Img
+            // 
+            this.Pc_Img.ErrorImage = null;
+            this.Pc_Img.Image = global::PRESENTER.Properties.Resources.PANTALLA;
+            this.Pc_Img.Location = new System.Drawing.Point(84, 33);
+            this.Pc_Img.Name = "Pc_Img";
+            this.Pc_Img.Size = new System.Drawing.Size(219, 221);
+            this.Pc_Img.TabIndex = 223;
+            this.Pc_Img.TabStop = false;
+            // 
+            // BtAdicionar
+            // 
+            this.BtAdicionar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.BtAdicionar.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.BtAdicionar.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtAdicionar.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.BtAdicionar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.BtAdicionar.Location = new System.Drawing.Point(6, 33);
+            this.BtAdicionar.Name = "BtAdicionar";
+            this.BtAdicionar.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(4);
+            this.BtAdicionar.Size = new System.Drawing.Size(75, 61);
+            this.BtAdicionar.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
+            this.BtAdicionar.SubItemsExpandWidth = 10;
+            this.BtAdicionar.TabIndex = 1;
+            this.BtAdicionar.Text = "Adicionar";
+            this.BtAdicionar.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            // 
+            // LabelX15
+            // 
+            this.LabelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX15.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelX15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.LabelX15.Location = new System.Drawing.Point(6, 6);
+            this.LabelX15.Name = "LabelX15";
+            this.LabelX15.SingleLineColor = System.Drawing.SystemColors.Control;
+            this.LabelX15.Size = new System.Drawing.Size(79, 23);
+            this.LabelX15.TabIndex = 221;
+            this.LabelX15.Text = "Imagen:";
+            // 
+            // SuperTabItem3
+            // 
+            this.SuperTabItem3.AttachedControl = this.SuperTabControlPanel3;
+            this.SuperTabItem3.GlobalItem = false;
+            this.SuperTabItem3.Name = "SuperTabItem3";
+            this.SuperTabItem3.Text = "Imagen";
             // 
             // SuperTabControlPanel2
             // 
@@ -1181,97 +1289,6 @@
             this.SuperTabItem2.Name = "SuperTabItem2";
             this.SuperTabItem2.Text = "Ubicacion";
             // 
-            // SuperTabControlPanel1
-            // 
-            this.SuperTabControlPanel1.Controls.Add(this.grayuda);
-            this.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SuperTabControlPanel1.Location = new System.Drawing.Point(0, 25);
-            this.SuperTabControlPanel1.Name = "SuperTabControlPanel1";
-            this.SuperTabControlPanel1.Size = new System.Drawing.Size(318, 269);
-            this.SuperTabControlPanel1.TabIndex = 1;
-            this.SuperTabControlPanel1.TabItem = this.SuperTabItem1;
-            // 
-            // grayuda
-            // 
-            this.grayuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grayuda.Location = new System.Drawing.Point(0, 0);
-            this.grayuda.Name = "grayuda";
-            this.grayuda.Size = new System.Drawing.Size(318, 269);
-            this.grayuda.TabIndex = 0;
-            // 
-            // SuperTabItem1
-            // 
-            this.SuperTabItem1.AttachedControl = this.SuperTabControlPanel1;
-            this.SuperTabItem1.GlobalItem = false;
-            this.SuperTabItem1.Name = "SuperTabItem1";
-            this.SuperTabItem1.TabFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuperTabItem1.Text = "Ayuda";
-            // 
-            // SuperTabControlPanel3
-            // 
-            this.SuperTabControlPanel3.Controls.Add(this.Panel2);
-            this.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SuperTabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.SuperTabControlPanel3.Name = "SuperTabControlPanel3";
-            this.SuperTabControlPanel3.Size = new System.Drawing.Size(318, 269);
-            this.SuperTabControlPanel3.TabIndex = 0;
-            this.SuperTabControlPanel3.TabItem = this.SuperTabItem3;
-            // 
-            // Panel2
-            // 
-            this.Panel2.AutoScroll = true;
-            this.Panel2.AutoSize = true;
-            this.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.Panel2.Controls.Add(this.Pc_Img);
-            this.Panel2.Controls.Add(this.BtAdicionar);
-            this.Panel2.Controls.Add(this.LabelX15);
-            this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel2.Location = new System.Drawing.Point(0, 0);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(318, 269);
-            this.Panel2.TabIndex = 223;
-            // 
-            // BtAdicionar
-            // 
-            this.BtAdicionar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BtAdicionar.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.BtAdicionar.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtAdicionar.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.BtAdicionar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtAdicionar.Location = new System.Drawing.Point(6, 33);
-            this.BtAdicionar.Name = "BtAdicionar";
-            this.BtAdicionar.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(4);
-            this.BtAdicionar.Size = new System.Drawing.Size(75, 61);
-            this.BtAdicionar.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.BtAdicionar.SubItemsExpandWidth = 10;
-            this.BtAdicionar.TabIndex = 1;
-            this.BtAdicionar.Text = "Adicionar";
-            this.BtAdicionar.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.BtAdicionar.Click += new System.EventHandler(this.BtAdicionar_Click);
-            // 
-            // LabelX15
-            // 
-            this.LabelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX15.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelX15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.LabelX15.Location = new System.Drawing.Point(6, 6);
-            this.LabelX15.Name = "LabelX15";
-            this.LabelX15.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.LabelX15.Size = new System.Drawing.Size(79, 23);
-            this.LabelX15.TabIndex = 221;
-            this.LabelX15.Text = "Imagen:";
-            // 
-            // SuperTabItem3
-            // 
-            this.SuperTabItem3.AttachedControl = this.SuperTabControlPanel3;
-            this.SuperTabItem3.GlobalItem = false;
-            this.SuperTabItem3.Name = "SuperTabItem3";
-            this.SuperTabItem3.Text = "Imagen";
-            // 
             // GPanel_Detalle
             // 
             this.GPanel_Detalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
@@ -1281,7 +1298,7 @@
             this.GPanel_Detalle.DisabledBackColor = System.Drawing.Color.Empty;
             this.GPanel_Detalle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.GPanel_Detalle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPanel_Detalle.Location = new System.Drawing.Point(0, 437);
+            this.GPanel_Detalle.Location = new System.Drawing.Point(0, 436);
             this.GPanel_Detalle.Name = "GPanel_Detalle";
             this.GPanel_Detalle.Size = new System.Drawing.Size(1043, 171);
             // 
@@ -1322,20 +1339,10 @@
             this.Dgv_Detalle.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.True;
             this.Dgv_Detalle.Location = new System.Drawing.Point(0, 0);
             this.Dgv_Detalle.Name = "Dgv_Detalle";
-            this.Dgv_Detalle.Size = new System.Drawing.Size(1037, 145);
+            this.Dgv_Detalle.Size = new System.Drawing.Size(1037, 143);
             this.Dgv_Detalle.TabIndex = 258;
             this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell);
             this.Dgv_Detalle.SelectionChanged += new System.EventHandler(this.Dgv_Detalle_SelectionChanged);
-            // 
-            // Pc_Img
-            // 
-            this.Pc_Img.ErrorImage = null;
-            this.Pc_Img.Image = global::PRESENTER.Properties.Resources.PANTALLA;
-            this.Pc_Img.Location = new System.Drawing.Point(84, 33);
-            this.Pc_Img.Name = "Pc_Img";
-            this.Pc_Img.Size = new System.Drawing.Size(219, 221);
-            this.Pc_Img.TabIndex = 223;
-            this.Pc_Img.TabStop = false;
             // 
             // F1_Proveedor
             // 
@@ -1358,6 +1365,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.GMPanel_Buscardor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GBuscador)).EndInit();
+            this.PanelMenu.ResumeLayout(false);
             this.GPanel_DatosGenerales.ResumeLayout(false);
             this.GPanel_DatosGenerales.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
@@ -1371,15 +1379,15 @@
             this.GPanel_InfoAdicional.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).EndInit();
             this.superTabControl2.ResumeLayout(false);
-            this.SuperTabControlPanel2.ResumeLayout(false);
             this.SuperTabControlPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grayuda)).EndInit();
             this.SuperTabControlPanel3.ResumeLayout(false);
             this.SuperTabControlPanel3.PerformLayout();
             this.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).EndInit();
+            this.SuperTabControlPanel2.ResumeLayout(false);
             this.GPanel_Detalle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).EndInit();
             this.ResumeLayout(false);
 
         }

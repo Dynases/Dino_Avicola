@@ -432,9 +432,9 @@
             this.BtnExportar.Image = global::MODEL.Properties.Resources.EXCEL;
             this.BtnExportar.ImageFixedSize = new System.Drawing.Size(48, 48);
             this.BtnExportar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtnExportar.Location = new System.Drawing.Point(432, 0);
+            this.BtnExportar.Location = new System.Drawing.Point(444, 0);
             this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(72, 72);
+            this.BtnExportar.Size = new System.Drawing.Size(78, 72);
             this.BtnExportar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BtnExportar.TabIndex = 71;
             this.BtnExportar.Text = "EXPORTAR";
@@ -465,7 +465,7 @@
             this.BtnImprimir.Image = global::MODEL.Properties.Resources.PRINT;
             this.BtnImprimir.ImageFixedSize = new System.Drawing.Size(48, 48);
             this.BtnImprimir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtnImprimir.Location = new System.Drawing.Point(360, 0);
+            this.BtnImprimir.Location = new System.Drawing.Point(372, 0);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(72, 72);
             this.BtnImprimir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -483,7 +483,7 @@
             this.BtnAtras.Image = global::MODEL.Properties.Resources.atras;
             this.BtnAtras.ImageFixedSize = new System.Drawing.Size(48, 48);
             this.BtnAtras.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtnAtras.Location = new System.Drawing.Point(288, 0);
+            this.BtnAtras.Location = new System.Drawing.Point(300, 0);
             this.BtnAtras.Name = "BtnAtras";
             this.BtnAtras.Size = new System.Drawing.Size(72, 72);
             this.BtnAtras.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -502,7 +502,7 @@
             this.BtnGrabar.Image = global::MODEL.Properties.Resources.save___copia;
             this.BtnGrabar.ImageFixedSize = new System.Drawing.Size(48, 48);
             this.BtnGrabar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtnGrabar.Location = new System.Drawing.Point(216, 0);
+            this.BtnGrabar.Location = new System.Drawing.Point(228, 0);
             this.BtnGrabar.Name = "BtnGrabar";
             this.BtnGrabar.Size = new System.Drawing.Size(72, 72);
             this.BtnGrabar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -521,7 +521,7 @@
             this.BtnEliminar.Image = global::MODEL.Properties.Resources.trash;
             this.BtnEliminar.ImageFixedSize = new System.Drawing.Size(48, 48);
             this.BtnEliminar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.BtnEliminar.Location = new System.Drawing.Point(144, 0);
+            this.BtnEliminar.Location = new System.Drawing.Point(156, 0);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(72, 72);
             this.BtnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -542,7 +542,7 @@
             this.BtnModificar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.BtnModificar.Location = new System.Drawing.Point(72, 0);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(72, 72);
+            this.BtnModificar.Size = new System.Drawing.Size(84, 72);
             this.BtnModificar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BtnModificar.TabIndex = 8;
             this.BtnModificar.Text = "MODIFICAR";

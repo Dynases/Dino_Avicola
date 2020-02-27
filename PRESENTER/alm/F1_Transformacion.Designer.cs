@@ -488,10 +488,10 @@
             this.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Tb_Id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.Tb_Id.Location = new System.Drawing.Point(126, 14);
+            this.Tb_Id.Location = new System.Drawing.Point(141, 14);
             this.Tb_Id.Name = "Tb_Id";
             this.Tb_Id.PreventEnterBeep = true;
-            this.Tb_Id.Size = new System.Drawing.Size(87, 25);
+            this.Tb_Id.Size = new System.Drawing.Size(163, 25);
             this.Tb_Id.TabIndex = 339;
             // 
             // labelX10
