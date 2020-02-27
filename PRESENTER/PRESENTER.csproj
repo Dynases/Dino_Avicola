@@ -187,11 +187,11 @@
     <Compile Include="adm\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="alm\F1_Almacen.cs">
+    <Compile Include="alm\F1_Sucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="alm\F1_Almacen.Designer.cs">
-      <DependentUpon>F1_Almacen.cs</DependentUpon>
+    <Compile Include="alm\F1_Sucursal.Designer.cs">
+      <DependentUpon>F1_Sucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="com\F1_Compra.cs">
       <SubType>Form</SubType>
@@ -262,8 +262,8 @@
     <EmbeddedResource Include="adm\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="alm\F1_Almacen.resx">
-      <DependentUpon>F1_Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="alm\F1_Sucursal.resx">
+      <DependentUpon>F1_Sucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="com\F1_Compra.resx">
       <DependentUpon>F1_Compra.cs</DependentUpon>

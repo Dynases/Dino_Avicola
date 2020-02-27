@@ -190,6 +190,7 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\bin\Debug\DATA.pdb
 D:\DYNASYS\Dino_Avicola\PRESENTER\bin\Debug\DATA.dll.config
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csprojAssemblyReference.cache
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.adm.Principal.resources
+D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Sucursal.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_Compra.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_CompraIngreso.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_Proveedor.resources
@@ -204,4 +205,3 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.pdb
-D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources

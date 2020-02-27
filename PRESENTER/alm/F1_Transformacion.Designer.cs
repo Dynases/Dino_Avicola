@@ -81,7 +81,6 @@
             // PanelContenidoRegistro
             // 
             this.PanelContenidoRegistro.Controls.Add(this.PanelFondo);
-            this.PanelContenidoRegistro.Location = new System.Drawing.Point(0, 34);
             this.PanelContenidoRegistro.Size = new System.Drawing.Size(950, 626);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.PanelMenu, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.LblSubtitulo, 0);
@@ -409,7 +408,7 @@
             // 
             this.GPanel_DatosGenerales.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GPanel_DatosGenerales.TabIndex = 85;
-            this.GPanel_DatosGenerales.Text = "DATOS GENERELAES";
+            this.GPanel_DatosGenerales.Text = "DATOS GENERALES";
             // 
             // labelX1
             // 
