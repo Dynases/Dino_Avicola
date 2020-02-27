@@ -117,6 +117,7 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_CompraIngreso.
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Proveedor.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.F1_Transformacion.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.com.FI_Seleccion.resources
+D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.frm.Efecto.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.reg.F1_Clientes.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.Properties.Resources.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.reg.f1_Precio.resources
@@ -125,4 +126,3 @@ D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.csproj.GenerateResour
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.exe
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.pdb
-D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.frm.Efecto.resources
