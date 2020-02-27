@@ -73,7 +73,7 @@ namespace SERVICE
         [OperationContract]
         List<VProveedorLista> ProveedorListar();
         [OperationContract]
-        DataTable ListarEncabezado();
+        DataTable ProveedorListarEncabezado();
         #endregion
         #region Proveedor_01
         [OperationContract]
@@ -120,6 +120,9 @@ namespace SERVICE
 
         [OperationContract]
         bool CompraIngreso_Guardar(VCompraIngresoLista proveedor, List<VCompraIngreso_01> detalle, ref int id,string usuario);
+
+        [OperationContract]
+        DataTable CompraIngreso_ListarEncabezado();
         #endregion
         #region Compra Ingreso_01
         [OperationContract]

@@ -107,7 +107,16 @@ namespace REPOSITORY.Clase
             try
             {
                 DataTable tabla = new DataTable();
-                string consulta = "SELECT A.Id,A.Descrip,A.Contacto,A.Ciudad,B.Descrip AS CiudadNombre,a.Telfon FROM COM.Proveed a JOIN ADM.Libreria b ON B.IdGrupo = 2 AND B.IdOrden = 1 AND B.IdLibrer = A.Ciudad";
+                string consulta = @"SELECT 
+                                        A.Id,A.Descrip,A.Contacto,A.Ciudad,B.Descrip AS CiudadNombre,a.Telfon, 
+	                                    c.EdadSeman AS EdadSemana
+                                    FROM
+                                        COM.Proveed a
+                                        JOIN ADM.Libreria b ON B.IdGrupo = 2 AND B.IdOrden = 1 AND B.IdLibrer = A.Ciudad
+                                        JOIN COM.Proveed_01 c ON c.IdProveed = a.Id
+                                    WHERE
+                                        C.Id = (select MAX(x.Id) from COM.Proveed_01 x WHERE X.IdProveed = A.Id)
+                                    GROUP BY C.EdadSeman, A.Id,A.Descrip,A.Ciudad,B.Descrip, A.Contacto,A.Telfon";
                 return  tabla = BD.EjecutarConsulta(consulta).Tables[0];
             }
             catch (Exception ex)

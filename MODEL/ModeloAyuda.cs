@@ -15,13 +15,13 @@ namespace MODEL
     public partial class ModeloAyuda : Form
     {
         #region Varibles
-        public static DataTable dtBuscador = new DataTable();
-        public static string nombreVista;
-        public static int posX, posY;
-        public static bool seleccionado;
-        public static int Columna = -1;
-        public static Janus.Windows.GridEX.GridEXRow filaSelect;
-        public static List<GLCelda> listEstrucGrilla;
+        public  DataTable dtBuscador = new DataTable();
+        public  string nombreVista;
+        public  int posX, posY;
+        public  bool seleccionado;
+        public  int Columna = -1;
+        public  Janus.Windows.GridEX.GridEXRow filaSelect;
+        public  List<GLCelda> listEstrucGrilla;
         //GridEX filaSelect = new GridEX();
         //List(Of Celda)
         #endregion
@@ -36,7 +36,7 @@ namespace MODEL
             GPPanelP.Text = titulo;
             listEstrucGrilla = listEst;
             seleccionado = false;
-
+            _PMCargarBuscador();
             Columna = 2;
         }
         #region METODOS PRIVADOS
@@ -88,7 +88,7 @@ namespace MODEL
             }
         }
 
-        private void ModeloAyuda_KeyDown(object sender, KeyEventArgs e)
+        private void grJBuscador_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Escape)
             {
@@ -101,6 +101,7 @@ namespace MODEL
                 this.Close();
             }
         }
+
         public void MP_Seleccionar()
         {
             if (Columna >= 0)

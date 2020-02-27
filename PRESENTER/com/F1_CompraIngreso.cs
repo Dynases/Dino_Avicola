@@ -1,9 +1,11 @@
 ﻿using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Keyboard;
 using ENTITY.com.CompraIngreso.View;
 using ENTITY.com.CompraIngreso_01;
 using ENTITY.Libreria.View;
 using Janus.Windows.GridEX;
 using Janus.Windows.GridEX.EditControls;
+using PRESENTER.frm;
 using PRESENTER.Report;
 using System;
 using System.Collections.Generic;
@@ -71,41 +73,7 @@ namespace PRESENTER.com
                 MessageBox.Show(ex.Message, GLMensaje.Error);
             }
         }
-
-        private void btn_Recibido_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int idLibreria = 0;
-                var lLibreria = new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.COMPRA_INGRESO),
-                                                                                         Convert.ToInt32(ENEstaticosOrden.COMPRA_INGRESO_RECIBIDO));
-                if (lLibreria.Count() > 0)
-                {
-                    idLibreria = lLibreria.Select(x => x.IdLibreria).Max();
-                }
-                VLibreriaLista libreria = new VLibreriaLista()
-                {
-                    IdGrupo = Convert.ToInt32(ENEstaticosGrupo.COMPRA_INGRESO),
-                    IdOrden = Convert.ToInt32(ENEstaticosOrden.COMPRA_INGRESO_RECIBIDO),
-                    IdLibrer = idLibreria + 1,
-                    Descrip = Cb_Recibido.Text == "" ? "" : Cb_Recibido.Text,
-                    Fecha = DateTime.Now.Date,
-                    Hora = DateTime.Now.ToString("hh:mm"),
-                    Usuario = UTGlobal.Usuario,
-                };
-                if (new ServiceDesktop.ServiceDesktopClient().LibreriaGuardar(libreria))
-                {
-                    UTGlobal.MG_ArmarCombo(Cb_Recibido,
-                                  new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.COMPRA_INGRESO),
-                                                                                                Convert.ToInt32(ENEstaticosOrden.COMPRA_INGRESO_RECIBIDO)).ToList());
-                    Cb_Recibido.SelectedIndex = ((List<VLibreria>)Cb_Recibido.DataSource).Count() - 1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, GLMensaje.Error);
-            }
-        }
+       
         private void Cb_Tipo_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -119,12 +87,7 @@ namespace PRESENTER.com
             {
                 MP_MostrarMensajeError(ex.Message);
             }
-        }
-
-        private void Cb_Recibido_ValueChanged(object sender, EventArgs e)
-        {
-            MP_SeleccionarButtonCombo(Cb_Recibido, btn_Recibido);
-        }
+        }      
         private void Dgv_GBuscador_SelectionChanged(object sender, EventArgs e)
         {
             if (Dgv_GBuscador.Row >= 0 && Dgv_GBuscador.RowCount >= 0)
@@ -431,9 +394,7 @@ namespace PRESENTER.com
             UTGlobal.MG_ArmarCombo(Cb_Tipo,
                                    new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.PRODUCTO),
                                                                                                  Convert.ToInt32(ENEstaticosOrden.PRODUCTO_GRUPO2)).ToList());
-            UTGlobal.MG_ArmarCombo(Cb_Recibido,
-                                   new ServiceDesktop.ServiceDesktopClient().LibreriaListarCombo(Convert.ToInt32(ENEstaticosGrupo.COMPRA_INGRESO),
-                                                                                                 Convert.ToInt32(ENEstaticosOrden.COMPRA_INGRESO_RECIBIDO)).ToList());
+          
 
         }
         private void MP_SeleccionarButtonCombo(MultiColumnCombo combo, ButtonX btn)
@@ -489,9 +450,9 @@ namespace PRESENTER.com
             Tb_Entregado.ReadOnly = false;           
             Tb_FechaEnt.Value = DateTime.Now;
             Tb_FechaRec.Value = DateTime.Now;
-            Cb_Recibido.Enabled = true;  
+            Tb_Recibido.ReadOnly = false;  
             Dgv_Detalle.Enabled = true;            
-            btn_Recibido.Enabled = true;
+           
         }
         private void MP_InHabilitar()
         {
@@ -504,10 +465,10 @@ namespace PRESENTER.com
             Tb_Observacion.ReadOnly = true;
             Tb_Entregado.ReadOnly = true;
             Tb_Edad.ReadOnly = true;
-            _Limpiar = false;           
-            Cb_Recibido.Enabled = false;          
+            _Limpiar = false;
+            Tb_Recibido.ReadOnly = true;          
             Dgv_Detalle.Enabled = false;           
-            btn_Recibido.Enabled = false;
+           
         }
         private void MP_Limpiar()
         {
@@ -524,7 +485,6 @@ namespace PRESENTER.com
                 if (_Limpiar == false)
                 {
                     UTGlobal.MG_SeleccionarCombo(Cb_Tipo);
-                    UTGlobal.MG_SeleccionarCombo(Cb_Recibido);
                 }
                 MP_CargarDetalle(Convert.ToInt32(Cb_Tipo.Value), 2);
                 Tb_TotalVendido.Value = 0;             
@@ -561,7 +521,7 @@ namespace PRESENTER.com
                     _idProveedor = tabla.Select(x => x.IdProvee).First();
                     Tb_Observacion.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Observacion)).Count() > 0 ? tabla.Select(x => x.Observacion).First().ToString() : "";                  
                     Cb_Tipo.Value = tabla.Select(x => x.Tipo).First();
-                    Cb_Recibido.Value = tabla.Select(x => x.Recibido).First();
+                    Tb_Recibido.Text = registro.Recibido.ToString();
                     Tb_Edad.Text = tabla.Select(x => x.CantidadSemanas).First().ToString();
                     Tb_Entregado.Text = tabla.Where(x => !string.IsNullOrEmpty(x.Entregado)).Count() > 0 ? tabla.Select(x => x.Entregado).First().ToString() : "";
                     Tb_TotalEnviado.Value =  Convert.ToDouble(registro.TotalRecibido);
@@ -632,7 +592,7 @@ namespace PRESENTER.com
                     Tipo = Convert.ToInt32(Cb_Tipo.Value),
                     Observacion = Tb_Observacion.Text,
                     Entregado = Tb_Entregado.Text,
-                    Recibido = Convert.ToInt32(Cb_Recibido.Value),
+                    Recibido = Tb_Recibido.Text,
                     TotalRecibido = Convert.ToDecimal( Tb_TotalEnviado.Value),
                     TotalVendido = Convert.ToDecimal(Tb_TotalVendido.Value),
                     Total = Convert.ToDecimal(Tb_TSaldoTo.Value),                    
@@ -726,41 +686,37 @@ namespace PRESENTER.com
         private void tb_Proveedor_KeyDown(object sender, KeyEventArgs e)
         {
             if (Tb_FechaEnt.IsInputReadOnly == false)
-            {              
-                   var lista = new ServiceDesktop.ServiceDesktopClient().ListarEncabezado();                
-                   List<GLCelda> listEstCeldas = new List<GLCelda>();
-                    listEstCeldas.Add(new GLCelda (){campo = "Id", visible = true, titulo = "ID",tamano = 80});
-                    listEstCeldas.Add(new GLCelda() { campo = "Descripcion", visible = true, titulo = "DESCRIPCION", tamano = 200 });
-                    listEstCeldas.Add(new GLCelda() { campo = "Contacto", visible = true, titulo = "CONTACTO", tamano = 150 });
+            {
+                if(e.Modifiers == Keys.Control && e.KeyCode == Keys.Enter)
+                {
+                    var lista = new ServiceDesktop.ServiceDesktopClient().ProveedorListarEncabezado();
+                    List<GLCelda> listEstCeldas = new List<GLCelda>();
+                    listEstCeldas.Add(new GLCelda() { campo = "Id", visible = true, titulo = "ID", tamano = 80 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Descrip", visible = true, titulo = "DESCRIPCION", tamano = 150 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Contacto", visible = true, titulo = "CONTACTO", tamano = 100 });
                     listEstCeldas.Add(new GLCelda() { campo = "Ciudad", visible = false, titulo = "IDCIUDAD", tamano = 80 });
-                    listEstCeldas.Add(new GLCelda() { campo = "NombreCiudad", visible = true, titulo = "CIUDAD", tamano = 120 });
-                    listEstCeldas.Add(new GLCelda() { campo = "Telefono", visible = true, titulo = "TELEFONO", tamano = 100 });
-                    GLEfecto efecto = new GLEfecto();
+                    listEstCeldas.Add(new GLCelda() { campo = "CiudadNombre", visible = true, titulo = "CIUDAD", tamano = 120 });
+                    listEstCeldas.Add(new GLCelda() { campo = "Telfon", visible = true, titulo = "TELEFONO", tamano = 100 });
+                    listEstCeldas.Add(new GLCelda() { campo = "EdadSemana", visible = true, titulo = "EDAD EN SEMANAS", tamano = 100 });
+                    Efecto efecto = new Efecto();
                     efecto.Tipo = 3;
                     efecto.Tabla = lista;
-                efecto.SelectCol = 2;
-                efecto.listaCelda = listEstCeldas;
-                efecto.Alto = 50;
-                efecto.Ancho = 350;
-                efecto.Context = "SELECCIONE UN PROVEEDOR";
-                efecto.ShowDialog();
-                bool bandera = false;
-                bandera = efecto.Band;
-                if (bandera)
-                {
-                    Janus.Windows.GridEX.GridEXRow Row = efecto.Row;
-                    _idProveedor = Convert.ToInt32(Row.Cells["Id"].Value);
-                }
-                
-                    //listEstCeldas.Add(New Modelo.Celda("ydrazonsocial", true, "RAZÓN SOCIAL", 180));
-                    //listEstCeldas.Add(New Modelo.Celda("yddesc", True, "NOMBRE", 280));
-                    //listEstCeldas.Add(New Modelo.Celda("yddctnum", True, "N. Documento".ToUpper, 150));
-                    //listEstCeldas.Add(New Modelo.Celda("yddirec", True, "DIRECCIÓN", 220));
-                    //listEstCeldas.Add(New Modelo.Celda("ydtelf1", True, "Teléfono".ToUpper, 200));
-                    //listEstCeldas.Add(New Modelo.Celda("ydfnac", True, "F.Nacimiento".ToUpper, 150, "MM/dd,YYYY"));
-                    //listEstCeldas.Add(New Modelo.Celda("ydnumivend,", False, "ID", 50));
-                    //listEstCeldas.Add(New Modelo.Celda("vendedor,", False, "ID", 50));
-                    //listEstCeldas.Add(New Modelo.Celda("yddias", False, "CRED", 50));                
+                    efecto.SelectCol = 2;
+                    efecto.listaCelda = listEstCeldas;
+                    efecto.Alto = 50;
+                    efecto.Ancho = 350;
+                    efecto.Context = "SELECCIONE UN PROVEEDOR";
+                    efecto.ShowDialog();
+                    bool bandera = false;
+                    bandera = efecto.Band;
+                    if (bandera)
+                    {
+                        Janus.Windows.GridEX.GridEXRow Row = efecto.Row;
+                        _idProveedor = Convert.ToInt32(Row.Cells["Id"].Value);
+                        tb_Proveedor.Text =Row.Cells["Descrip"].Value.ToString();
+                        Tb_Edad.Text = Row.Cells["Id"].Value.ToString();
+                    }
+                }              
             }
         }
 

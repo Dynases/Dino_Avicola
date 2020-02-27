@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ENTITY.com.CompraIngreso.View;
 using DATA.EntityDataModel.DiAvi;
+using System.Data;
 
 namespace REPOSITORY.Clase
 {
@@ -183,6 +184,32 @@ namespace REPOSITORY.Clase
                                       }).ToList();
                     return listResult;
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public DataTable ListarEncabezado()
+        {
+            try
+            {
+                DataTable tabla = new DataTable();
+                string consulta = @"SELECT	
+	                                a.Id,
+	                                a.NumNota,
+	                                a.FechaEnt,
+	                                a.FechaRec,
+	                                a.Placa,
+	                                a.IdProvee,
+	                                b.Descrip as Proveedor,
+	                                a.Tipo,
+	                                a.EdadSemana,
+	                                a.IdSucur
+                                FROM 
+	                                COM.CompraIng a JOIN
+	                                COM.Proveed b ON b.Id = a.IdProvee ";
+                return tabla = BD.EjecutarConsulta(consulta).Tables[0];
             }
             catch (Exception ex)
             {

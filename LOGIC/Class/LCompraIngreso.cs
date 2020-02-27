@@ -4,6 +4,7 @@ using REPOSITORY.Clase;
 using REPOSITORY.Interface;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +71,17 @@ namespace LOGIC.Class
             try
             {
                 return iCompraIngreso.ListarNotaXId(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public DataTable ListarEncabezado()
+        {
+            try
+            {
+                return iCompraIngreso.ListarEncabezado();
             }
             catch (Exception ex)
             {

@@ -228,6 +228,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="frm\Efecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Efecto.Designer.cs">
+      <DependentUpon>Efecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="com\FI_Seleccion.resx">
       <DependentUpon>FI_Seleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Efecto.resx">
+      <DependentUpon>Efecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reg\F1_Clientes.resx">
       <DependentUpon>F1_Clientes.cs</DependentUpon>
@@ -462,6 +471,7 @@
     <None Include="Resources\TRANSFORMACION.png" />
     <None Include="Resources\hojaruta.png" />
     <None Include="Resource\avicola02.jpg" />
+    <None Include="Resources\CUESTION.png" />
     <Content Include="Resource\BUSQUEDA.png" />
     <Content Include="Resource\CANCEL.png" />
     <None Include="Resource\CLIENTE.png" />

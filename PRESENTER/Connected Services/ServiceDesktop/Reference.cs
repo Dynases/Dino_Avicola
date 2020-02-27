@@ -158,11 +158,11 @@ namespace PRESENTER.ServiceDesktop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ProveedorListar", ReplyAction="http://tempuri.org/IServiceDesktop/ProveedorListarResponse")]
         System.Threading.Tasks.Task<ENTITY.Proveedor.View.VProveedorLista[]> ProveedorListarAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ListarEncabezadoResponse")]
-        System.Data.DataTable ListarEncabezado();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ProveedorListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ProveedorListarEncabezadoResponse")]
+        System.Data.DataTable ProveedorListarEncabezado();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ListarEncabezadoResponse")]
-        System.Threading.Tasks.Task<System.Data.DataTable> ListarEncabezadoAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/ProveedorListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/ProveedorListarEncabezadoResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> ProveedorListarEncabezadoAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Proveedor_01ListarXId", ReplyAction="http://tempuri.org/IServiceDesktop/Proveedor_01ListarXIdResponse")]
         ENTITY.Proveedor.View.VProveedor_01Lista[] Proveedor_01ListarXId(int Id);
@@ -250,6 +250,12 @@ namespace PRESENTER.ServiceDesktop {
         // CODEGEN: Generando contrato de mensaje, ya que la operación tiene múltiples valores de devolución.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_Guardar", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_GuardarResponse")]
         System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse> CompraIngreso_GuardarAsync(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_ListarEncabezadoResponse")]
+        System.Data.DataTable CompraIngreso_ListarEncabezado();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CompraIngreso_ListarEncabezado", ReplyAction="http://tempuri.org/IServiceDesktop/CompraIngreso_ListarEncabezadoResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> CompraIngreso_ListarEncabezadoAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXId", ReplyAction="http://tempuri.org/IServiceDesktop/CmmpraIngreso_01ListarXIdResponse")]
         ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId(int id);
@@ -629,12 +635,12 @@ namespace PRESENTER.ServiceDesktop {
             return base.Channel.ProveedorListarAsync();
         }
         
-        public System.Data.DataTable ListarEncabezado() {
-            return base.Channel.ListarEncabezado();
+        public System.Data.DataTable ProveedorListarEncabezado() {
+            return base.Channel.ProveedorListarEncabezado();
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataTable> ListarEncabezadoAsync() {
-            return base.Channel.ListarEncabezadoAsync();
+        public System.Threading.Tasks.Task<System.Data.DataTable> ProveedorListarEncabezadoAsync() {
+            return base.Channel.ProveedorListarEncabezadoAsync();
         }
         
         public ENTITY.Proveedor.View.VProveedor_01Lista[] Proveedor_01ListarXId(int Id) {
@@ -769,6 +775,14 @@ namespace PRESENTER.ServiceDesktop {
         
         public System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.CompraIngreso_GuardarResponse> CompraIngreso_GuardarAsync(PRESENTER.ServiceDesktop.CompraIngreso_GuardarRequest request) {
             return base.Channel.CompraIngreso_GuardarAsync(request);
+        }
+        
+        public System.Data.DataTable CompraIngreso_ListarEncabezado() {
+            return base.Channel.CompraIngreso_ListarEncabezado();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> CompraIngreso_ListarEncabezadoAsync() {
+            return base.Channel.CompraIngreso_ListarEncabezadoAsync();
         }
         
         public ENTITY.com.CompraIngreso_01.VCompraIngreso_01[] CmmpraIngreso_01ListarXId(int id) {

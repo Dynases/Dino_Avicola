@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevComponents.DotNetBar;
-namespace UTILITY.Global
+using UTILITY.Global;
+
+namespace PRESENTER.frm
 {
-    public partial class GLEfecto : Form
+    public partial class Efecto : Form
     {
-        public GLEfecto()
+        public Efecto()
         {
             InitializeComponent();
         }
-        private void GLEfecto_Load(object sender, EventArgs e)
+
+        private void Efecto_Load(object sender, EventArgs e)
         {
-           // this.WindowState = FormWindowState.Maximized;
+            // this.WindowState = FormWindowState.Maximized;
             switch (Tipo)
             {
                 case 1:
@@ -49,7 +52,7 @@ namespace UTILITY.Global
 
         void MP_MostrarMensaje()
         {
-            Bitmap blah = UTILITY.Properties.Resources.CUESTION;
+            Bitmap blah = PRESENTER.Properties.Resources.CUESTION;
             Icon ico = Icon.FromHandle(blah.GetHicon());
             if (MessageBox.Show(Context, Header, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
             {
@@ -76,14 +79,29 @@ namespace UTILITY.Global
             {
                 Band = true;
                 this.Close();
-            }            
+            }
         }
         void MP_MostrarFrmAyuda()
         {
-            
+            MODEL.ModeloAyuda frmAyuda = new MODEL.ModeloAyuda(Alto, Ancho, Tabla, Context.ToUpper(), listaCelda);
+            if (SelectCol >= 0)
+            {
+                frmAyuda.Columna = SelectCol;
+                frmAyuda.MP_Seleccionar();
+            }
+            frmAyuda.ShowDialog();
+            if (frmAyuda.seleccionado)
+            {
+                Row = frmAyuda.filaSelect;
+                Band = true;
+                this.Close();
+            }
+            else
+            {
+                Band = false;
+                this.Close();
+            }
         }
         #endregion
-
-
     }
 }

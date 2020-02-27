@@ -189,7 +189,7 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
-        public DataTable ListarEncabezado()
+        public DataTable ProveedorListarEncabezado()
         {
             try
             {
@@ -418,6 +418,18 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
+        public DataTable CompraIngreso_ListarEncabezado()
+        {
+            try
+            {
+                var listResult = new LCompraIngreso().ListarEncabezado();
+                return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         #endregion
         #region Seleccion
         public List<VSeleccionLista> Seleccion_Lista()
@@ -510,7 +522,9 @@ namespace SERVICE
             }
         }
 
-   
+
+
+
 
         #endregion
 

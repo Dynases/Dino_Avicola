@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F1_CompraIngreso));
-            Janus.Windows.GridEX.GridEXLayout Cb_Recibido_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             Janus.Windows.GridEX.GridEXLayout Cb_Tipo_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F1_CompraIngreso));
             this.panel1 = new System.Windows.Forms.Panel();
             this.GPanel_DatosGenerales = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btn_Recibido = new DevComponents.DotNetBar.ButtonX();
-            this.Cb_Recibido = new Janus.Windows.GridEX.EditControls.MultiColumnCombo();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.Tb_Entregado = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
@@ -72,6 +69,7 @@
             this.Tb_TotalFisico = new DevComponents.Editors.DoubleInput();
             this.Tb_TotalEnviado = new DevComponents.Editors.DoubleInput();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.Tb_Recibido = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelContenidoRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -85,9 +83,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.GMPanel_Buscardor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GBuscador)).BeginInit();
+            this.PanelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.GPanel_DatosGenerales.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cb_Recibido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cb_Tipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaEnt)).BeginInit();
@@ -109,6 +107,7 @@
             this.PanelContenidoRegistro.Controls.Add(this.panel2);
             this.PanelContenidoRegistro.Controls.Add(this.panel1);
             this.PanelContenidoRegistro.Size = new System.Drawing.Size(1133, 597);
+            this.PanelContenidoRegistro.Controls.SetChildIndex(this.PanelMenu, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.LblSubtitulo, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.panel1, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.panel2, 0);
@@ -241,6 +240,11 @@
             this.LblSubtitulo.Text = "Registre un nuevo ingreso. Visualice y/o modifique la información de un ingreso p" +
     "reviamente registrado. ";
             // 
+            // PanelMenu
+            // 
+            this.PanelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelMenu.BackgroundImage")));
+            this.PanelMenu.Size = new System.Drawing.Size(1133, 72);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -255,8 +259,7 @@
             // 
             this.GPanel_DatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
             this.GPanel_DatosGenerales.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.GPanel_DatosGenerales.Controls.Add(this.btn_Recibido);
-            this.GPanel_DatosGenerales.Controls.Add(this.Cb_Recibido);
+            this.GPanel_DatosGenerales.Controls.Add(this.Tb_Recibido);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX11);
             this.GPanel_DatosGenerales.Controls.Add(this.Tb_Entregado);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX10);
@@ -314,40 +317,6 @@
             this.GPanel_DatosGenerales.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GPanel_DatosGenerales.TabIndex = 80;
             this.GPanel_DatosGenerales.Text = "DATOS GENERELAES";
-            // 
-            // btn_Recibido
-            // 
-            this.btn_Recibido.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Recibido.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.btn_Recibido.Image = ((System.Drawing.Image)(resources.GetObject("btn_Recibido.Image")));
-            this.btn_Recibido.ImageFixedSize = new System.Drawing.Size(28, 28);
-            this.btn_Recibido.Location = new System.Drawing.Point(309, 366);
-            this.btn_Recibido.Name = "btn_Recibido";
-            this.btn_Recibido.Size = new System.Drawing.Size(28, 29);
-            this.btn_Recibido.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_Recibido.TabIndex = 343;
-            this.btn_Recibido.Visible = false;
-            this.btn_Recibido.Click += new System.EventHandler(this.btn_Recibido_Click);
-            // 
-            // Cb_Recibido
-            // 
-            this.Cb_Recibido.BackColor = System.Drawing.Color.White;
-            Cb_Recibido_DesignTimeLayout.LayoutString = resources.GetString("Cb_Recibido_DesignTimeLayout.LayoutString");
-            this.Cb_Recibido.DesignTimeLayout = Cb_Recibido_DesignTimeLayout;
-            this.Cb_Recibido.DisabledBackColor = System.Drawing.Color.Blue;
-            this.Cb_Recibido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_Recibido.ImageHorizontalAlignment = Janus.Windows.GridEX.ImageHorizontalAlignment.Far;
-            this.Cb_Recibido.Location = new System.Drawing.Point(108, 368);
-            this.Cb_Recibido.Name = "Cb_Recibido";
-            this.Cb_Recibido.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom;
-            this.Cb_Recibido.Office2007CustomColor = System.Drawing.Color.DodgerBlue;
-            this.Cb_Recibido.SelectedIndex = -1;
-            this.Cb_Recibido.SelectedItem = null;
-            this.Cb_Recibido.Size = new System.Drawing.Size(195, 22);
-            this.Cb_Recibido.TabIndex = 11;
-            this.Cb_Recibido.Tag = "1";
-            this.Cb_Recibido.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
-            this.Cb_Recibido.ValueChanged += new System.EventHandler(this.Cb_Recibido_ValueChanged);
             // 
             // labelX11
             // 
@@ -1029,6 +998,22 @@
             this.labelX12.TabIndex = 220;
             this.labelX12.Text = "TOTAL ENVIADO(h)";
             // 
+            // Tb_Recibido
+            // 
+            this.Tb_Recibido.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.Tb_Recibido.Border.Class = "TextBoxBorder";
+            this.Tb_Recibido.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Recibido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Recibido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
+            this.Tb_Recibido.Location = new System.Drawing.Point(107, 368);
+            this.Tb_Recibido.Name = "Tb_Recibido";
+            this.Tb_Recibido.PreventEnterBeep = true;
+            this.Tb_Recibido.Size = new System.Drawing.Size(196, 23);
+            this.Tb_Recibido.TabIndex = 342;
+            // 
             // F1_CompraIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1050,10 +1035,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.GMPanel_Buscardor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GBuscador)).EndInit();
+            this.PanelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.GPanel_DatosGenerales.ResumeLayout(false);
             this.GPanel_DatosGenerales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cb_Recibido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cb_Tipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaRec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_FechaEnt)).EndInit();
@@ -1094,8 +1079,6 @@
         internal DevComponents.DotNetBar.LabelX labelX5;
         internal DevComponents.Editors.DateTimeAdv.DateTimeInput Tb_FechaRec;
         internal DevComponents.Editors.DateTimeAdv.DateTimeInput Tb_FechaEnt;
-        internal DevComponents.DotNetBar.ButtonX btn_Recibido;
-        internal Janus.Windows.GridEX.EditControls.MultiColumnCombo Cb_Recibido;
         internal DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.Controls.TextBoxX Tb_Entregado;
         internal DevComponents.DotNetBar.LabelX labelX10;
@@ -1116,5 +1099,6 @@
         internal DevComponents.DotNetBar.LabelX labelX14;
         internal DevComponents.DotNetBar.LabelX labelX15;
         private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.Controls.TextBoxX Tb_Recibido;
     }
 }

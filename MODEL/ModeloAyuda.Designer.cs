@@ -90,6 +90,7 @@
             this.grJBuscador.Size = new System.Drawing.Size(730, 273);
             this.grJBuscador.TabIndex = 0;
             this.grJBuscador.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007;
+            this.grJBuscador.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grJBuscador_KeyDown);
             // 
             // ModeloAyuda
             // 
@@ -100,7 +101,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModeloAyuda";
             this.Text = "ModeloAyuda";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ModeloAyuda_KeyDown);
+           // this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ModeloAyuda_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloAyuda_KeyPress);
             this.GPPanelP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grJBuscador)).EndInit();
