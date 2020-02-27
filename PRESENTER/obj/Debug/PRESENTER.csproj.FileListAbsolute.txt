@@ -204,3 +204,4 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.pdb
+D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources
