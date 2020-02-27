@@ -59,22 +59,22 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/31/2017 05:21:26</publishTime>
     </File>
     <File Include="bin/DATA.dll">
-      <publishTime>02/26/2020 16:23:00</publishTime>
+      <publishTime>02/27/2020 17:19:04</publishTime>
     </File>
     <File Include="bin/DATA.dll.config">
-      <publishTime>02/26/2020 10:41:43</publishTime>
+      <publishTime>02/27/2020 10:58:53</publishTime>
     </File>
     <File Include="bin/DATA.pdb">
-      <publishTime>02/26/2020 16:23:00</publishTime>
+      <publishTime>02/27/2020 17:19:04</publishTime>
     </File>
     <File Include="bin/DevComponents.DotNetBar2.dll">
       <publishTime>10/06/2015 14:57:36</publishTime>
     </File>
     <File Include="bin/ENTITY.dll">
-      <publishTime>02/26/2020 16:23:00</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/ENTITY.pdb">
-      <publishTime>02/26/2020 16:23:00</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>02/26/2020 10:41:48</publishTime>
@@ -95,28 +95,28 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/26/2020 10:41:44</publishTime>
     </File>
     <File Include="bin/LOGIC.dll">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/LOGIC.dll.config">
       <publishTime>02/26/2020 10:41:43</publishTime>
     </File>
     <File Include="bin/LOGIC.pdb">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/REPOSITORY.dll">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/REPOSITORY.dll.config">
       <publishTime>02/26/2020 10:41:45</publishTime>
     </File>
     <File Include="bin/REPOSITORY.pdb">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/SERVICE.dll">
-      <publishTime>02/26/2020 18:52:06</publishTime>
+      <publishTime>02/27/2020 17:48:48</publishTime>
     </File>
     <File Include="bin/SERVICE.pdb">
-      <publishTime>02/26/2020 18:52:06</publishTime>
+      <publishTime>02/27/2020 17:48:48</publishTime>
     </File>
     <File Include="bin/ShockwaveFlashObjects.dll">
       <publishTime>08/31/2017 05:21:26</publishTime>
@@ -125,22 +125,22 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/26/2020 10:02:34</publishTime>
     </File>
     <File Include="bin/UTILITY.dll">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="bin/UTILITY.pdb">
-      <publishTime>02/26/2020 17:25:20</publishTime>
+      <publishTime>02/27/2020 17:48:47</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>02/26/2020 10:41:47</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>02/26/2020 18:52:07</publishTime>
+      <publishTime>02/27/2020 17:49:38</publishTime>
     </File>
     <File Include="ServiceDesktop.svc">
       <publishTime>02/26/2020 10:41:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/26/2020 18:52:06</publishTime>
+      <publishTime>02/27/2020 17:19:05</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1,0 +1,11 @@
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\ENTITY.dll
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\ENTITY.pdb
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\DATA.dll
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\EntityFramework.dll
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\DATA.pdb
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\DATA.dll.config
+D:\DYNASYS\Dino_Avicola\ENTITY\bin\Debug\EntityFramework.xml
+D:\DYNASYS\Dino_Avicola\ENTITY\obj\Debug\ENTITY.csprojAssemblyReference.cache
+D:\DYNASYS\Dino_Avicola\ENTITY\obj\Debug\ENTITY.csproj.CopyComplete
+D:\DYNASYS\Dino_Avicola\ENTITY\obj\Debug\ENTITY.dll
+D:\DYNASYS\Dino_Avicola\ENTITY\obj\Debug\ENTITY.pdb

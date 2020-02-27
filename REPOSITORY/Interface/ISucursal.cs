@@ -10,5 +10,6 @@ namespace REPOSITORY.Interface
    public  interface ISucursal
     {
         List<VSucursalCombo> Listar();
+        List<VSucursalLista> ListarSucursales();
     }
 }

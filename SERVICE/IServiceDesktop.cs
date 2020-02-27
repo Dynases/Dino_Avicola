@@ -99,6 +99,8 @@ namespace SERVICE
         #region Sucursal
         [OperationContract]
         List<VSucursalCombo> SucursalListarCombo();
+        [OperationContract]
+        List<VSucursalLista> SucursalListar();
         #endregion
         #region Precio Categoria
         [OperationContract]
@@ -119,7 +121,7 @@ namespace SERVICE
         List<VCompraIngresoNota> CompraIngreso_NotaXId(int id);
 
         [OperationContract]
-        bool CompraIngreso_Guardar(VCompraIngresoLista proveedor, List<VCompraIngreso_01> detalle, ref int id,string usuario);
+        bool CompraIngreso_Guardar(VCompraIngresoLista proveedor, List<VCompraIngreso_01> detalle, ref int id, string usuario);
 
         [OperationContract]
         DataTable CompraIngreso_ListarEncabezado();

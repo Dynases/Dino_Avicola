@@ -128,7 +128,7 @@ namespace SERVICE
         {
             try
             {
-                var listResult = new LLibreria().Listar(idGrupo,idOrden);
+                var listResult = new LLibreria().Listar(idGrupo, idOrden);
                 return listResult;
             }
             catch (Exception ex)
@@ -178,7 +178,7 @@ namespace SERVICE
         }
 
         public List<VProveedorLista> ProveedorListar()
-        {           
+        {
             try
             {
                 var listResult = new LProveedor().Listar();
@@ -229,7 +229,7 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
-        public bool ProductoModificar(VProducto Producto,  int id)
+        public bool ProductoModificar(VProducto Producto, int id)
         {
             try
             {
@@ -246,7 +246,7 @@ namespace SERVICE
 
             try
             {
-                var result = new LProducto().Eliminar( id);
+                var result = new LProducto().Eliminar(id);
                 return result;
             }
             catch (Exception ex)
@@ -295,13 +295,26 @@ namespace SERVICE
 
         #endregion
 
-        #region Sucursal
+        #region Sucursal        
+
         public List<VSucursalCombo> SucursalListarCombo()
         {
             try
             {
                 var listResult = new LSucursal().Listar();
                 return listResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<VSucursalLista> SucursalListar()
+        {
+            try
+            {
+                return new LSucursal().ListarSucursales();
             }
             catch (Exception ex)
             {
@@ -341,11 +354,11 @@ namespace SERVICE
         }
         #endregion
         #region Compra Ingreso
-        public bool CompraIngreso_Guardar(VCompraIngresoLista vCompraIngreso, List<VCompraIngreso_01> detalle, ref int id,string usuario)
+        public bool CompraIngreso_Guardar(VCompraIngresoLista vCompraIngreso, List<VCompraIngreso_01> detalle, ref int id, string usuario)
         {
             try
             {
-                var result = new LCompraIngreso().Guardar(vCompraIngreso, detalle, ref id,usuario);
+                var result = new LCompraIngreso().Guardar(vCompraIngreso, detalle, ref id, usuario);
                 return result;
             }
             catch (Exception ex)

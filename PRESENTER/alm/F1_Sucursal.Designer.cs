@@ -37,6 +37,9 @@
             this.lblId = new DevComponents.DotNetBar.LabelX();
             this.GPanel_InfoAdicional = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl2 = new DevComponents.DotNetBar.SuperTabControl();
+            this.SuperTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.Dgv_Sucursales = new Janus.Windows.GridEX.GridEX();
+            this.SuperTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.SuperTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Pc_Img = new System.Windows.Forms.PictureBox();
@@ -48,9 +51,6 @@
             this.btnMapaMin = new DevComponents.DotNetBar.ButtonX();
             this.Gmc_Sucursal = new GMap.NET.WindowsForms.GMapControl();
             this.SuperTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
-            this.SuperTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.grayuda = new Janus.Windows.GridEX.GridEX();
-            this.SuperTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.Tb_Telef = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.Tb_Direcc = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -73,17 +73,17 @@
             this.PanelMenu.SuspendLayout();
             this.PanelFondo.SuspendLayout();
             this.PanelDerecha.SuspendLayout();
+            this.GPanel_Sucursales.SuspendLayout();
             this.PanelIzquierda.SuspendLayout();
             this.GPanel_DatosGenerales.SuspendLayout();
             this.GPanel_InfoAdicional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).BeginInit();
             this.superTabControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Sucursales)).BeginInit();
             this.SuperTabControlPanel3.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).BeginInit();
             this.SuperTabControlPanel2.SuspendLayout();
-            this.SuperTabControlPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grayuda)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoRegistro
@@ -145,7 +145,6 @@
             // 
             // PanelContenidoBuscar
             // 
-            this.PanelContenidoBuscar.Location = new System.Drawing.Point(0, 34);
             this.PanelContenidoBuscar.Size = new System.Drawing.Size(800, 389);
             // 
             // btnMin
@@ -230,6 +229,7 @@
             this.GPanel_Sucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
             this.GPanel_Sucursales.CanvasColor = System.Drawing.SystemColors.Control;
             this.GPanel_Sucursales.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.GPanel_Sucursales.Controls.Add(this.Dgv_Sucursales);
             this.GPanel_Sucursales.DisabledBackColor = System.Drawing.Color.Empty;
             this.GPanel_Sucursales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GPanel_Sucursales.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -418,6 +418,31 @@
             this.superTabControl2.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl2.Text = "superTabControl2";
             // 
+            // SuperTabControlPanel1
+            // 
+            this.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SuperTabControlPanel1.Location = new System.Drawing.Point(0, 27);
+            this.SuperTabControlPanel1.Name = "SuperTabControlPanel1";
+            this.SuperTabControlPanel1.Size = new System.Drawing.Size(359, 230);
+            this.SuperTabControlPanel1.TabIndex = 1;
+            this.SuperTabControlPanel1.TabItem = this.SuperTabItem1;
+            // 
+            // Dgv_Sucursales
+            // 
+            this.Dgv_Sucursales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dgv_Sucursales.Location = new System.Drawing.Point(0, 0);
+            this.Dgv_Sucursales.Name = "Dgv_Sucursales";
+            this.Dgv_Sucursales.Size = new System.Drawing.Size(561, 459);
+            this.Dgv_Sucursales.TabIndex = 0;
+            // 
+            // SuperTabItem1
+            // 
+            this.SuperTabItem1.AttachedControl = this.SuperTabControlPanel1;
+            this.SuperTabItem1.GlobalItem = false;
+            this.SuperTabItem1.Name = "SuperTabItem1";
+            this.SuperTabItem1.TabFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuperTabItem1.Text = "Ayuda";
+            // 
             // SuperTabControlPanel3
             // 
             this.SuperTabControlPanel3.Controls.Add(this.Panel2);
@@ -563,32 +588,6 @@
             this.SuperTabItem2.Name = "SuperTabItem2";
             this.SuperTabItem2.Text = "Ubicacion";
             // 
-            // SuperTabControlPanel1
-            // 
-            this.SuperTabControlPanel1.Controls.Add(this.grayuda);
-            this.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SuperTabControlPanel1.Location = new System.Drawing.Point(0, 27);
-            this.SuperTabControlPanel1.Name = "SuperTabControlPanel1";
-            this.SuperTabControlPanel1.Size = new System.Drawing.Size(359, 230);
-            this.SuperTabControlPanel1.TabIndex = 1;
-            this.SuperTabControlPanel1.TabItem = this.SuperTabItem1;
-            // 
-            // grayuda
-            // 
-            this.grayuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grayuda.Location = new System.Drawing.Point(0, 0);
-            this.grayuda.Name = "grayuda";
-            this.grayuda.Size = new System.Drawing.Size(359, 230);
-            this.grayuda.TabIndex = 0;
-            // 
-            // SuperTabItem1
-            // 
-            this.SuperTabItem1.AttachedControl = this.SuperTabControlPanel1;
-            this.SuperTabItem1.GlobalItem = false;
-            this.SuperTabItem1.Name = "SuperTabItem1";
-            this.SuperTabItem1.TabFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuperTabItem1.Text = "Ayuda";
-            // 
             // Tb_Telef
             // 
             // 
@@ -706,19 +705,19 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelFondo.ResumeLayout(false);
             this.PanelDerecha.ResumeLayout(false);
+            this.GPanel_Sucursales.ResumeLayout(false);
             this.PanelIzquierda.ResumeLayout(false);
             this.GPanel_DatosGenerales.ResumeLayout(false);
             this.GPanel_DatosGenerales.PerformLayout();
             this.GPanel_InfoAdicional.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).EndInit();
             this.superTabControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Sucursales)).EndInit();
             this.SuperTabControlPanel3.ResumeLayout(false);
             this.SuperTabControlPanel3.PerformLayout();
             this.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pc_Img)).EndInit();
             this.SuperTabControlPanel2.ResumeLayout(false);
-            this.SuperTabControlPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grayuda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,7 +738,7 @@
         internal DevComponents.DotNetBar.Controls.GroupPanel GPanel_InfoAdicional;
         internal DevComponents.DotNetBar.SuperTabControl superTabControl2;
         internal DevComponents.DotNetBar.SuperTabControlPanel SuperTabControlPanel1;
-        internal Janus.Windows.GridEX.GridEX grayuda;
+        internal Janus.Windows.GridEX.GridEX Dgv_Sucursales;
         internal DevComponents.DotNetBar.SuperTabItem SuperTabItem1;
         internal DevComponents.DotNetBar.SuperTabControlPanel SuperTabControlPanel3;
         internal System.Windows.Forms.Panel Panel2;

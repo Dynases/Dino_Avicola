@@ -2,9 +2,11 @@
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
+using Janus.Windows.GridEX;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using UTILITY.Global;
 
@@ -17,6 +19,7 @@ namespace PRESENTER.alm
             InitializeComponent();
             this.MP_IniciarMapa();
             this.MP_InHabilitar();
+            this.MP_CargarSucursales();
         }
 
         //==================================
@@ -65,7 +68,7 @@ namespace PRESENTER.alm
         {
             this.Tb_Descrip.Text = "";
             this.Tb_Direcc.Text = "";
-            this.Tb_Telef.Text = "";            
+            this.Tb_Telef.Text = "";
 
             this.MP_InHabilitar();
         }
@@ -147,6 +150,123 @@ namespace PRESENTER.alm
             {
                 MP_MostrarMensajeError(ex.Message);
                 return "";
+            }
+        }
+
+        private void MP_CargarSucursales()
+        {
+            try
+            {
+                var ListaCompleta = new ServiceDesktop.ServiceDesktopClient().SucursalListar();
+                if (ListaCompleta.Count() > 0)
+                {
+                    Dgv_Sucursales.DataSource = ListaCompleta;
+                    Dgv_Sucursales.RetrieveStructure();
+                    Dgv_Sucursales.AlternatingColors = true;
+
+                    Dgv_Sucursales.RootTable.Columns[0].Key = "Id";
+                    Dgv_Sucursales.RootTable.Columns[0].Caption = "Id";
+                    Dgv_Sucursales.RootTable.Columns[0].Visible = false;
+
+                    Dgv_Sucursales.RootTable.Columns[1].Key = "Descripcion";
+                    Dgv_Sucursales.RootTable.Columns[1].Caption = "Descripcion";
+                    Dgv_Sucursales.RootTable.Columns[1].Width = 300;
+                    Dgv_Sucursales.RootTable.Columns[1].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    Dgv_Sucursales.RootTable.Columns[1].CellStyle.FontSize = 8;
+                    Dgv_Sucursales.RootTable.Columns[1].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                    Dgv_Sucursales.RootTable.Columns[1].Visible = true;
+
+                    Dgv_Sucursales.RootTable.Columns[2].Key = "Direccion";
+                    Dgv_Sucursales.RootTable.Columns[2].Caption = "Direccion";
+                    Dgv_Sucursales.RootTable.Columns[2].Width = 250;
+                    Dgv_Sucursales.RootTable.Columns[2].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    Dgv_Sucursales.RootTable.Columns[2].CellStyle.FontSize = 8;
+                    Dgv_Sucursales.RootTable.Columns[2].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                    Dgv_Sucursales.RootTable.Columns[2].Visible = true;
+
+                    Dgv_Sucursales.RootTable.Columns[3].Key = "Telefono";
+                    Dgv_Sucursales.RootTable.Columns[3].Caption = "Telefono";
+                    Dgv_Sucursales.RootTable.Columns[3].Width = 280;
+                    Dgv_Sucursales.RootTable.Columns[3].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    Dgv_Sucursales.RootTable.Columns[3].CellStyle.FontSize = 8;
+                    Dgv_Sucursales.RootTable.Columns[3].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                    Dgv_Sucursales.RootTable.Columns[3].Visible = true;
+
+                    //Habilitar filtradores
+                    Dgv_Sucursales.DefaultFilterRowComparison = FilterConditionOperator.Contains;
+                    Dgv_Sucursales.FilterMode = FilterMode.Automatic;
+                    Dgv_Sucursales.FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges;
+                    //Dgv_Buscardor.FilterRowButtonStyle = FilterRowButtonStyle.ConditionOperatorDropDown;
+                    Dgv_Sucursales.GroupByBoxVisible = false;
+                    Dgv_Sucursales.VisualStyle = VisualStyle.Office2007;
+                }
+            }
+            catch (Exception ex)
+            {
+                MP_MostrarMensajeError(ex.Message);
+            }
+        }
+
+        private void MP_CargarDetalle(int id)
+        {
+            try
+            {
+                var lresult = new ServiceDesktop.ServiceDesktopClient().Transformacion_01_Lista().Where(a => a.IdTransformacion == id).ToList();
+                if (lresult.Count() > 0)
+                {
+                    Dgv_Sucursales.DataSource = lresult;
+                    Dgv_Sucursales.RetrieveStructure();
+                    Dgv_Sucursales.AlternatingColors = true;
+
+                    Dgv_Sucursales.RootTable.Columns["Id"].Visible = false;
+                    //Dgv_Sucursales.RootTable.Columns["IdTransformacion"].Visible = false;
+                    //Dgv_Sucursales.RootTable.Columns["IdProducto"].Visible = false;
+
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].Caption = "DESCRIPCION";
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].Width = 150;
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].CellStyle.FontSize = 9;
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                    Dgv_Sucursales.RootTable.Columns["Descripcion"].Visible = true;
+
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].Caption = "TOTAL PROD";
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].FormatString = "0";
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].Width = 120;
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].CellStyle.FontSize = 9;
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                    //Dgv_Sucursales.RootTable.Columns["TotalProd"].Visible = true;
+
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].Caption = "M. PRIMA";
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].Width = 150;
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].CellStyle.FontSize = 9;
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near;
+                    //Dgv_Sucursales.RootTable.Columns["Producto2"].Visible = true;
+
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].Caption = "CANT.";
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].FormatString = "0.00";
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].Width = 90;
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].CellStyle.FontSize = 9;
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                    //Dgv_Sucursales.RootTable.Columns["Cantidad"].Visible = true;
+
+                    //Dgv_Sucursales.RootTable.Columns["Total"].Caption = "TOTAL";
+                    //Dgv_Sucursales.RootTable.Columns["Total"].FormatString = "0.00";
+                    //Dgv_Sucursales.RootTable.Columns["Total"].Width = 100;
+                    //Dgv_Sucursales.RootTable.Columns["Total"].HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center;
+                    //Dgv_Sucursales.RootTable.Columns["Total"].CellStyle.FontSize = 9;
+                    //Dgv_Sucursales.RootTable.Columns["Total"].CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far;
+                    //Dgv_Sucursales.RootTable.Columns["Total"].Visible = true;
+
+                    Dgv_Sucursales.GroupByBoxVisible = false;
+                    Dgv_Sucursales.VisualStyle = VisualStyle.Office2007;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, GLMensaje.Error);
             }
         }
 
