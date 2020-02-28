@@ -1140,11 +1140,6 @@ namespace PRESENTER.com
             return _Error;
         }   
         #endregion
-
-        private void BtAdicionar_Click(object sender, EventArgs e)
-        {
-           
-        }
   
     }
 }

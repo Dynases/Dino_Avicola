@@ -1,4 +1,5 @@
-﻿using PRESENTER.com;
+﻿using PRESENTER.alm;
+using PRESENTER.com;
 using PRESENTER.reg;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,11 @@ namespace PRESENTER.adm
             F1_Compra frm = new F1_Compra();
             frm.Show();
         }
-    
+
+        private void btInvSucursal_Click(object sender, EventArgs e)
+        {
+            F1_Sucursal frm = new F1_Sucursal();
+            frm.Show();
+        }
     }
 }

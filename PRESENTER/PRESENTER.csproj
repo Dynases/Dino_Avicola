@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -187,11 +187,11 @@
     <Compile Include="adm\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="alm\F1_Almacen.cs">
+    <Compile Include="alm\F1_Sucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="alm\F1_Almacen.Designer.cs">
-      <DependentUpon>F1_Almacen.cs</DependentUpon>
+    <Compile Include="alm\F1_Sucursal.Designer.cs">
+      <DependentUpon>F1_Sucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="com\F1_Compra.cs">
       <SubType>Form</SubType>
@@ -268,8 +268,8 @@
     <EmbeddedResource Include="adm\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="alm\F1_Almacen.resx">
-      <DependentUpon>F1_Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="alm\F1_Sucursal.resx">
+      <DependentUpon>F1_Sucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="com\F1_Compra.resx">
       <DependentUpon>F1_Compra.cs</DependentUpon>
@@ -397,6 +397,7 @@
     <None Include="Properties\DataSources\ENTITY.com.Seleccion.View.VSeleccionLista.datasource" />
     <None Include="Properties\DataSources\ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista.datasource" />
     <None Include="Properties\DataSources\ENTITY.inv.Sucursal.View.VSucursalCombo.datasource" />
+    <None Include="Properties\DataSources\ENTITY.inv.Sucursal.View.VSucursalLista.datasource" />
     <None Include="Properties\DataSources\ENTITY.inv.Transformacion.View.VTransformacion.datasource" />
     <None Include="Properties\DataSources\ENTITY.inv.Transformacion_01.View.VTransformacion_01_Lista.datasource" />
     <None Include="Properties\DataSources\ENTITY.Libreria.View.VLibreria.datasource" />
@@ -488,7 +489,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -81,7 +81,6 @@
             // PanelContenidoRegistro
             // 
             this.PanelContenidoRegistro.Controls.Add(this.PanelFondo);
-            this.PanelContenidoRegistro.Location = new System.Drawing.Point(0, 34);
             this.PanelContenidoRegistro.Size = new System.Drawing.Size(950, 626);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.PanelMenu, 0);
             this.PanelContenidoRegistro.Controls.SetChildIndex(this.LblSubtitulo, 0);
@@ -409,7 +408,7 @@
             // 
             this.GPanel_DatosGenerales.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GPanel_DatosGenerales.TabIndex = 85;
-            this.GPanel_DatosGenerales.Text = "DATOS GENERELAES";
+            this.GPanel_DatosGenerales.Text = "DATOS GENERALES";
             // 
             // labelX1
             // 
@@ -489,10 +488,10 @@
             this.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Tb_Id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.Tb_Id.Location = new System.Drawing.Point(126, 14);
+            this.Tb_Id.Location = new System.Drawing.Point(141, 14);
             this.Tb_Id.Name = "Tb_Id";
             this.Tb_Id.PreventEnterBeep = true;
-            this.Tb_Id.Size = new System.Drawing.Size(87, 25);
+            this.Tb_Id.Size = new System.Drawing.Size(163, 25);
             this.Tb_Id.TabIndex = 339;
             // 
             // labelX10

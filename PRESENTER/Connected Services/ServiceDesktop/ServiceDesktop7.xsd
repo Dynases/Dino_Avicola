@@ -13,4 +13,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="VSucursalCombo" nillable="true" type="tns:VSucursalCombo" />
+  <xs:complexType name="ArrayOfVSucursalLista">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VSucursalLista" nillable="true" type="tns:VSucursalLista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVSucursalLista" nillable="true" type="tns:ArrayOfVSucursalLista" />
+  <xs:complexType name="VSucursalLista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VSucursalLista" nillable="true" type="tns:VSucursalLista" />
 </xs:schema>

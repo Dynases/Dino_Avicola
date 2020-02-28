@@ -3,20 +3,19 @@ using REPOSITORY.Clase;
 using REPOSITORY.Interface;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LOGIC.Class
 {
-   public class LSucursal
+    public class LSucursal
     {
         protected ISucursal iSucursal;
         public LSucursal()
         {
             iSucursal = new RSucursal();
         }
+
         #region Consulta
+
         public List<VSucursalCombo> Listar()
         {
             try
@@ -28,6 +27,19 @@ namespace LOGIC.Class
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<VSucursalLista> ListarSucursales()
+        {
+            try
+            {
+                return iSucursal.ListarSucursales();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         #endregion
 
     }

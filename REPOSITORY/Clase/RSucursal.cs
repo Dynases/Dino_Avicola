@@ -31,5 +31,29 @@ namespace REPOSITORY.Clase
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<VSucursalLista> ListarSucursales()
+        {
+            try
+            {
+                using (var db = GetEsquema())
+                {
+                    var listResult = db.Sucursal.Select(s => new VSucursalLista
+                    {
+                        Id = s.Id,
+                        Descripcion = s.Descrip,
+                        Direccion = s.Direcc,
+                        Telefono = s.Telef
+                    }).ToList();
+
+                    return listResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

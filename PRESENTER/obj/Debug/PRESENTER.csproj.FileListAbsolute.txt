@@ -188,11 +188,13 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\bin\Debug\DATA.pdb
 D:\DYNASYS\Dino_Avicola\PRESENTER\bin\Debug\DATA.dll.config
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csprojAssemblyReference.cache
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.adm.Principal.resources
+D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Sucursal.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_Compra.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_CompraIngreso.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_Proveedor.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.F1_Transformacion.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.com.FI_Seleccion.resources
+D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.frm.Efecto.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.reg.F1_Clientes.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.Properties.Resources.resources
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.reg.f1_Precio.resources
@@ -202,5 +204,8 @@ D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe.licenses
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.csproj.CopyComplete
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.exe
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.pdb
+<<<<<<< HEAD
 D:\DYNASYS\Dino_Avicola\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources
 D:\GitHub\Dino_Avicola\DiAvi\PRESENTER\obj\Debug\PRESENTER.alm.F1_Almacen.resources
+=======
+>>>>>>> dcayo
