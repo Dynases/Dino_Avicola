@@ -120,3 +120,4 @@ D:\GitHub\Dino_Avicola\DiAvi\SERVICE\bin\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\SERVICE\obj\Debug\SERVICE.csprojResolveAssemblyReference.cache
 D:\GitHub\Dino_Avicola\DiAvi\SERVICE\obj\Debug\SERVICE.dll
 D:\GitHub\Dino_Avicola\DiAvi\SERVICE\obj\Debug\SERVICE.pdb
+D:\DYNASYS\Dino_Avicola\SERVICE\bin\DevComponents.DotNetBar2.xml

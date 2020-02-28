@@ -86,3 +86,4 @@ D:\GitHub\Dino_Avicola\DiAvi\LOGIC\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.csprojResolveAssemblyReference.cache
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.dll
 D:\GitHub\Dino_Avicola\DiAvi\LOGIC\obj\Debug\LOGIC.pdb
+D:\DYNASYS\Dino_Avicola\LOGIC\bin\Debug\DevComponents.DotNetBar2.xml

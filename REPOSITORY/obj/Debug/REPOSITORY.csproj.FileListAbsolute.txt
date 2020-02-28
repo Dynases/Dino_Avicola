@@ -102,3 +102,4 @@ D:\GitHub\Dino_Avicola\DiAvi\REPOSITORY\bin\Debug\DevComponents.DotNetBar2.xml
 D:\GitHub\Dino_Avicola\DiAvi\REPOSITORY\obj\Debug\REPOSITORY.csprojResolveAssemblyReference.cache
 D:\GitHub\Dino_Avicola\DiAvi\REPOSITORY\obj\Debug\REPOSITORY.dll
 D:\GitHub\Dino_Avicola\DiAvi\REPOSITORY\obj\Debug\REPOSITORY.pdb
+D:\DYNASYS\Dino_Avicola\REPOSITORY\bin\Debug\DevComponents.DotNetBar2.xml
