@@ -151,7 +151,8 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdCompraIng" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSucur" Type="int" Nullable="false" />
+    <Property Name="IdCompraIng" Type="int" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
     <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Precio" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -159,6 +160,7 @@ advertencia 6002: La tabla o vista 'DiAvi.ADM.Estaticos' no tiene definida ningu
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="Hora" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="Usuario" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Merma" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="Seleccion_01">
     <Key>

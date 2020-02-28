@@ -18,5 +18,6 @@ namespace ENTITY.com.Seleccion.View
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }
+        public decimal Merma { get; set; }
     }
 }

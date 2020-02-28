@@ -39,9 +39,9 @@
             this.GPanel_Detalle = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.Dgv_Detalle = new Janus.Windows.GridEX.GridEX();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Tb_Selecc_Total = new DevComponents.Editors.DoubleInput();
-            this.Tb_Selecc_TPrecio = new DevComponents.Editors.DoubleInput();
-            this.Tb_Selecc_TCantidad = new DevComponents.Editors.DoubleInput();
+            this.Tb_Total = new DevComponents.Editors.DoubleInput();
+            this.Tb_TPrecio = new DevComponents.Editors.DoubleInput();
+            this.Tb_TCantidad = new DevComponents.Editors.DoubleInput();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.Tb_Recep_Total = new DevComponents.Editors.DoubleInput();
             this.Tb_Recep_TPrecio = new DevComponents.Editors.DoubleInput();
@@ -93,9 +93,9 @@
             this.GPanel_Detalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_Total)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_TPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_TCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_Total)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_Total)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_TPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_TCantidad)).BeginInit();
@@ -315,7 +315,6 @@
             this.Dgv_Seleccion.TabIndex = 258;
             this.Dgv_Seleccion.CellEdited += new Janus.Windows.GridEX.ColumnActionEventHandler(this.Dgv_Seleccion_CellEdited);
             this.Dgv_Seleccion.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Seleccion_EditingCell);
-           // this.Dgv_Seleccion.SelectionChanged += new System.EventHandler(this.Dgv_Seleccion_SelectionChanged);
             // 
             // GPanel_Detalle
             // 
@@ -370,14 +369,15 @@
             this.Dgv_Detalle.Size = new System.Drawing.Size(363, 356);
             this.Dgv_Detalle.TabIndex = 258;
             this.Dgv_Detalle.EditingCell += new Janus.Windows.GridEX.EditingCellEventHandler(this.Dgv_Detalle_EditingCell_1);
-           // this.Dgv_Detalle.SelectionChanged += new System.EventHandler(this.Dgv_Detalle_SelectionChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
-            this.panel1.Controls.Add(this.Tb_Selecc_Total);
-            this.panel1.Controls.Add(this.Tb_Selecc_TPrecio);
-            this.panel1.Controls.Add(this.Tb_Selecc_TCantidad);
+            this.panel1.Controls.Add(this.Tb_MERMA);
+            this.panel1.Controls.Add(this.labelX16);
+            this.panel1.Controls.Add(this.Tb_Total);
+            this.panel1.Controls.Add(this.Tb_TPrecio);
+            this.panel1.Controls.Add(this.Tb_TCantidad);
             this.panel1.Controls.Add(this.labelX8);
             this.panel1.Controls.Add(this.Tb_Recep_Total);
             this.panel1.Controls.Add(this.Tb_Recep_TPrecio);
@@ -389,56 +389,56 @@
             this.panel1.Size = new System.Drawing.Size(772, 65);
             this.panel1.TabIndex = 0;
             // 
-            // Tb_Selecc_Total
+            // Tb_Total
             // 
             // 
             // 
             // 
-            this.Tb_Selecc_Total.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_Selecc_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_Selecc_Total.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_Selecc_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_Selecc_Total.Increment = 1D;
-            this.Tb_Selecc_Total.Location = new System.Drawing.Point(696, 6);
-            this.Tb_Selecc_Total.MinValue = 0D;
-            this.Tb_Selecc_Total.Name = "Tb_Selecc_Total";
-            this.Tb_Selecc_Total.Size = new System.Drawing.Size(64, 22);
-            this.Tb_Selecc_Total.TabIndex = 229;
-            this.Tb_Selecc_Total.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_Total.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_Total.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_Total.Increment = 1D;
+            this.Tb_Total.Location = new System.Drawing.Point(700, 6);
+            this.Tb_Total.MinValue = 0D;
+            this.Tb_Total.Name = "Tb_Total";
+            this.Tb_Total.Size = new System.Drawing.Size(64, 22);
+            this.Tb_Total.TabIndex = 229;
+            this.Tb_Total.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
-            // Tb_Selecc_TPrecio
-            // 
-            // 
-            // 
-            // 
-            this.Tb_Selecc_TPrecio.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_Selecc_TPrecio.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_Selecc_TPrecio.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_Selecc_TPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_Selecc_TPrecio.Increment = 1D;
-            this.Tb_Selecc_TPrecio.Location = new System.Drawing.Point(626, 6);
-            this.Tb_Selecc_TPrecio.MinValue = 0D;
-            this.Tb_Selecc_TPrecio.Name = "Tb_Selecc_TPrecio";
-            this.Tb_Selecc_TPrecio.Size = new System.Drawing.Size(64, 22);
-            this.Tb_Selecc_TPrecio.TabIndex = 228;
-            this.Tb_Selecc_TPrecio.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
-            // 
-            // Tb_Selecc_TCantidad
+            // Tb_TPrecio
             // 
             // 
             // 
             // 
-            this.Tb_Selecc_TCantidad.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.Tb_Selecc_TCantidad.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tb_Selecc_TCantidad.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.Tb_Selecc_TCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_Selecc_TCantidad.Increment = 1D;
-            this.Tb_Selecc_TCantidad.Location = new System.Drawing.Point(556, 6);
-            this.Tb_Selecc_TCantidad.MinValue = 0D;
-            this.Tb_Selecc_TCantidad.Name = "Tb_Selecc_TCantidad";
-            this.Tb_Selecc_TCantidad.Size = new System.Drawing.Size(64, 22);
-            this.Tb_Selecc_TCantidad.TabIndex = 227;
-            this.Tb_Selecc_TCantidad.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            this.Tb_TPrecio.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TPrecio.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TPrecio.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TPrecio.Increment = 1D;
+            this.Tb_TPrecio.Location = new System.Drawing.Point(630, 6);
+            this.Tb_TPrecio.MinValue = 0D;
+            this.Tb_TPrecio.Name = "Tb_TPrecio";
+            this.Tb_TPrecio.Size = new System.Drawing.Size(64, 22);
+            this.Tb_TPrecio.TabIndex = 228;
+            this.Tb_TPrecio.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
+            // 
+            // Tb_TCantidad
+            // 
+            // 
+            // 
+            // 
+            this.Tb_TCantidad.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.Tb_TCantidad.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tb_TCantidad.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.Tb_TCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tb_TCantidad.Increment = 1D;
+            this.Tb_TCantidad.Location = new System.Drawing.Point(560, 6);
+            this.Tb_TCantidad.MinValue = 0D;
+            this.Tb_TCantidad.Name = "Tb_TCantidad";
+            this.Tb_TCantidad.Size = new System.Drawing.Size(64, 22);
+            this.Tb_TCantidad.TabIndex = 227;
+            this.Tb_TCantidad.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right;
             // 
             // labelX8
             // 
@@ -450,7 +450,7 @@
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX8.ForeColor = System.Drawing.Color.White;
-            this.labelX8.Location = new System.Drawing.Point(421, 15);
+            this.labelX8.Location = new System.Drawing.Point(516, 12);
             this.labelX8.Name = "labelX8";
             this.labelX8.SingleLineColor = System.Drawing.SystemColors.Control;
             this.labelX8.Size = new System.Drawing.Size(46, 16);
@@ -467,7 +467,7 @@
             this.Tb_Recep_Total.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.Tb_Recep_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Recep_Total.Increment = 1D;
-            this.Tb_Recep_Total.Location = new System.Drawing.Point(302, 9);
+            this.Tb_Recep_Total.Location = new System.Drawing.Point(293, 9);
             this.Tb_Recep_Total.MinValue = 0D;
             this.Tb_Recep_Total.Name = "Tb_Recep_Total";
             this.Tb_Recep_Total.Size = new System.Drawing.Size(64, 22);
@@ -484,7 +484,7 @@
             this.Tb_Recep_TPrecio.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.Tb_Recep_TPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Recep_TPrecio.Increment = 1D;
-            this.Tb_Recep_TPrecio.Location = new System.Drawing.Point(232, 9);
+            this.Tb_Recep_TPrecio.Location = new System.Drawing.Point(223, 9);
             this.Tb_Recep_TPrecio.MinValue = 0D;
             this.Tb_Recep_TPrecio.Name = "Tb_Recep_TPrecio";
             this.Tb_Recep_TPrecio.Size = new System.Drawing.Size(64, 22);
@@ -501,7 +501,7 @@
             this.Tb_Recep_TCantidad.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.Tb_Recep_TCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Recep_TCantidad.Increment = 1D;
-            this.Tb_Recep_TCantidad.Location = new System.Drawing.Point(162, 9);
+            this.Tb_Recep_TCantidad.Location = new System.Drawing.Point(153, 9);
             this.Tb_Recep_TCantidad.MinValue = 0D;
             this.Tb_Recep_TCantidad.Name = "Tb_Recep_TCantidad";
             this.Tb_Recep_TCantidad.Size = new System.Drawing.Size(64, 22);
@@ -539,8 +539,6 @@
             // 
             this.GPanel_DatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(254)))));
             this.GPanel_DatosGenerales.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.GPanel_DatosGenerales.Controls.Add(this.Tb_MERMA);
-            this.GPanel_DatosGenerales.Controls.Add(this.labelX16);
             this.GPanel_DatosGenerales.Controls.Add(this.Cb_Almacen);
             this.GPanel_DatosGenerales.Controls.Add(this.labelX11);
             this.GPanel_DatosGenerales.Controls.Add(this.Tb_Id);
@@ -608,7 +606,7 @@
             this.Tb_MERMA.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.Tb_MERMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_MERMA.Increment = 1D;
-            this.Tb_MERMA.Location = new System.Drawing.Point(110, 317);
+            this.Tb_MERMA.Location = new System.Drawing.Point(426, 6);
             this.Tb_MERMA.MinValue = 0D;
             this.Tb_MERMA.Name = "Tb_MERMA";
             this.Tb_MERMA.Size = new System.Drawing.Size(84, 22);
@@ -623,11 +621,11 @@
             // 
             this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(139)))));
-            this.labelX16.Location = new System.Drawing.Point(3, 316);
+            this.labelX16.ForeColor = System.Drawing.Color.White;
+            this.labelX16.Location = new System.Drawing.Point(373, 6);
             this.labelX16.Name = "labelX16";
             this.labelX16.SingleLineColor = System.Drawing.SystemColors.Control;
-            this.labelX16.Size = new System.Drawing.Size(80, 23);
+            this.labelX16.Size = new System.Drawing.Size(50, 23);
             this.labelX16.TabIndex = 346;
             this.labelX16.Text = "MERMA";
             // 
@@ -1054,9 +1052,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Detalle)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_Total)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_TPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tb_Selecc_TCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_Total)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tb_TCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_Total)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_TPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tb_Recep_TCantidad)).EndInit();
@@ -1102,9 +1100,9 @@
         internal Janus.Windows.GridEX.GridEX Dgv_Seleccion;
         private DevComponents.DotNetBar.Controls.TextBoxX Tb_Id;
         internal DevComponents.DotNetBar.LabelX labelX10;
-        internal DevComponents.Editors.DoubleInput Tb_Selecc_Total;
-        internal DevComponents.Editors.DoubleInput Tb_Selecc_TPrecio;
-        internal DevComponents.Editors.DoubleInput Tb_Selecc_TCantidad;
+        internal DevComponents.Editors.DoubleInput Tb_Total;
+        internal DevComponents.Editors.DoubleInput Tb_TPrecio;
+        internal DevComponents.Editors.DoubleInput Tb_TCantidad;
         internal DevComponents.DotNetBar.LabelX labelX8;
         internal DevComponents.Editors.DoubleInput Tb_Recep_Total;
         internal DevComponents.Editors.DoubleInput Tb_Recep_TPrecio;

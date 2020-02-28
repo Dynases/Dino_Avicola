@@ -14,7 +14,7 @@ namespace REPOSITORY.Clase
     public class RSeleccion : BaseConexion, ISeleccion
     {
         #region tRANSACCIONES
-        public bool Guardar(VSeleccionLista vSeleccion, ref int id)
+        public bool Guardar(VSeleccion vSeleccion, ref int id)
         {
             try
             {
@@ -24,34 +24,25 @@ namespace REPOSITORY.Clase
                     Seleccion seleccion;
                     if (id > 0)
                     {
-                        seleccion = db.CompraIng.Where(a => a.Id == idAux).FirstOrDefault();
+                        seleccion = db.Seleccion.Where(a => a.Id == idAux).FirstOrDefault();
                         if (seleccion == null)
-                            throw new Exception("No existe la compra con id " + idAux);
+                            throw new Exception("No existe la seleccion con id " + idAux);
                     }
                     else
                     {
-                        seleccion = new CompraIng();
-                        db.CompraIng.Add(seleccion);
+                        seleccion = new Seleccion();
+                        db.Seleccion.Add(seleccion);
                     }
-
                     seleccion.IdSucur = vSeleccion.IdSucur;
-                    seleccion.IdProvee = vSeleccion.IdProvee;
-                    seleccion.Estado = vSeleccion.estado;
-                    seleccion.NumNota = vSeleccion.NumNota;
-                    seleccion.FechaEnt = vSeleccion.FechaEnt;
-                    seleccion.FechaRec = vSeleccion.FechaRec;
-                    seleccion.Placa = vSeleccion.Placa;
-                    seleccion.EdadSemana = vSeleccion.CantidadSemanas;
-                    seleccion.Tipo = vSeleccion.Tipo;
-                    seleccion.Obser = vSeleccion.Observacion;
-                    seleccion.Entregado = vSeleccion.Entregado;
-                    seleccion.Recibido = vSeleccion.Recibido;
-                    seleccion.TotalVendido = vSeleccion.TotalVendido;
-                    seleccion.TotalRecibido = vSeleccion.TotalRecibido;
-                    seleccion.Total = vSeleccion.Total;
+                    seleccion.IdCompraIng = vSeleccion.IdCompraIng;
+                    seleccion.Estado = vSeleccion.Estado;
+                    seleccion.Cantidad = vSeleccion.Cantidad ;
+                    seleccion.Precio = vSeleccion.Precio;
+                    seleccion.Total = vSeleccion.Total;                  
                     seleccion.Fecha = vSeleccion.Fecha;
                     seleccion.Hora = vSeleccion.Hora;
                     seleccion.Usuario = vSeleccion.Usuario;
+                    seleccion.Merma = vSeleccion.Merma;
                     db.SaveChanges();
                     id = seleccion.Id;
                     return true;

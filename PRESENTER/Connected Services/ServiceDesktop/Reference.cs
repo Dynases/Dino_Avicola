@@ -275,6 +275,14 @@ namespace PRESENTER.ServiceDesktop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_ListaResponse")]
         System.Threading.Tasks.Task<ENTITY.com.Seleccion.View.VSeleccionLista[]> Seleccion_ListaAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_Guardar", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_GuardarResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITY.com.Seleccion.View.VSeleccionLista))]
+        PRESENTER.ServiceDesktop.Seleccion_GuardarResponse Seleccion_Guardar(PRESENTER.ServiceDesktop.Seleccion_GuardarRequest request);
+        
+        // CODEGEN: Generando contrato de mensaje, ya que la operación tiene múltiples valores de devolución.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_Guardar", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_GuardarResponse")]
+        System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.Seleccion_GuardarResponse> Seleccion_GuardarAsync(PRESENTER.ServiceDesktop.Seleccion_GuardarRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDesktop/Seleccion_01_Lista", ReplyAction="http://tempuri.org/IServiceDesktop/Seleccion_01_ListaResponse")]
         ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_Lista();
         
@@ -484,6 +492,54 @@ namespace PRESENTER.ServiceDesktop {
         
         public CompraIngreso_GuardarResponse(bool CompraIngreso_GuardarResult, int id) {
             this.CompraIngreso_GuardarResult = CompraIngreso_GuardarResult;
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Seleccion_Guardar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class Seleccion_GuardarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ENTITY.com.Seleccion.View.VSeleccion vSeleccion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public ENTITY.com.Seleccion_01.View.VSeleccion_01[] detalle;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string usuario;
+        
+        public Seleccion_GuardarRequest() {
+        }
+        
+        public Seleccion_GuardarRequest(ENTITY.com.Seleccion.View.VSeleccion vSeleccion, ENTITY.com.Seleccion_01.View.VSeleccion_01[] detalle, int id, string usuario) {
+            this.vSeleccion = vSeleccion;
+            this.detalle = detalle;
+            this.id = id;
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Seleccion_GuardarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class Seleccion_GuardarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool Seleccion_GuardarResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public int id;
+        
+        public Seleccion_GuardarResponse() {
+        }
+        
+        public Seleccion_GuardarResponse(bool Seleccion_GuardarResult, int id) {
+            this.Seleccion_GuardarResult = Seleccion_GuardarResult;
             this.id = id;
         }
     }
@@ -813,6 +869,26 @@ namespace PRESENTER.ServiceDesktop {
         
         public System.Threading.Tasks.Task<ENTITY.com.Seleccion.View.VSeleccionLista[]> Seleccion_ListaAsync() {
             return base.Channel.Seleccion_ListaAsync();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PRESENTER.ServiceDesktop.Seleccion_GuardarResponse PRESENTER.ServiceDesktop.IServiceDesktop.Seleccion_Guardar(PRESENTER.ServiceDesktop.Seleccion_GuardarRequest request) {
+            return base.Channel.Seleccion_Guardar(request);
+        }
+        
+        public bool Seleccion_Guardar(ENTITY.com.Seleccion.View.VSeleccion vSeleccion, ENTITY.com.Seleccion_01.View.VSeleccion_01[] detalle, ref int id, string usuario) {
+            PRESENTER.ServiceDesktop.Seleccion_GuardarRequest inValue = new PRESENTER.ServiceDesktop.Seleccion_GuardarRequest();
+            inValue.vSeleccion = vSeleccion;
+            inValue.detalle = detalle;
+            inValue.id = id;
+            inValue.usuario = usuario;
+            PRESENTER.ServiceDesktop.Seleccion_GuardarResponse retVal = ((PRESENTER.ServiceDesktop.IServiceDesktop)(this)).Seleccion_Guardar(inValue);
+            id = retVal.id;
+            return retVal.Seleccion_GuardarResult;
+        }
+        
+        public System.Threading.Tasks.Task<PRESENTER.ServiceDesktop.Seleccion_GuardarResponse> Seleccion_GuardarAsync(PRESENTER.ServiceDesktop.Seleccion_GuardarRequest request) {
+            return base.Channel.Seleccion_GuardarAsync(request);
         }
         
         public ENTITY.com.Seleccion_01.View.VSeleccion_01_Lista[] Seleccion_01_Lista() {

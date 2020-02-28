@@ -213,21 +213,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Seleccion">
-      <EntityTypeMapping TypeName="DiAviModel.Seleccion">
-        <MappingFragment StoreEntitySet="Seleccion">
-          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-          <ScalarProperty Name="Hora" ColumnName="Hora" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="Precio" ColumnName="Precio" />
-          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="IdCompraIng" ColumnName="IdCompraIng" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Seleccion_01">
       <EntityTypeMapping TypeName="DiAviModel.Seleccion_01">
         <MappingFragment StoreEntitySet="Seleccion_01">
@@ -358,6 +343,23 @@
           <ScalarProperty Name="FechaRecep" ColumnName="FechaRecep" />
           <ScalarProperty Name="NotaGranja" ColumnName="NotaGranja" />
           <ScalarProperty Name="NotaRecepcion" ColumnName="NotaRecepcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seleccion">
+      <EntityTypeMapping TypeName="DiAviModel.Seleccion">
+        <MappingFragment StoreEntitySet="Seleccion">
+          <ScalarProperty Name="Merma" ColumnName="Merma" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdCompraIng" ColumnName="IdCompraIng" />
+          <ScalarProperty Name="IdSucur" ColumnName="IdSucur" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -21,6 +21,7 @@ namespace DATA.EntityDataModel.DiAvi
         }
     
         public int Id { get; set; }
+        public int IdSucur { get; set; }
         public int IdCompraIng { get; set; }
         public int Estado { get; set; }
         public decimal Cantidad { get; set; }
@@ -29,9 +30,10 @@ namespace DATA.EntityDataModel.DiAvi
         public System.DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Usuario { get; set; }
+        public decimal Merma { get; set; }
     
+        public virtual CompraIng CompraIng { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Seleccion_01> Seleccion_01 { get; set; }
-        public virtual CompraIng CompraIng { get; set; }
     }
 }

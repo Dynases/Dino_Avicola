@@ -133,6 +133,9 @@ namespace SERVICE
         #region Seleccion
         [OperationContract]
         List<VSeleccionLista> Seleccion_Lista();
+
+        [OperationContract]
+        bool  Seleccion_Guardar(VSeleccion vSeleccion, List<VSeleccion_01> detalle, ref int id, string usuario);
         #endregion
         #region Seleccion_01
         [OperationContract]

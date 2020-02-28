@@ -432,6 +432,19 @@ namespace SERVICE
         }
         #endregion
         #region Seleccion
+
+        public bool Seleccion_Guardar(VSeleccion vSeleccion, List<VSeleccion_01> detalle, ref int id, string usuario)
+        {
+            try
+            {
+                var result = new LSeleccion().Guardar(vSeleccion, detalle, ref id, usuario);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public List<VSeleccionLista> Seleccion_Lista()
         {
             try
@@ -533,6 +546,7 @@ namespace SERVICE
                 throw new Exception(ex.Message);
             }
         }
+
         #endregion
 
     }
